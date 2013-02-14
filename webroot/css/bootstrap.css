@@ -353,7 +353,7 @@ a:hover {
 }
 
 .row-fluid [class*="span"]:first-child {
-  margin-left: 0;
+  margin-left: 22em;
 }
 
 .row-fluid .controls-row [class*="span"] + [class*="span"] {

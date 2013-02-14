@@ -1,8 +1,8 @@
 	
-	
-	</div>
-	<div id='footer'>
-			</div>
+	</section>
+	</section>
+	<section id='footer'>
+			</section>
 </body>
 <!-- jquery -->
 

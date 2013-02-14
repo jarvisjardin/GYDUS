@@ -1,9 +1,11 @@
+<section class="wrapper">	
+
 	<section class="CTA pull-left">
 					
 					<section class="cta-text">
-						<p class="">Find your classroom, quickly with<br>
-						   GYDUS. Its <strong>fun</strong>, <strong>fast</strong>, and <strong>friendly</strong>.<br>
-						   <strong>Search now</strong> 
+						<p class="">Find your classroom,<br>
+						 quickly with GYDUS.<br> Its <strong>fun</strong>, <strong>fast</strong>, and <strong>friendly</strong>.<br>
+						 <strong>Search now</strong> 
 						</p>
 					</section><!-- end of cta-text-->
 
@@ -15,13 +17,11 @@
 						</section><!-- end of input-append aqilex-searchbar-->
 
 					</section><!-- end of cta-searchbar-->
-
 	</section><!--end of CTA -->
 
 				<section class="signup-section pull-left">
 					<section class="signup-section-text">
-						<p>Try GYDUS for <strong>FREE</strong> and start finding<br>
-your classrooms <strong>in under 60 seconds</strong>!</p>
+						<p>Try it for <strong>FREE</strong> and start using GYDUS <strong>in under 60 seconds</strong>!</p>
 					</section><!-- end of signup-section-text-->
 
 					<section class="signup-section-btn pull-right">
@@ -29,6 +29,29 @@ your classrooms <strong>in under 60 seconds</strong>!</p>
 					</section><!-- end of signup-section-btn-->
 
 				</section><!-- end of signup-section-->
+				
+				
+						<section class="gydus-bennifits-holder row-fluid"><!-- edited boostraps css for this-->
+						
+							<section class="benni-one span3">
+								<p class="benni-one-txt pull-left">LIGHTNING FAST <br> SPEED</p>
+							</section><!-- end of benni-one -->
+						
+							<section class="benni-two span3">
+								<p class="benni-two-txt">SIMPLE TO USE <br> INTERFACE</p>
+
+								
+							</section><!-- end of benni-two-->
+							
+							<section class="benni-three span3">
+								
+								<p class="benni-three-txt">DIRECTIONS TO <br> LOCATIONS</p>
+
+							</section><!-- end of benni-three-->
+				
+
+							
+						</section><!-- end of gydus-bennifits contents-->
 
 				<section class="gydus-bottom pull-left clearfix">
 					<section class="video-section pull-right clearfix">

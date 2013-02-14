@@ -24,7 +24,6 @@
 
 	<!-- Parent container for the page, load your core templates into this div -->
 	
-	
 <!-- NAVIGATION -->
 	        <section class="navbar  navbar-fixed-top ">
 	        	<section class="navbar-inner dark-header">
