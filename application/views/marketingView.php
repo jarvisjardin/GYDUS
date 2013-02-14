@@ -54,8 +54,8 @@
 						</section><!-- end of gydus-bennifits contents-->
 
 				<section class="gydus-bottom pull-left clearfix">
-					<section class="video-section pull-right clearfix">
-						<h1>GET TO KNOW GYDUS</h1>
+					<section class="video-section pull-left clearfix">
+						<h1 class="vidTitle">INTRO TO GYDUS</h1>
 						<section class="video-video">
 							<video class="gydus-video" controls>
 							<source src="webroot/superman.mp4" type="video/mp4">
@@ -64,24 +64,20 @@
 						</section><!-- end of video-video -->
 					</section><!-- end of video-section -->
 	
-					<section class="keyfeatures-section pull-left clearfix">
-						<section class="keyfeatures-section-title pull-left">
-							<h1 class="kfsT">KEY FEATURES</h1>
+					<section class="keyfeatures-section pull-right clearfix">
+						<section class="keyfeatures-section-title pull-right">
+							<h1 class="kfsT">GYDUS UPDATES</h1>
+								<a class="updateLink" href="#">VERSION 1.0 (Released on April 4, 2012)</a>
+								
+								<h4 class="whatsnew">Whats new in this version?</h4>
+								<ul class="newitems">
+									<li>- Enhanced UI elements</li>
+									<li>- Users allowed to log in and register </li>
+
+								</ul>
 						</section><!-- end of keyfeatures-section-title-->
 						<section class="keyfeatures-section-bullets">
-							<section class="keyfeatures-section-bullets-text pull-left">
-								<ul class="kf-left pull-left clearfix">
-									<li>Directions to location</li>
-									<li>Easy to use interface</li>
-									<li>Suggest a location</li>
-	
-								</ul>
-								<ul class="kf-right pull-left clearfix">
-									<li>Finding locations</li>
-									<li>Points of interest</li>
-									<li>GPS positioner</li>
-									</ul><!-- end of kf-left-->
-							</section><!-- end of keyfeatures-section-bullets-text-->
+							
 						</section><!-- end of keyfeatures-section-bullets-->
 					</section><!--end of keyfeatures-section-->
 				</section><!-- end of gydus-bottom-->
