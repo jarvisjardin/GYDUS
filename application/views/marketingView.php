@@ -19,10 +19,15 @@
 					</section><!-- end of cta-searchbar-->
 	</section><!--end of CTA -->
 
+<section class="gotomap-section-btn pull-right">
+						<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/userController/register'">Go To map</button>
+					</section><!-- end of signup-section-btn-->
 				<section class="signup-section pull-left">
 					<section class="signup-section-text">
 						<p>Try it for <strong>FREE</strong> and start using GYDUS <strong>in under 60 seconds</strong>!</p>
 					</section><!-- end of signup-section-text-->
+					
+					
 
 					<section class="signup-section-btn pull-right">
 						<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/userController/register'">SIGN UP NOW</button>
