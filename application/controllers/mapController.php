@@ -11,5 +11,15 @@
 		
 		
 		}
+		function searchView(){
+		
+			$data = array();
+				
+			$data['content'] = 'searchView';
+			$this->load->view('templates/template', $data);
+		
+		
+		}
+
 	}
 ?>

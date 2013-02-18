@@ -166,7 +166,7 @@ a.signin.nav-signin{
 /*------------------------- map ---------------------------*/
 
 .map{
-	height:361px;
+	height:36px;
 	background-color: green;
 }
 
@@ -561,6 +561,6 @@ font-size: 1.25em;
 .map-spot{
 	background-color: green;
 	width:100%;
-	height:119px;
+	height:700px;
 	
 }
