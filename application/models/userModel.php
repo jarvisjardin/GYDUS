@@ -4,7 +4,7 @@ class userModel extends CI_Model{
 	function validate()
 	{
 		$this->db->where('email', $this->input->post('user_email'));
-		$this->db->where('password', $this->input->post('user_pass'));
+		$this->db->where('password',md5($this->input->post('user_pass')));
 		$query = $this->db->get('Users');
 		
 		if($query->num_rows == 1)
