@@ -20,7 +20,7 @@
 	</section><!--end of CTA -->
 
 <section class="gotomap-section-btn pull-right">
-						<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/userController/register'">Go To map</button>
+						<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/mapController/'">Go To map</button>
 					</section><!-- end of signup-section-btn-->
 				<section class="signup-section pull-left">
 					<section class="signup-section-text">
