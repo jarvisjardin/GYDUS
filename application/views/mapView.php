@@ -16,6 +16,7 @@
 
 		<h4><?php echo anchor('index.php/userController/logout', 'Logout'); ?></h4>
 		<h4><?php echo anchor('index.php/mapController/searchView', 'Search'); ?></h4>
+		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
 
 	</section>
 	

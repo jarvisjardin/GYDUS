@@ -20,6 +20,36 @@
 		
 		
 		}
+		function search(){
+			/*
+				search the database for locations
+			*/
+			
+		}
+		function POI(){
+			/*
+				show points of interest
+			*/
+			
+		}
+		
+		function suggestaspotView(){
+		
+			$data['content'] = 'sasView';
+			$this->load->view('templates/template', $data);			
+		
+		}
+		function suggestaspot(){
+			$this->load->model('mapModel');
+			$query = $this->mapModel->suggestaspot();
+			
+			
+			redirect('index.php/mapController');
+
+			
+		}
+		
+		
 
 	}
 ?>

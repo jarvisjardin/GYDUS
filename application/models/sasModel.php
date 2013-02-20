@@ -1,5 +1,5 @@
 <?
-class sasModel extends CI_Model{
+class mapModel extends CI_Model{
 		
 	function suggestaspot(){
 	
@@ -13,6 +13,13 @@ class sasModel extends CI_Model{
 				create var for tally# +1
 				update table	
 			*/
+			
+			$this->db->where('name', $this->input->post('spot_name'));
+			$tally = $this->db->get('SuggestASpot');
+			
+			$newTally = $tally + 1;
+			
+
 		}else{
 			
 			/*

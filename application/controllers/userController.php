@@ -22,7 +22,7 @@
 					'is_logged_in' => true
 				);
 				$this->session->set_userdata($data);
-				redirect('index.php/site/members_area');
+				redirect('index.php/mapController');
 			}
 			else // incorrect username or password
 			{
@@ -39,27 +39,13 @@
 		
 		function create_member()
 		{
-			/*$this->load->library('form_validation');
-			
-			// field name, error message, validation rules
-			$this->form_validation->set_rules('first_name', 'Name', 'trim|required');
-			$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');
-			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
-			
-		
-			if($this->form_validation->run() == FALSE)
-			{
-				redirect('index.php/marketingController');
-			}
-			
-			else
-			{*/			
+					
 				$this->load->model('userModel');
 				
 				if($query = $this->userModel->create_member())
 				{
-					$data['content'] = 'members_area';
-					$this->load->view('templates/template', $data);
+					redirect('index.php/mapController');
+
 				}
 				else
 				{
