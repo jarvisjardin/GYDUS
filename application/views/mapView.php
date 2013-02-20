@@ -15,8 +15,8 @@
 		<h3>This section represents the area that only logged in members can access.</h3>
 
 		<h4><?php echo anchor('index.php/userController/logout', 'Logout'); ?></h4>
-		<h4><?php echo anchor('index.php/mapController/searchView', 'Search'); ?></h4>
-		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
+		<h4 class="map-view-fL btn btn-large btn-block btn-info"><?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?></h4>
+<!-- 		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4> -->
 
 	</section>
 	

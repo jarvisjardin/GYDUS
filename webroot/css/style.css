@@ -556,11 +556,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
 font-size: 1.25em;
 
 }
+/*-------------------------------
+
+		FIND LOCATION
+
+-------------------------------*/
 
 
+.findLocation{
+	margin-top:6em;
+	
+}
+.h3-findlocationtitle{
+	color:#1d77a3;
+	margin-left: 5em;
+	
+}
+
+.gydus-findL-btn.btn.btn-danger{
+margin-top:-3em;
+margin-right:10em;
+}
+
+/*-------------------------------
+
+		MAP VIEW
+
+-------------------------------*/
 .map-spot{
-	background-color: green;
 	width:100%;
 	height:550px;
-	
+}
+
+.map-view-fL a{
+	color:white;
+	font-style: "Helvetica";
 }
