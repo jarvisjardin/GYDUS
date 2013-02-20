@@ -62,7 +62,14 @@ $(document).ready(function() {
 	         return false;
 	     });// END OF displaying find location   
 	     
-	     	
+	     	$("#findLbtnX").on('click', function(){
+		     	$("#searchViewdisplay").animate({marginTop:"-53.5em", opacity:0},1500, function(){
+		     																			$("#findLbtnX").removeClass("hide");
+		     																			$("#logCheckHead").animate({opacity:1},1500);
+		     																			});
+/* 		     	$("#logCheckHead").animate({opacity:"100%"},1500); */
+		     	
+	     	})
 
         
         

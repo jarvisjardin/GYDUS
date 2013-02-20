@@ -23,8 +23,8 @@
 	<section class="findLocation alert alert-info">
 		<h3 class="h3-findlocationtitle">Find Location</h3>
 		<section class="findLocation-Close">
-		
-			<button class="gydus-findL-btn btn  btn-danger pull-right clearfix" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">X</button>
+<!-- 		onClick="location='<?php echo base_url();?>index.php/mapController/'" -->
+			<button class="gydus-findL-btn btn  btn-danger pull-right clearfix" id="findLbtnX" type="button" >X</button>
 
 		</section><!-- end of findLocation Close-->
 	</section><!-- end of findlocation-->
