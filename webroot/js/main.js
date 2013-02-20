@@ -78,6 +78,22 @@ $(document).ready(function() {
 	$("#viewAcctMenu").on('click', function(){
 		
 		$("#accountMenu").removeClass("hide");
+		$("#viewAcctMenu").addClass("hide");
+	});
+	
+	$("#CloseMenu").on('click', function(){
+		
+		$("#accountMenu").addClass("hide");
+		$("#viewAcctMenu").removeClass("hide");
+
+		
+	});
+	
+	
+	//user clicks Accounts Settings from the menu
+	$("#AccountSettingsSec").on('click', function(){
+		
+		
 	});
 	
 	

@@ -105,7 +105,7 @@
 		<!-- this is going to have a class of hide -->
 		
 		<section class="acctMenu hide" id="accountMenu">
-			<section class="acctSettings btn btn-large btn-block btn-info">
+			<section class="acctSettings btn btn-large btn-block btn-info" id="AccountSettingsSec" onClick="location='<?php echo base_url();?>index.php/mapController/'">
 				<h3 class="accountSettingsHead">Account Settings</h3>
 			</section><!-- end of acctSettings-->
 			
@@ -113,8 +113,11 @@
 				<h3 class="logOutaccountSettingsHead ">Sign Out</h3>
 			</section><!-- end of logoutacctSettings-->
 		
+		<p class="closeMenu btn" id="CloseMenu">Close</p>
 		</section><!--- end of acctMenu--->
 		
+		
+	
 		
 		
 		
@@ -134,7 +137,7 @@
 		
 
 <!-- 		<h4><?php echo anchor('index.php/userController/logout', 'Account Settings'); ?></h4> -->
-		<h4 id="viewAcctMenu">Account Settings link</h4>
+		<h4 id="viewAcctMenu" class="btn">Account Settings link</h4>
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
 <!-- 		<?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?> -->
 		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
