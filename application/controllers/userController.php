@@ -17,15 +17,21 @@
 			
 			if($query) // if the user's credentials validated...
 			{
-				$data = array(
+				$userData = array(
 					'user_email' => $this->input->post('user_email'),
-					'is_logged_in' => true
+					'is_logged_in' => TRUE
 				);
-				$this->session->set_userdata($data);
-				redirect('index.php/mapController');
-			}
-			else // incorrect username or password
-			{
+				
+
+				$this->session->set_userdata($userData);
+
+				$data['content'] = 'mapView';
+				
+				$this->load->view('templates/member_template', $data);	
+							
+			
+			}else{ // incorrect username or password
+			
 				redirect('index.php/marketingController/index');
 
 			}
@@ -44,7 +50,8 @@
 				
 				if($this->userModel->create_member())
 				{
-					redirect('index.php/mapController');
+					$data['content'] = 'mapView';
+					$this->load->view('templates/member_template', $data);
 
 				}
 				else
@@ -60,6 +67,7 @@
 		{
 			$this->session->sess_destroy();
 		
+			
 			$data['content'] = 'marketingView';
 			$this->load->view('templates/template', $data);		
 			

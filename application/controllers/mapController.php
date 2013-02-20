@@ -1,7 +1,7 @@
 <?php
 
 	class mapController extends CI_Controller{
-
+	    
 		function index(){
 		
 			$data = array();
@@ -12,12 +12,21 @@
 		
 		}
 		function searchView(){
-		
-			$data = array();
-				
-			$data['content'] = 'searchView';
-			$this->load->view('templates/template', $data);
-		
+			
+			$this->load->helper('url');
+
+		    // ensure user is signed in
+		    if ($this->session->userdata('is_logged_in')) {
+			    echo "you're logged in";
+
+		    }else{
+		    
+				$data = array();
+					
+				$data['content'] = 'searchView';
+				$this->load->view('templates/template', $data);
+			}
+			
 		
 		}
 		function search(){

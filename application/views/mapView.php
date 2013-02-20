@@ -18,6 +18,10 @@
 		
 		
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fixed user sessions
 		
 		<section class="searchView hide" id="searchViewdisplay">
 	<section class="findLocation alert alert-info">
@@ -136,7 +140,12 @@
 		<h4>Account Settings link</h4>
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
 <!-- 		<?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?> -->
+<<<<<<< HEAD
 <!-- 		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4> -->
+=======
+		<h4 class="map-view-fL btn btn-large btn-block btn-info"><?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?></h4>
+		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
+>>>>>>> fixed user sessions
 
 	</section>
 	
