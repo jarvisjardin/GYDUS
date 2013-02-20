@@ -25,6 +25,7 @@
 				<option>FS2</option>
 				<option>FS3</option>
 				<option>FS4</option>
+
 			</select>
 		</section><!-- end fo dropdownBuildings-->
 		
@@ -56,10 +57,10 @@
 			<section class="suggestSpotbtn">
 				<a href="#" class="btn btn-large btn-block btn-primary disabled">Suggest a Spot</a>
 
-			</section>!-- end of suggest spot btn-->
-			
+			</section><!-- end of suggest spot btn-->
+			<br>
 			<section class="viewLocationbtn">
-			<button class="btn btn-large btn-block btn-success" type="button">Block level button</button>
+			<button class="btn btn-large btn-block btn-success" type="button">View Location</button>
 
 			</section><!-- end of view location btn-->
 		

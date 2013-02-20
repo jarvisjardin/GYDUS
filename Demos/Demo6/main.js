@@ -311,7 +311,7 @@ map.beginSearch(search);
 
 function updateSearch () {
 	search.update(1);
-
+	
 	// Check the element is in the DOM and the browser supports canvas
 	if(maze.getContext) {
 		// Initaliase a 2-dimensional drawing context
