@@ -72,7 +72,7 @@
 					<section class="keyfeatures-section pull-right clearfix">
 						<section class="keyfeatures-section-title pull-right">
 							<h1 class="kfsT">GYDUS UPDATES</h1>
-								<a class="updateLink" href="#">VERSION 1.0 (Released on April 4, 2012)</a>
+								<a class="updateLink" href="#">VERSION 1.0 (Released on January 4, 2013)</a>
 								
 								<h4 class="whatsnew">Whats new in this version?</h4>
 								<ul class="newitems">
