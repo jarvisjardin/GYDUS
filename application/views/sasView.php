@@ -7,14 +7,12 @@
 
 <form action="<?php echo base_url();?>index.php/mapController/suggestaspot"  method="post"class="form-horizontal gydus-form-horizontal ">
             <section class="control-group">
-              <label class="control-label" for="inputName">Name</label>
               <section class="controls">
                 <input type="text" class="gydus-login-email-input" name="spot-name" id="spot-name" placeholder="name">
               </section>
             </section>
             
              <section class="control-group">
-              <label class="control-label" for="inputName">Name</label>
               <section class="controls">
 	              <textarea rows="3" placeholder="Description of Spot"></textarea>             
 	               </section>

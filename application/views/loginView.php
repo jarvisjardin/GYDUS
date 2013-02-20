@@ -6,18 +6,25 @@
 
 
 <form action="<?php echo base_url();?>index.php/userController/check_member"  method="post"class="form-horizontal gydus-form-horizontal ">
-            <section class="control-group">
+            <section class="control-group gydus-form-error">
               <label class="control-label" for="inputEmail">Email</label>
               <section class="controls">
+              	<section class="loginEmailError">
                 <input type="text" class="gydus-login-email-input" name="user_email" id="login-inputEmail" placeholder="Email">
-              </section>
-            </section>
+                   <p class="loginemailerr">invalid email</p>
+
+              	</section><!--end of loginEmailError-->
+              </section><!-- end of controls -->
+            </section><!-- end of email-->
             <section class="control-group">
               <label class="control-label" for="inputPassword">Password</label>
               <section class="controls">
+                 <section class="loginPwError">
                 <input type="password" id="login-inputPassword" name="user_pass" placeholder="Password">
-              </section>
-            </section>
+                <p class="loginpasserr">invalid password</p>
+                 </section><!-- end of loginPwError -->
+              </section><!-- end of controls-->
+            </section><!-- end of password-->
             <section class="control-group">
               <section class="controls">
                 
