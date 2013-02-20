@@ -52,7 +52,7 @@
 					redirect('index.php/marketingController/index');
 				
 				}
-			//}
+			
 			
 		}
 		
