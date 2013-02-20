@@ -6,6 +6,8 @@
 	<title>untitled</title>
 </head>
 <body>
+
+<section class="searchView">
 	<section class="findLocation alert alert-info">
 		<h3 class="h3-findlocationtitle">Find Location</h3>
 		<section class="findLocation-Close">
@@ -16,22 +18,25 @@
 	</section><!-- end of findlocation-->
 		<section class="searchkeyword">
 			<form class="form-search">
-				<section class="input-append">
-					<input type="text" class="span2 search-query">
-						<button type="submit" class="btn">Search</button>
+				<section class="gydus-kw-append input-append">
+					<input type="text" class="gydus-kw-search span2" placeholder="Search keyword or classroom">
 				</section><!-- end of input-append-->
+				<h3 class="searchOR">or</h3>
 		</section><!-- end of searchkeyword-->
 		
 		<section class="dropdownBuildings">
-			<select multiple="multiple">
+			<select class="buildingSelect">
+				<option>SELECT BUILDING</option>
 				<option>FS1</option>
 				<option>FS2</option>
 				<option>FS3</option>
 				<option>FS4</option>
-
 			</select>
 		</section><!-- end fo dropdownBuildings-->
 		
+		<section class="poiTitleSection alert alert-info">
+			<h4 class="poiHeader ">Select Points of Interest</h4>
+		</section>
 		<section class="poiSelection">
 		<label class="checkbox inline">
 			<input type="checkbox" id="inlineCheckbox1" value="option1"> Patio
@@ -42,8 +47,10 @@
 		<label class="checkbox inline">
 			<input type="checkbox" id="inlineCheckbox3" value="option3"> Library
 		</label>
+		</section><!--end of poiselection -->
 		
-		<label class="checkbox inline">
+		<section class="poiSelectionTwo">
+		<label class="checkbox inline bs">
 			<input type="checkbox" id="inlineCheckbox3" value="option3"> Book Store
 		</label>
 		
@@ -58,7 +65,7 @@
 		<section class="findlocationBtns">
 		
 			<section class="suggestSpotbtn">
-				<a href="#" class="btn btn-large btn-block btn-primary disabled">Suggest a Spot</a>
+				<a href="#" class="btn btn-large btn-block  disabled">Suggest a Spot</a>
 
 			</section><!-- end of suggest spot btn-->
 			<br>
@@ -68,6 +75,7 @@
 			</section><!-- end of view location btn-->
 		
 		</section><!-- end of find location btns-->
-	</section><!-- end of findlocation-->
+	</section><!-- end of searchView-->
+
 </body>
 </html>	
