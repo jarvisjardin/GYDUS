@@ -71,6 +71,17 @@ $(document).ready(function() {
 		     	
 	     	})
 
+
+/*-----------View Acct Menu---------------*/
+
+	
+	$("#viewAcctMenu").on('click', function(){
+		
+		$("#accountMenu").removeClass("hide");
+	});
+	
+	
+	
         
         
 
