@@ -42,7 +42,7 @@
 					
 				$this->load->model('userModel');
 				
-				if($query = $this->userModel->create_member())
+				if($this->userModel->create_member())
 				{
 					redirect('index.php/mapController');
 

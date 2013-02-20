@@ -45,6 +45,27 @@ $(document).ready(function() {
         var FS3B1_map = new google.maps.GroundOverlay("FS3B1.png", FS3B1_Bounds);
 
         FS3B1_map.setMap(map); */
+        
+        
+/*         	         $('#searchViewdisplay').addClass('hide'); */
+
+        
+        /*-----------Find location click effects---------------*/
+         $('#map-viewFLbtn').on('click', function(){     
+/* 	         alert("sup bitch") */
+		$("#logCheckHead").animate({
+			opacity:0.4
+		},1500);
+		$("#searchViewdisplay").removeClass("hide");
+		/*         $("#searchViewdisplay").removeClass("hide").addClass("gydus-block"); */
+
+	         return false;
+	     });// END OF displaying find location   
+	     
+	     	
+
+        
+        
 
                          
 });
