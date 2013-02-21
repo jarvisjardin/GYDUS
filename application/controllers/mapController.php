@@ -15,7 +15,6 @@
 			
 			$this->load->helper('url');
 
-		    // ensure user is signed in
 		    if ($this->session->userdata('is_logged_in')) {
 			    echo "you're logged in";
 

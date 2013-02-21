@@ -8,8 +8,11 @@ class userModel extends CI_Model{
 		$query = $this->db->get('Users');
 		
 		if($query->num_rows == 1)
-		{
-			return true;
+		{	
+			
+			return $query;
+			
+			
 		}
 		
 	}
@@ -26,6 +29,7 @@ class userModel extends CI_Model{
 		$insert = $this->db->insert('Users', $new_member_insert_data);
 		return $insert;
 	}
+	
 
 			
 		
