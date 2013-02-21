@@ -1,6 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-
 	class userController extends CI_Controller{
 		
 		function login()
@@ -17,6 +16,14 @@
 			
 			if($query) // if the user's credentials validated...
 			{
+				
+				foreach ($query->result() as $row){
+					$dbData = array(
+								'name'=>$row->name,
+								'email'=>$row->email);
+				}
+				
+								
 				$userData = array(
 					'user_email' => $this->input->post('user_email'),
 					'is_logged_in' => TRUE
@@ -27,7 +34,7 @@
 
 				$data['content'] = 'mapView';
 				
-				$this->load->view('templates/member_template', $data);	
+				$this->load->view('templates/template', $data, $dbData);	
 							
 			
 			}else{ // incorrect username or password
@@ -51,7 +58,7 @@
 				if($this->userModel->create_member())
 				{
 					$data['content'] = 'mapView';
-					$this->load->view('templates/member_template', $data);
+					$this->load->view('templates/template', $data);
 
 				}
 				else
@@ -72,6 +79,18 @@
 			$this->load->view('templates/template', $data);		
 			
 		}
+		
+		function account_settings(){
+		
+			$data['content'] = 'accountSettingsView';
+			$this->load->view('templates/template', $data);		
+	
+		
+		}
+		
+		
+	}
+
 
 }
 ?>
