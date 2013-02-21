@@ -15,9 +15,13 @@
 */
 $(document).ready(function() {
 
-   
+
+
+   // variable to get fullsails latitude and long
         var FullSail = new google.maps.LatLng(28.594461, -81.304002);
 
+
+  // setting the map to center around Fullsail
         var mapOptions = {
             zoom: 18,
             center: FullSail,
@@ -97,6 +101,15 @@ $(document).ready(function() {
 	});
 	
 	
+
+/*---------- GPS Position -----------------*/
+
+$('#FootGPSBtn').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
+                       map.setCenter(FullSail);// centering the map at Fullsail
+
+        return false;
+    });
+
 	
         
         

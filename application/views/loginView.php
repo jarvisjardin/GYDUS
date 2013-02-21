@@ -22,8 +22,8 @@
             </section><!-- end of password-->
             <section class="control-group">
               <section class="controls">
-                
-                <button  class="btn btn-success" type="submit" class="btn">Sign in Now</button>
+                                <button  class="btn btn-success" type="submit">Sign In</button>
+
               </section>
             </section>
           </form>
