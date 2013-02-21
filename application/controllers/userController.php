@@ -94,6 +94,17 @@
 		
 		}
 		
+		function edit_account_settings(){
+		
+			$this->load->helper('url');
+
+			$data['name'] = $this->session->userdata('name');
+			$data['content'] = 'editAccountSettingsView';
+			$this->load->view('templates/template', $data);		
+	
+		
+		}
+		
 
 }
 ?>

@@ -27,7 +27,7 @@
               <section class="control-group">
               <section class="controls">
                 
-                <button  class="btn btn-primary" type="buton" class="btn">Edit Account</button>
+                <button  class="btn btn-primary"  type="buton" class="btn" onClick="location='<?php echo base_url();?>index.php/userController/edit_account_settings'">Edit Account</button>
                 <section class="acct-cancel">
                 <button  class="btn btn-danger" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
                 </section><!--end of acct-cancel-->
