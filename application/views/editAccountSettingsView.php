@@ -1,13 +1,13 @@
 <section class="gydus-editAccSett">
 <h1 class="gydus-register-headertxt">Edit Account </h1>
 
-<form action="<?php echo base_url();?>index.php/userController/create_member"  method="post" class="form-horizontal gydus-form-horizontal ">
+<form action="<?php echo base_url();?>index.php/userController/update_member" method="post" class="form-horizontal gydus-form-horizontal ">
 
 		<!-- NAME-->
 		<section class="control-group">
               <label class="control-label" for="inputName">Edit UserName</label>
               <section class="controls">
-                <input type="text" class="gydus-reg-name-input" name="name"  id="reg-inputName" placeholder="<?php echo $this->session->userdata('name');?>">
+                <input type="text" class="gydus-reg-name-input" name="user_name"  id="reg-inputName" placeholder="<?php echo $this->session->userdata('name');?>">
               </section>
 
 

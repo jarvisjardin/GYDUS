@@ -16,12 +16,13 @@
 			
 			if($query) // if the user's credentials validated...
 			{
-				
 				$row = $query->row_array();
 								
 				$userData = array(
+					'id' => $row['id'],
 					'name' => $row['name'],
 					'email' => $row['email'],
+					'pass' => $row['password'],
 					'is_logged_in' => TRUE
 				);
 				
@@ -57,8 +58,10 @@
 
 				
 				$userData = array(
+					'id' => $row['id'],
 					'name' => $row['name'],
 					'email' => $row['email'],
+					'pass' => $row['password'],
 					'is_logged_in' => TRUE
 				);
 				
@@ -83,7 +86,7 @@
 			
 		}
 		
-		function account_settings(){
+		function account_setting(){
 		
 			$this->load->helper('url');
 
@@ -102,6 +105,36 @@
 			$data['content'] = 'editAccountSettingsView';
 			$this->load->view('templates/template', $data);		
 	
+		
+		}
+		function update_member(){
+		
+			$this->load->helper('url');
+			$data = $this->session->all_userdata();
+		
+			$this->load->model('userModel');
+			$query = $this->userModel->update_member($data);
+			
+			if($query){
+				
+				$row = $query->row_array();
+
+				
+				$userData = array(
+					'id' => $row['id'],
+					'name' => $row['name'],
+					'email' => $row['email'],
+					'pass' => $row['password'],
+					'is_logged_in' => TRUE
+				);
+				
+
+				$this->session->set_userdata($userData);
+				
+				redirect('index.php/userController/account_setting');
+				
+			}
+
 		
 		}
 		
