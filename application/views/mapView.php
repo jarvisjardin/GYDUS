@@ -109,7 +109,7 @@
 				<h3 class="accountSettingsHead">Account Settings</h3>
 			</section><!-- end of acctSettings-->
 			
-			<section class="logOutacctSettings btn btn-large btn-block btn-danger">
+			<section class="logOutacctSettings btn btn-large btn-block btn-danger" onClick="location='<?php echo base_url();?>index.php/userController/logout'">
 				<h3 class="logOutaccountSettingsHead ">Sign Out</h3>
 			</section><!-- end of logoutacctSettings-->
 		
