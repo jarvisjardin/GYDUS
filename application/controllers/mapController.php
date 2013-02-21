@@ -63,6 +63,8 @@
 			$query = $this->mapModel->suggestaspot();
 			
 			
+			
+			
 			redirect('index.php/mapController');
 
 			
