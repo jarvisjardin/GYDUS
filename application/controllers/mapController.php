@@ -32,7 +32,11 @@
 			/*
 				search the database for locations
 			*/
-			$this->load->model('mapModel');
+			
+			
+			echo $this->input-post('searchLocation');
+			
+			/*$this->load->model('mapModel');
 			$query = $this->mapModel->search();
 			
 			foreach ($query->result() as $row)
@@ -40,7 +44,7 @@
 			    echo $row->name;
 			    echo $row->building_id;
 			    echo $row->id;
-			}
+			}*/
 			
 			
 			

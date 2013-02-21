@@ -105,7 +105,7 @@
 		<!-- this is going to have a class of hide -->
 		
 		<section class="acctMenu hide" id="accountMenu">
-			<section class="acctSettings btn btn-large btn-block btn-info" id="AccountSettingsSec" onClick="location='<?php echo base_url();?>index.php/userController/account_settings'">
+			<section class="acctSettings btn btn-large btn-block btn-info" id="AccountSettingsSec" onClick="location='<?php echo base_url();?>index.php/userController/account_setting'">
 				<h3 class="accountSettingsHead">Account Settings</h3>
 			</section><!-- end of acctSettings-->
 			
