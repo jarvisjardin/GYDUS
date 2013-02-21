@@ -37,7 +37,7 @@
 <!--  SIGN IN LINK -->					
 					<section class="gydus-signin-nav pull-right">
 					
-						<a class="brand signin nav-signin" href="<?php echo base_url();?>index.php/userController/logout">Sign Out</a>
+						<a class="brand signin nav-signin" href="<?php echo base_url();?>index.php/userController/logout"><?php echo $name;?></a>
 					</section><!-- end of gydus signin nav-->
 	        	</section> <!-- close navbar-inner dark-header -->
 	        </section><!-- end of navbar navbar-fixed-top -->

@@ -17,12 +17,8 @@
 			if($query) // if the user's credentials validated...
 			{
 				
-				foreach ($query->result() as $row){
-					$dbData = array(
-								'name'=>$row->name,
-								'email'=>$row->email);
-				}
-				
+				$row = $query->row_array();
+				$data['name'] = $row['name'];
 								
 				$userData = array(
 					'user_email' => $this->input->post('user_email'),
@@ -34,7 +30,7 @@
 
 				$data['content'] = 'mapView';
 				
-				$this->load->view('templates/template', $data, $dbData);	
+				$this->load->view('templates/template', $data);	
 							
 			
 			}else{ // incorrect username or password
@@ -89,7 +85,7 @@
 		}
 		
 		
-	}
+	
 
 
 }
