@@ -17,7 +17,7 @@
 		</section><!-- end of findLocation Close-->
 	</section><!-- end of findlocation-->
 		<section class="searchkeyword">
-			<form action="<?php echo base_url();?>index.php/mapController/search" class="form-search">
+			<form action="<?php echo base_url();?>index.php/mapController/search" method='post' class="form-search">
 				<section class="gydus-kw-append input-append">
 					<input type="text" class="gydus-kw-search span2" placeholder="Search keyword or classroom" id="searchLocation">
 				</section><!-- end of input-append-->
@@ -70,11 +70,12 @@
 			</section><!-- end of suggest spot btn-->
 			<br>
 			<section class="viewLocationbtn">
-			<button class="btn btn-large btn-block btn-success" type="button">View Location</button>
+			<button class="btn btn-large btn-block btn-success" type="submit">View Location</button>
 
 			</section><!-- end of view location btn-->
 		
 		</section><!-- end of find location btns-->
+	</form>
 	</section><!-- end of searchView-->
 
 </body>

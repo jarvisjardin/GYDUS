@@ -33,7 +33,16 @@
 				search the database for locations
 			*/
 			$this->load->model('mapModel');
-			$query = $this->userModel->search();
+			$query = $this->mapModel->search();
+			
+			foreach ($query->result() as $row)
+			{
+			    echo $row->name;
+			    echo $row->building_id;
+			    echo $row->id;
+			}
+			
+			
 			
 		}
 		function POI(){
