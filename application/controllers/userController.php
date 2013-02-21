@@ -18,10 +18,10 @@
 			{
 				
 				$row = $query->row_array();
-				$data['name'] = $row['name'];
 								
 				$userData = array(
-					'user_email' => $this->input->post('user_email'),
+					'name' => $row['name'],
+					'email' => $row['email'],
 					'is_logged_in' => TRUE
 				);
 				
@@ -29,7 +29,8 @@
 				$this->session->set_userdata($userData);
 
 				$data['content'] = 'mapView';
-				
+				$data['name'] = $userData['name'];
+
 				$this->load->view('templates/template', $data);	
 							
 			
@@ -50,19 +51,25 @@
 		{
 					
 				$this->load->model('userModel');
+				$query = $this->userModel->create_member();
 				
-				if($this->userModel->create_member())
-				{
-					$data['content'] = 'mapView';
-					$this->load->view('templates/template', $data);
+				$row = $query->row_array();
 
-				}
-				else
-				{
-					redirect('index.php/marketingController/index');
 				
-				}
-			
+				$userData = array(
+					'name' => $row['name'],
+					'email' => $row['email'],
+					'is_logged_in' => TRUE
+				);
+				
+
+				$this->session->set_userdata($userData);
+
+				$data['name'] = $userData['name'];
+				$data['content'] = 'mapView';
+				$this->load->view('templates/template', $data);
+
+				
 			
 		}
 		
@@ -78,6 +85,9 @@
 		
 		function account_settings(){
 		
+			$this->load->helper('url');
+
+			$data['name'] = $this->session->userdata('name');
 			$data['content'] = 'accountSettingsView';
 			$this->load->view('templates/template', $data);		
 	

@@ -17,9 +17,9 @@
 		</section><!-- end of findLocation Close-->
 	</section><!-- end of findlocation-->
 		<section class="searchkeyword">
-			<form class="form-search">
+			<form action="<?php echo base_url();?>index.php/mapController/search" class="form-search">
 				<section class="gydus-kw-append input-append">
-					<input type="text" class="gydus-kw-search span2" placeholder="Search keyword or classroom">
+					<input type="text" class="gydus-kw-search span2" placeholder="Search keyword or classroom" id="searchLocation">
 				</section><!-- end of input-append-->
 				<h3 class="searchOR">or</h3>
 		</section><!-- end of searchkeyword-->

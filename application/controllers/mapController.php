@@ -32,6 +32,8 @@
 			/*
 				search the database for locations
 			*/
+			$this->load->model('mapModel');
+			$query = $this->userModel->search();
 			
 		}
 		function POI(){

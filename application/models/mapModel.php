@@ -57,7 +57,12 @@ class mapModel extends CI_Model{
 			
 		}
 		
-	}
+	}//ends of suggest a spot function
+	
+	function search(){
+		
+		
+	}	
 			
 		
 } 
