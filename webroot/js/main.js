@@ -128,8 +128,8 @@ $(document).ready(function() {
 
 /*---------- GPS Position -----------------*/
 
-$('#gps').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
-	
+$('#clickableGPS').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
+	alert("hello");
 		//map.setCenter(FullSail);
 
         return false;

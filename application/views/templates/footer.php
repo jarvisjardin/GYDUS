@@ -21,8 +21,8 @@
 		
 	</section>
 	
-	<section class="foot-GPS span5 pull-left clearfix">
-	
+	<section  id="#footGPS" class="foot-GPS span5 pull-left clearfix">
+		<p id="clickableGPS">GPS</p>
 	</section>
 	
 	<section class="foot-sas span5 pull-left clearfix">
