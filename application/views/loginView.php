@@ -20,12 +20,12 @@
             </section>
             <section class="control-group">
               <section class="controls">
-                
+                 
                 <button  class="btn btn-success" type="submit" class="btn">Sign in Now</button>
               </section>
             </section>
           </form>
-<button class="btn btn-block btn-warning" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
+<button class="btn btn-block btn-warning " type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
 
           </section><!-- end of Gydus Login --> 
 

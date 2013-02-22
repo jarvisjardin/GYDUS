@@ -61,6 +61,8 @@ $(document).ready(function() {
 				opacity:0.4
 			},1500);
 			$("#searchViewdisplay").slideDown(1500);
+				     		$("input[type=text]").val('');
+
 
 	         return false;
 	         
@@ -70,7 +72,6 @@ $(document).ready(function() {
 	     
 	     	$("#findLbtnX").on('click', function(){
 	     		$("#searchViewdisplay").slideUp(1500);
-	     		$("#findLbtnX").removeClass("hide");
 	     		$("#logCheckHead").animate({opacity:1},1500);
 
 		     	
