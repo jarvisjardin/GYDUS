@@ -175,7 +175,7 @@
 		
 
 <!-- 		<h4><?php echo anchor('index.php/userController/logout', 'Account Settings'); ?></h4> -->
-		<h4 id="viewAcctMenu" class="btn">Account Settings link</h4>
+		<h4 id="viewAcctMenu" class="btn">User Account Settings link</h4>
 <!-- 		<h4 id="viewGydusSetMenu" class="btn">Gydus Settings Link</h4> -->
 <!-- 		<h4 id="viewGydusSetMenu" class="btn">Gydus Settings Link</h4> -->
 <button class="btn btn-block btn-warning" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
