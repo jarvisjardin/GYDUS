@@ -93,6 +93,12 @@
 		function suggestaspotView(){
 		
 			$data['content'] = 'sasView';
+			$this->load->helper('url');
+
+			if ($this->session->userdata('is_logged_in')){
+				
+				$data['name'] = $this->session->userdata('name');
+			};		
 			$this->load->view('templates/template', $data);			
 		
 		}
