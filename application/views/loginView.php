@@ -25,7 +25,7 @@
               </section>
             </section>
           </form>
-          <button class="btn btn-large btn-block btn btn-success" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
+<button class="btn btn-block btn-warning" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
 
           </section><!-- end of Gydus Login --> 
 
