@@ -55,25 +55,26 @@ $(document).ready(function() {
 
         
         /*-----------Find location click effects---------------*/
-         $('#map-viewFLbtn').on('click', function(){     
-/* 	         alert("sup bitch") */
-		$("#logCheckHead").animate({
-			opacity:0.4
-		},1500);
-		$("#searchViewdisplay").removeClass("hide");
-		/*         $("#searchViewdisplay").removeClass("hide").addClass("gydus-block"); */
+         $('#map-viewFLbtn').on('click', function(){   
+           
+			$("#logCheckHead").animate({
+				opacity:0.4
+			},1500);
+			$("#searchViewdisplay").slideDown(1500);
 
 	         return false;
+	         
 	     });// END OF displaying find location   
 	     
+	     
+	     
 	     	$("#findLbtnX").on('click', function(){
-		     	$("#searchViewdisplay").animate({marginTop:"-53.5em", opacity:0},1500, function(){
-		     																			$("#findLbtnX").removeClass("hide");
-		     																			$("#logCheckHead").animate({opacity:1},1500);
-		     																			});
-/* 		     	$("#logCheckHead").animate({opacity:"100%"},1500); */
+	     		$("#searchViewdisplay").slideUp(1500);
+	     		$("#findLbtnX").removeClass("hide");
+	     		$("#logCheckHead").animate({opacity:1},1500);
+
 		     	
-	     	})
+	     	})// END of Closing the Finding Location
 
 
 /*-----------View Acct Menu---------------*/
@@ -127,8 +128,9 @@ $(document).ready(function() {
 
 /*---------- GPS Position -----------------*/
 
-$('#FootGPSBtn').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
-                       map.setCenter(FullSail);// centering the map at Fullsail
+$('#gps').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
+	
+		//map.setCenter(FullSail);
 
         return false;
     });

@@ -862,6 +862,11 @@ height:107px;
 .foot-GPS.span5{
 	height:144px;
 	background: url("../img/footGPSbtn.png")no-repeat;
+
+}
+#clickableGPS{
+	height:144px;
+	text-indent: -9999px;
 }
 
 .foot-sas.span5{
