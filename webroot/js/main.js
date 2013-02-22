@@ -101,6 +101,31 @@ $(document).ready(function() {
 	});
 	
 	
+	
+	
+	
+	
+	/*-----------View Gydus Menu---------------*/
+
+	
+	$("#viewGydusSetMenu").on('click', function(){
+		
+		$("#gydusMenu").removeClass("hide");
+		$("#viewGydusSetMenu").addClass("hide");
+	});
+	
+	$("#gydusCloseMenu").on('click', function(){
+		
+		$("#gydusMenu").addClass("hide");
+		$("#viewGydusSetMenu").removeClass("hide");
+
+		
+	});
+	
+	
+
+	
+	
 
 /*---------- GPS Position -----------------*/
 
