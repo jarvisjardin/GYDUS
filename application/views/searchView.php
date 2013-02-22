@@ -21,12 +21,13 @@
                 <section class="searchkeyword">
                     <section class="gydus-kw-append input-append">
                         <input type="text" class="gydus-kw-search span2" placeholder="Search keyword or classroom" id="searchLocation">
-                    </section>
+                    </section>     
                     <!-- end of input-append-->
                      <h3 class="searchOR">or</h3>
-
+  
                 </section>
                 <!-- end of searchkeyword-->
+       
                 <section class="dropdownBuildings">
                     <select class="buildingSelect">
                         <option>SELECT BUILDING</option>
@@ -37,6 +38,7 @@
                     </select>
                 </section>
                 <!-- end fo dropdownBuildings-->
+                
                 <section class="poiTitleSection alert alert-info">
                     	<h4 class="poiHeader ">Select Points of Interest</h4>
 
@@ -48,8 +50,9 @@
                         <input type="checkbox" id="inlineCheckbox2" value="option2">Food/Drink</label>
                     <label class="checkbox inline">
                         <input type="checkbox" id="inlineCheckbox3" value="option3">Library</label>
-                </section>
+                </section>               
                 <!--end of poiselection -->
+                
                 <section class="poiSelectionTwo">
                     <label class="checkbox inline bs">
                         <input type="checkbox" id="inlineCheckbox3" value="option3">Book Store</label>
@@ -59,6 +62,7 @@
                         <input type="checkbox" id="inlineCheckbox3" value="option3">Receptionist</label>
                 </section>
                 <!-- end of poi selection-->
+                
                 <section class="findlocationBtns">
                     <section class="suggestSpotbtn">
                         <a href="#" class="btn btn-large btn-block disabled">Suggest a Spot</a>

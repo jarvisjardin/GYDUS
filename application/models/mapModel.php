@@ -61,10 +61,11 @@ class mapModel extends CI_Model{
 	}//ends of suggest a spot function
 	
 	function search(){
+
 		$this->db->where('name',$this->input->post('searchLocation'));
 		$query = $this->db->get('Rooms');
 		
-		if($query->row_num() > 0)
+		if($query->num_rows() > 0)
 		{
 		
 			return $query;

@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	<?php echo $map['js']; ?>
+
 </head>
 
 <script type="text/javascript"
@@ -30,9 +32,9 @@
 		</section><!-- end of findLocation Close-->
 	</section><!-- end of findlocation-->
 		<section class="searchkeyword">
-			<form class="form-search">
+			<form action="<?php echo base_url();?>index.php/mapController/search" method='post' class="form-search">
 				<section class="gydus-kw-append input-append">
-					<input type="text" class="gydus-kw-search span2" placeholder="Search keyword or classroom">
+					<input type="text" class="gydus-kw-search span2" name='searchLocation' placeholder="Search keyword or classroom">
 				</section><!-- end of input-append-->
 				<h3 class="searchOR">or</h3>
 		</section><!-- end of searchkeyword-->
@@ -83,7 +85,7 @@
 			</section><!-- end of suggest spot btn-->
 			<br>
 			<section class="viewLocationbtn">
-			<button class="btn btn-large btn-block btn-success" type="button">View Location</button>
+			<button class="btn btn-large btn-block btn-success" type="submit">View Location</button>
 
 			</section><!-- end of view location btn-->
 		
@@ -183,7 +185,8 @@
 	</section>
 	
 	<section class="map-spot">
-		    <div id="map_canvas" style="width:100%; height:100%"></div>
+		    <!-- <div id="map_canvas" style="width:100%; height:100%"></div> -->
+		   <?php echo $map['html']; ?>
 
 	</section>
 </body>
