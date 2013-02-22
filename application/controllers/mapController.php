@@ -23,16 +23,19 @@
 			$this->googlemaps->add_ground_overlay($FS3B);
 			
 			$data = array();
-				
 			$data['content'] = 'mapView';
 			$data['map'] = $this->googlemaps->create_map();
 
-			
-			$this->load->view('templates/template', $data);
+			$this->load->helper('url');
 
-		
-		
-		}
+			if ($this->session->userdata('is_logged_in')){
+				
+				$data['name'] = $this->session->userdata('name');
+			};			
+				
+
+			$this->load->view('templates/template',$data);
+		}	
 		function searchView(){
 			
 			$this->load->helper('url');

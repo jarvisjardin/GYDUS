@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 
    // variable to get fullsails latitude and long
-        var FullSail = new google.maps.LatLng(28.594461, -81.304002);
+   /*     var FullSail = new google.maps.LatLng(28.594461, -81.304002);
 
 
   // setting the map to center around Fullsail
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
  
         /*=================== FS3C =======================*/
-        var FS3C_Bounds = new google.maps.LatLngBounds(
+/*        var FS3C_Bounds = new google.maps.LatLngBounds(
        		new google.maps.LatLng(28.594256, -81.304249),
        		new google.maps.LatLng(28.594663, -81.303696));
 

@@ -30,10 +30,7 @@ class userController extends CI_Controller
 
 			$this->session->set_userdata($userData);
 
-			$data['content'] = 'mapView';
-			$data['name'] = $userData['name'];
-
-			$this->load->view('templates/template', $data);	
+			redirect('index.php/mapController/index');
 						
 		
 		}else{ // incorrect username or password
