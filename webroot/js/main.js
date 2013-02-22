@@ -15,15 +15,8 @@
 */
 $(document).ready(function() {
 
-<<<<<<< HEAD
-
-
-   // variable to get fullsails latitude and long
-        var FullSail = new google.maps.LatLng(28.594461, -81.304002);
-=======
    		
     /*    var FullSail = new google.maps.LatLng(28.594461, -81.304002);
->>>>>>> implemented googleMap codeigniter plugin
 
 
   // setting the map to center around Fullsail
