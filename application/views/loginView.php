@@ -25,11 +25,7 @@
               </section>
             </section>
           </form>
-<<<<<<< HEAD
           <button class="btn btn-large btn-block btn btn-success" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
 
           </section><!-- end of Gydus Login --> 
-=======
-          </section><!-- end of Gydus Login --> 
 
->>>>>>> fixed the codeigniter googleMap error
