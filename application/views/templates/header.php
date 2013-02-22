@@ -29,8 +29,8 @@
 	        	<section class="navbar-inner dark-header">
 
 <!-- GYDUS LOGO -->
-					<section class="logo">
-		        		<a class="brand gydus-logo" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
+					<section class="logo" id="logo">
+		        		<a class="brand gydus-logo" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
 					</section><!-- end of logo -->
 					
 					

@@ -15,8 +15,10 @@
 */
 $(document).ready(function() {
 
-   		
-    /*    var FullSail = new google.maps.LatLng(28.594461, -81.304002);
+
+
+   // variable to get fullsails latitude and long
+        var FullSail = new google.maps.LatLng(28.594461, -81.304002);
 
 
   // setting the map to center around Fullsail
@@ -30,7 +32,7 @@ $(document).ready(function() {
 
  
         /*=================== FS3C =======================*/
-   /*     var FS3C_Bounds = new google.maps.LatLngBounds(
+        var FS3C_Bounds = new google.maps.LatLngBounds(
        		new google.maps.LatLng(28.594256, -81.304249),
        		new google.maps.LatLng(28.594663, -81.303696));
 
@@ -38,7 +40,7 @@ $(document).ready(function() {
 
         FS3C_map.setMap(map);
 
-        
+
         /*=================== FS3B1 =======================*/
       /*  var FS3B1_Bounds = new google.maps.LatLngBounds(
         	new google.maps.LatLng(28.594906, -81.304305),
@@ -106,16 +108,14 @@ $(document).ready(function() {
 	/*-----------View Gydus Menu---------------*/
 
 	
-	$("#viewGydusSetMenu").on('click', function(){
+	$("#logo").on('click', function(){
 		
 		$("#gydusMenu").removeClass("hide");
-		$("#viewGydusSetMenu").addClass("hide");
 	});
 	
 	$("#gydusCloseMenu").on('click', function(){
 		
 		$("#gydusMenu").addClass("hide");
-		$("#viewGydusSetMenu").removeClass("hide");
 
 		
 	});
