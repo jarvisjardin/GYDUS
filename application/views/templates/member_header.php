@@ -41,6 +41,8 @@
 					</section><!-- end of gydus signin nav-->
 	        	</section> <!-- close navbar-inner dark-header -->
 	        </section><!-- end of navbar navbar-fixed-top -->
+	        
+	        
         
 <!--  end of header -->
 

@@ -178,7 +178,7 @@
 		<h4 id="viewAcctMenu" class="btn">Account Settings link</h4>
 <!-- 		<h4 id="viewGydusSetMenu" class="btn">Gydus Settings Link</h4> -->
 <!-- 		<h4 id="viewGydusSetMenu" class="btn">Gydus Settings Link</h4> -->
-
+<button class="btn btn-large btn-block btn btn-success" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
 <!-- 		<?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?> -->
 		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
