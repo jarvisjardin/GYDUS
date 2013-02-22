@@ -176,6 +176,10 @@ class userController extends CI_Controller
 			
 			if ($success)
 			{
+				$this->load->helper('url');
+				$data['content'] = 'emailSentView';
+				$this->load->view('templates/template', $data);	
+
 				echo 'message sent';
 			}
 			else
