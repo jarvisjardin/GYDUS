@@ -22,7 +22,7 @@
 	</section>
 	
 	<section  id="#footGPS" class="foot-GPS span5 pull-left clearfix">
-		<p id="clickableGPS">GPS</p>
+		<p id="clickableGPS">GPS</p><!-- just to make something to click -->
 	</section>
 	
 	<section class="foot-sas span5 pull-left clearfix">
