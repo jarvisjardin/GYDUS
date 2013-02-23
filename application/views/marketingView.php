@@ -10,17 +10,21 @@
 					</section><!-- end of cta-text-->
 
 					<section class="cta-searchbar">
-
+						<form action="<?php echo base_url();?>index.php/mapController/search"  method="post">
 						<section class="input-append gydus-searchbox pull-left">
-						  <input class="span2 searchBar " id="searchBar" type="text" placeholder="Search Keyword or Classroom">
+						  <input class="span2 searchBar " id="searchBar" type="text" name='searchLocation' placeholder="Search Keyword or Classroom">
+						  <section class="gotomap-section-btn pull-right">
 
+						  <button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="submit"">Search</button>
+						  </section>
+						
 						</section><!-- end of input-append aqilex-searchbar-->
-
+						</form>
 					</section><!-- end of cta-searchbar-->
 	</section><!--end of CTA -->
 
 <section class="gotomap-section-btn pull-right">
-						<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/mapController/'">Go To map</button>
+					<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/mapController/'">Go To map</button>
 					</section><!-- end of signup-section-btn-->
 				<section class="signup-section pull-left">
 					<section class="signup-section-text">
