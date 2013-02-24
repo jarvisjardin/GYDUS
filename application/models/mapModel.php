@@ -1,6 +1,11 @@
 <?
 class mapModel extends CI_Model{
 		
+	function __construct()
+    {
+        parent::__construct();
+    }
+	
 	function suggestaspot(){
 
 	
@@ -62,8 +67,9 @@ class mapModel extends CI_Model{
 	
 	function search(){
 
+		
 		$this->db->where('name',$this->input->post('searchLocation'));
-		$query = $this->db->get('Rooms');
+		$query = $this->db->get('Buildings'); //Change this to rooms later
 		
 		if($query->num_rows() > 0)
 		{

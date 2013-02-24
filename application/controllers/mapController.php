@@ -2,6 +2,11 @@
 
 	class mapController extends CI_Controller{
 	    
+		function __construct()
+	    {
+	        parent::__construct();
+	    }
+		
 		function index(){
 			
 			$this->load->library('googlemaps');
@@ -58,18 +63,17 @@
 				search the database for locations
 			*/
 			
-					
+			$this->load->library('googlemaps');
+		
 			$this->load->model('mapModel');
 			$query = $this->mapModel->search();
 			
 			if($query){
 				echo "Search Results: (", $query->num_rows(),')';
 				echo "<br><hr>";
-				foreach ($query->result() as $row)
-				{	
+				
+				foreach ($query->result() as $row){	
 				    echo "Name: ",$row->name;
-				    echo '<br>';
-				    echo "Building Id: ",$row->building_id;				  
 				    echo '<br>';
 				    echo "ID: ",$row->id;
 				    echo '<hr>';

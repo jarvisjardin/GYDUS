@@ -9,7 +9,7 @@ class userController extends CI_Controller
 		$data['content'] = 'loginView';
 		$this->load->view('templates/template', $data);		
 	}
-	
+		
 	function check_member()
 	{		
 		$this->load->model('userModel');
@@ -65,10 +65,8 @@ class userController extends CI_Controller
 			
 
 			$this->session->set_userdata($userData);
-
-			$data['name'] = $userData['name'];
-			$data['content'] = 'mapView';
-			$this->load->view('templates/template', $data);
+			
+			redirect('index.php/mapController/index');
 
 			
 		
