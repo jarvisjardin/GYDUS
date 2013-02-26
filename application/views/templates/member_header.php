@@ -29,10 +29,16 @@
 	        	<section class="navbar-inner dark-header">
 
 <!-- GYDUS LOGO -->
-					<section class="logo" id="logo">
-		        		<a class="brand gydus-logo" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
-					</section><!-- end of logo -->
-					
+				<section class="logo" id="logo">
+		        		<a class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
+		        		<ul class="dropdown-menu">
+		        			<li class="gydusContactHead">Contact Us</li>
+		        			<li class="gydusDevCornerHead">Developers Corner</li>
+		        			<li class="gydusTermsHead">Terms and Conditions</li>
+		        		
+		        		</ul><!-- end of dropdown-menu-->
+		        		
+					</section><!-- end of logo -->					
 					
 <!--  SIGN IN LINK -->					
 					<section class="gydus-signin-nav pull-right">

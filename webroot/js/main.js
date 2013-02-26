@@ -110,6 +110,7 @@ $(document).ready(function() {
 	/*-----------View Gydus Menu---------------*/
 
 	
+/*
 	$("#logo").on('click', function(){
 		
 		$("#gydusMenu").removeClass("hide");
@@ -122,6 +123,7 @@ $(document).ready(function() {
 		
 	});
 	
+*/
 	
 
 	
