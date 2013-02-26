@@ -32,7 +32,7 @@
 				<section class="logo" id="logo">
 		        		<a class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
 		        		<ul class="gydusSetDrop dropdown-menu">
-		        			<li class="gydusContactHead"><a href="#"><h3>Contact Us</h3></a></li>
+		        			<li class="gydusContactHead"><a href="<?php echo base_url();?>index.php/userController/contact_us"><h3>Contact Us</h3></a></li>
 		        			<li class="gydusDevCornerHead"><a href="#"><h3>Developers Corner</h3></a></li>
 		        			<li class="gydusTermsHead"><a href="#"><h3>Terms and Conditions</h3></a></li>
 		        		
@@ -43,7 +43,17 @@
 <!--  SIGN IN LINK -->					
 					<section class="gydus-signin-nav pull-right">
 					
-						<a class="brand signin nav-signin" href="<?php echo base_url();?>index.php/userController/logout"><?php echo $name;?></a>
+						<a class="brand signin nav-signin" data-toggle="dropdown" href="#"><?php echo $name;?></a>
+						
+						<ul class="gydusUserDrop dropdown-menu">
+							<li class="accountSettingsHead "><a href="<?php echo base_url();?>index.php/userController/account_setting"><h3>Account Settings</h3></a></li>
+							<li class="logOutaccountSettingsHead btn-danger"><a href="<?php echo base_url();?>index.php/userController/logout"><h3>Sign Out</h3></a></li>
+							
+							
+							
+							
+							
+						</ul><!-- end of dropdown-menu-->
 					</section><!-- end of gydus signin nav-->
 	        	</section> <!-- close navbar-inner dark-header -->
 	        </section><!-- end of navbar navbar-fixed-top -->
