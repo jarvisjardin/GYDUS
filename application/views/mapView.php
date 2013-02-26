@@ -14,7 +14,6 @@
 <body>
 	<section>
 		<br><br><br><br>
-		<h3 id="logCheckHead">This section represents the area that only logged in members can access.</h3>
 		
 		
 		
@@ -94,74 +93,7 @@
 		
 		
 		
-		<!---------------------------------------------------
-		
-		
-		
-		 Account Settings Menu
-		 
-		 
-		 
-		 ---------------------------------------------------->
-		
-		<!-- this is going to have a class of hide -->
-		
-		<section class="acctMenu hide" id="accountMenu">
-			<section class="acctSettings btn btn-large btn-block btn-info" id="AccountSettingsSec" onClick="location='<?php echo base_url();?>index.php/userController/account_setting'">
-				<h3 class="accountSettingsHead">Account Settings</h3>
-			</section><!-- end of acctSettings-->
-			
-			<section class="logOutacctSettings btn btn-large btn-block btn-danger" onClick="location='<?php echo base_url();?>index.php/userController/logout'">
-				<h3 class="logOutaccountSettingsHead ">Sign Out</h3>
-			</section><!-- end of logoutacctSettings-->
-		
-		<p class="closeMenu btn" id="CloseMenu">Close</p>
-		</section><!--- end of acctMenu--->
-		
-		
-		
-		
-		
-			<!---------------------------------------------------
-		
-		
-		
-		 Gydus Settings Menu
-		 
-		 
-		 
-		 ---------------------------------------------------->
-		
-		<!-- this is going to have a class of hide -->
-		
-		<section class="gydusMenu hide" id="gydusMenu">
-			<section class="acctSettings btn btn-large btn-block btn-info" id="GydusSettingsSec" onClick="location='<?php echo base_url();?>index.php/userController/contact_us'">
-				<h3 class="gydusContactHead">Contact Us</h3>
-			</section><!-- end of acctSettings-->
-			
-			<section class="logOutacctSettings  btn btn-large btn-block btn-info" onClick="location='<?php echo base_url();?>index.php/userController/logout'">
-				<h3 class="gydusDevCornerHead ">Developers Corner</h3>
-			</section><!-- end of logoutacctSettings-->
-			
-			<section class="logOutacctSettings  btn btn-large btn-block btn-info" onClick="location='<?php echo base_url();?>index.php/userController/logout'">
-				<h3 class="gydusTermsHead ">Terms and Conditions</h3>
-			</section><!-- end of logoutacctSettings-->
-		
-		<p class="closeMenu btn" id="gydusCloseMenu">Close</p>
-		</section><!--- end of acctMenu--->
-		
-		
-		
-		
-		
-		
-	
-		
-		
-		 
-		
-		
-		
+				
 		
 		
 		
@@ -174,11 +106,7 @@
 		
 		
 
-<!-- 		<h4><?php echo anchor('index.php/userController/logout', 'Account Settings'); ?></h4> -->
-		<h4 id="viewAcctMenu" class="btn">User Account Settings link</h4>
-<!-- 		<h4 id="viewGydusSetMenu" class="btn">Gydus Settings Link</h4> -->
-<!-- 		<h4 id="viewGydusSetMenu" class="btn">Gydus Settings Link</h4> -->
-<button class="btn btn-block btn-warning" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
+
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
 <!-- 		<?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?> -->
 		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
