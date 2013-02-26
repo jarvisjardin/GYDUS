@@ -31,10 +31,10 @@
 <!-- GYDUS LOGO -->
 				<section class="logo" id="logo">
 		        		<a class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
-		        		<ul class="dropdown-menu">
-		        			<li class="gydusContactHead">Contact Us</li>
-		        			<li class="gydusDevCornerHead">Developers Corner</li>
-		        			<li class="gydusTermsHead">Terms and Conditions</li>
+		        		<ul class="gydusSetDrop dropdown-menu">
+		        			<li class="gydusContactHead"><a href="#"><h3>Contact Us</h3></a></li>
+		        			<li class="gydusDevCornerHead"><a href="#"><h3>Developers Corner</h3></a></li>
+		        			<li class="gydusTermsHead"><a href="#"><h3>Terms and Conditions</h3></a></li>
 		        		
 		        		</ul><!-- end of dropdown-menu-->
 		        		
