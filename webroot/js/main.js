@@ -56,11 +56,18 @@ $(document).ready(function() {
         
         /*-----------Find location click effects---------------*/
          $('#map-viewFLbtn').on('click', function(){   
-           
+           $('#map-viewFLbtn').fadeOut(1500, function(){
+					$('#map-viewFLbtn').addClass('hide');
+					$('#mapSpot').addClass('hide');	
+
+				});	
 			
-			$("#searchViewdisplay").slideDown(1500);
-			$("input[type=text]").val('');
-			$('#map-viewFLbtn').addClass('hide');	
+			$("#searchViewdisplay").slideDown(1500,function(){
+				$("input[type=text]").val('');
+				
+				
+			});
+			
 
 
 	         return false;
@@ -71,7 +78,10 @@ $(document).ready(function() {
 	     
 	     	$("#findLbtnX").on('click', function(){
 	     		$("#searchViewdisplay").slideUp(1500);
-				$('#map-viewFLbtn').removeClass('hide');
+				$('#map-viewFLbtn').fadeIn(1000, function(){
+					$('#map-viewFLbtn').removeClass('hide');
+				});					$('#mapSpot').removeClass('hide');	
+
 		     	
 	     	})// END of Closing the Finding Location
 

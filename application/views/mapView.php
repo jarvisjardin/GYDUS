@@ -79,7 +79,7 @@
 		<section class="findlocationBtns">
 		
 			<section class="suggestSpotbtn">
-				<a href="#" class="btn btn-large btn-block  ">Suggest a Spot</a>
+				<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-block  ">Suggest a Spot</a>
 
 			</section><!-- end of suggest spot btn-->
 			<br>
@@ -108,14 +108,14 @@
 
 
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
-<!-- 		<?php echo anchor('index.php/mapController/searchView', 'Find Location'); ?> -->
-		<h4><?php echo anchor('index.php/mapController/suggestaspotView', 'Suggest A Spot'); ?></h4>
 
 	</section>
 	
-	<section class="map-spot">
-		    <!-- <div id="map_canvas" style="width:100%; height:100%"></div> -->
-		   <?php echo $map['html']; ?>
+	<section id="mapSpot" class="map-spot">
+		    <section id="map_canvas" class="mapCanvas pull-left" style="width:100%; height:100%">
+			    <?php echo $map['html']; ?>
+			</section>
+			    
 
 	</section>
 </body>
