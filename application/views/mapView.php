@@ -34,7 +34,7 @@
 		<section class="searchkeyword">
 			<form action="<?php echo base_url();?>index.php/mapController/search" method='post' class="form-search">
 				<section class="gydus-kw-append input-append">
-					<input type="text" class="gydus-kw-search span2" name='searchLocation' placeholder="Search keyword or classroom">
+					<input type="text" class="gydus-kw-search" name='searchLocation' placeholder="Search keyword or room">
 				</section><!-- end of input-append-->
 				<h3 class="searchOR">or</h3>
 		</section><!-- end of searchkeyword-->
@@ -53,28 +53,28 @@
 			<h4 class="poiHeader ">Select Points of Interest</h4>
 		</section>
 		<section class="poiSelection">
-		<label class="checkbox inline">
-			<input type="checkbox" id="inlineCheckbox1" value="option1"> Patio
-		</label>
-		<label class="checkbox inline">
-			<input type="checkbox" id="inlineCheckbox2" value="option2"> Food/Drink
-		</label>
-		<label class="checkbox inline">
-			<input type="checkbox" id="inlineCheckbox3" value="option3"> Library
-		</label>
+			<label class="checkbox inline btn">
+				<input type="checkbox" id="inlineCheckbox1" value="option1"> Patio
+			</label>
+			<label class="checkbox inline btn">
+				<input type="checkbox" id="inlineCheckbox2" value="option2"> Food/beverage
+			</label>
+			<label class="checkbox inline btn">
+				<input type="checkbox" id="inlineCheckbox3" value="option3"> Library
+			</label>
 		</section><!--end of poiselection -->
 		
 		<section class="poiSelectionTwo">
-		<label class="checkbox inline bs">
-			<input type="checkbox" id="inlineCheckbox3" value="option3"> Book Store
-		</label>
-		
-		<label class="checkbox inline">
-			<input type="checkbox" id="inlineCheckbox3" value="option3"> Restroom
-		</label>
-		<label class="checkbox inline">
-			<input type="checkbox" id="inlineCheckbox3" value="option3"> Receptionist
-		</label>
+			<label class="checkbox inline btn">
+				<input type="checkbox" id="inlineCheckbox3" value="option3"> BookStore
+			</label>
+			
+			<label class="checkbox inline btn">
+				<input type="checkbox" id="inlineCheckbox3" value="option3"> Restroom
+			</label>
+			<label class="checkbox inline btn">
+				<input type="checkbox" id="inlineCheckbox3" value="option3"> Receptionist
+			</label>
 		</section><!-- end o poi selection-->
 		
 		<section class="findlocationBtns">

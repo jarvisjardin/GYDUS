@@ -633,42 +633,59 @@ width: 100%;
 margin-top:-3em;
 margin-right:10%;
 }
-
-.gydus-kw-search.span2{
-	margin-left: 23em;
-	width:38em;
+.gydus-kw-append{
+	width:60%;
+}
+.gydus-kw-search{
+margin-left:5em;
+	width:100%;
 }
 .searchOR{
-	margin-left: 23em;
+	margin-left: 7em;
 }
 
 .buildingSelect{
-	width:38em;
-	margin-left:23em;
+	width:60%;
+	margin-left:5em;
 }
 .poiTitleSection.alert.alert-info{
 	margin-top:5em;
 }
 .poiTitleSection.alert.alert-info h4{
-	margin-left:7em;
+	margin-left:2em;
 }
 
 
 .poiSelection{
 	margin-top:3em;
-	margin-left:20em;	
+	margin-left:3.4em;	
+	width:100%;
 }
 .poiSelectionTwo{
-	margin-left:20em;	
-}
-.checkbox.inline.bs{
-width:5.1em;
+	margin-top:3em;
+	margin-left:3.4em;	
+	width:100%;
 }
 
-.checkbox.inline{
-	font-size: 1.25em;
-	padding:3em;
+
+.poiSelection label{
+	padding-left:1.5em;
+}
+
+.poiSelectionTwo label{
+	padding-left:1.5em;
+}
+
+/*
+.poiSelectionTwo{
+	margin-left:3.4em;	
 	width:5em;
+}
+*/
+
+
+.checkbox.inline{
+	margin-left:2em;
 }
 /*-------------------------------
 
