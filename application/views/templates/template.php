@@ -3,7 +3,8 @@
 
 	if ($this->session->userdata('is_logged_in'))
 	{
-		$this->load->view('templates/member_header', $name);
+		$this->load->view('templates/member_header', $userData);
+		
 
 	}else{ 
 	
@@ -13,7 +14,10 @@
 
 <?php 
 	
+	
 	$this->load->view($content);
+		
+
 	
 ?>
 

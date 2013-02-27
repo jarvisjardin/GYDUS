@@ -40,7 +40,7 @@
 			$this->load->helper('url');
 
 			if ($this->session->userdata('is_logged_in')){	
-				$data['name'] = $this->session->userdata('name');
+				$data['userData'] = $this->session->all_userdata();
 			};			
 				
 

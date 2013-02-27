@@ -80,8 +80,14 @@
 		<section class="findlocationBtns">
 		
 			<section class="suggestSpotbtn">
-				<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-block  ">Suggest a Spot</a>
+				<?php 
+					$this->load->helper('url');
 
+					if ($this->session->userdata('is_logged_in')){ ?>
+					<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-block">Suggest a Spot</a>		
+				<?php }else{ ?>	
+					<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-block disabled">Suggest a Spot</a>
+				<?php }; ?>	
 			</section><!-- end of suggest spot btn-->
 			<br>
 			<section class="viewLocationbtn">

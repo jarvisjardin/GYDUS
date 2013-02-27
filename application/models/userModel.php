@@ -29,6 +29,7 @@ class userModel extends CI_Model{
 
 		return $query;
 	}
+	
 	function update_member($userdata){
 		
 		if($this->input->post('user_name') != ''){$updateName = $this->input->post('user_name');}else{$updateName = $userdata['name'];};	

@@ -43,7 +43,7 @@
 <!--  SIGN IN LINK -->					
 					<section class="gydus-signin-nav pull-right">
 					
-						<a class="brand signin nav-signin" data-toggle="dropdown" href="#"><?php echo $name;?></a>
+						<a class="brand signin nav-signin" data-toggle="dropdown" href="#"><?php echo $userData['name'];?></a>
 						
 						<ul class="gydusUserDrop dropdown-menu">
 							<li class="accountSettingsHead "><a href="<?php echo base_url();?>index.php/userController/account_setting"><h3>Account Settings</h3></a></li>
