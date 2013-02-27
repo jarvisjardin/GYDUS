@@ -4,36 +4,40 @@
 
 <section class="sasView">
  <h1 class="gydus-login-headertxt">Suggest A Spot</h1>
+ 
+ <section class="searchkeyword">
+			<form action="<?php echo base_url();?>index.php/mapController/suggestaspot" method='post' class="form-search">
+				<section class="gydus-kw-append input-append">
+					<input type="text" class="gydus-kw-search" name='searchLocation' placeholder="Name of Spot">
+				</section><!-- end of input-append-->
+				
+				
+				<section class="gydus-kw-append-desc control-group">
+					<section class="controls">
+						<textarea rows="3" class="gydus-kw-search-spotDesc" placeholder="Description of Spot"></textarea>             
+	                </section>
+	            </section>
+				
+ </section><!-- end of searchkeyword-->
 
-<form action="<?php echo base_url();?>index.php/mapController/suggestaspot"  method="post"class="form-horizontal gydus-form-horizontal ">
-            <section class="control-group">
-              <section class="controls">
-                <input type="text" class="gydus-login-email-input" name="spot-name" id="spot-name" placeholder="name">
-              </section>
-            </section>
-            
-             <section class="control-group">
-              <section class="controls">
-	              <textarea rows="3" placeholder="Description of Spot"></textarea>             
-	               </section>
-            </section>
-            <section>
-            	  <input type="hidden" name="sasLat" id="sasLat"><br>
-     	          <input type="hidden" name="sasLng" id="sasLng"><br>
 
-            </section>
-              
+
               <section class="control-group">
-              <section class="controls">
+              	<section class="viewLocationbtn controls">
                 
-                <button  class="btn btn-primary" type="buton" class="btn">Suggest Location</button>
-                <button  class="btn btn-danger" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
-              </section>
+               	 <button  class="btn btn-large btn-block btn-primary" type="buton" class="btn">Suggest Location</button>
+                </section><!-- end of viewlocaionbtn-->
+                
+                <section class="sasCancel">
+                              <button  class="btn btn-large btn-block btn-danger" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
+                </section><!-- end of sas cancel-->
             </section>
           </form>
           
+
           <h2 id='sasPrompt'>Position the Marker where you want it!</h2>
           </section><!-- end of Gydus Login --> 
+
 
 
 <section id="mapSpot" class="map-spot">
