@@ -24,6 +24,7 @@
 		<section class="searchView hide" id="searchViewdisplay">
 	<section class="findLocation alert alert-info">
 		<h3 class="h3-findlocationtitle">Find Location</h3>
+		
 		<section class="findLocation-Close">
 <!-- 		onClick="location='<?php echo base_url();?>index.php/mapController/'" -->
 			<button class="gydus-findL-btn btn  btn-danger pull-right clearfix" id="findLbtnX" type="button" >X</button>
