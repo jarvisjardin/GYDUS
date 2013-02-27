@@ -918,26 +918,25 @@ position: absolute;
 	margin-top:-5em;
 margin-left:20em;
 height:107px;
+border:none;
 }
 
-.foot-nav.span5{
+.foot-nav{
 	height:75px;
+	width:246px;
 	background: url("../img/footNavbtn.png")no-repeat;
-	margin-top:2.3em;
 }
 
-.foot-GPS.span5{
-	height:144px;
+.foot-GPS{
+	height:107px;
+	width:161px;
 	background: url("../img/footGPSbtn.png")no-repeat;
 
 }
-#clickableGPS{
-	height:144px;
-	text-indent: -9999px;
-}
 
-.foot-sas.span5{
+
+.foot-sas{
 	height:75px;
+	width:246px;
 	background: url("../img/footSASbtn.png")no-repeat;
-	margin-top:2.3em;
 }

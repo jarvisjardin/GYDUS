@@ -12,22 +12,29 @@
 		</section><!-- end of foot-container-->
 	</section><!-- end of footer-->
 
+<section id="footer" class="row">
+	 <button class="foot-nav" type="button"></button>
+	 <button class="foot-GPS" type="button"></button>
+	 <button class="foot-sas" type="button"></button>
+
+
+</section><!-- end of footer-->
 
 
 
-
+<!--
 <section class="footer row pull-left">
 	<section class="foot-nav span5 pull-left clearfix">
 		
 	</section>
 	
 	<section  id="#footGPS" class="foot-GPS span5 pull-left clearfix">
-		<p id="clickableGPS">GPS</p><!-- just to make something to click -->
-	</section>
+		<p id="clickableGPS">GPS</p>	</section>
 	
 	<section class="foot-sas span5 pull-left clearfix">
 	
 	</section>
+-->
 	
 </section><!-- end of footer -->
 </body>
