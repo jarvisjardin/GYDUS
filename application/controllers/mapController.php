@@ -2,11 +2,13 @@
 
 	class mapController extends CI_Controller{
 	    
+	    public $mapData;
+	    
 		function __construct()
 	    {
 	        parent::__construct();
 	    }
-		
+	    
 		function index(){
 			
 			$this->load->library('googlemaps');
@@ -15,7 +17,8 @@
 			$config['zoom'] = '18';
 			$this->googlemaps->initialize($config);
 			
-			$FS3C = array();
+		
+			/*$FS3C = array();
 			$FS3C['image'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FS3C_zps01d22c94.png';
 			$FS3C['positionSW'] = '28.594256, -81.304249';
 			$FS3C['positionNE'] = '28.594663, -81.303696';
@@ -26,21 +29,25 @@
 			$FS3B['positionSW'] = '28.594906, -81.304305';
 			$FS3B['positionNE'] = '28.595417, -81.303560';
 			$this->googlemaps->add_ground_overlay($FS3B);
+			*/
 			
+		
+		
 			$data = array();
 			$data['content'] = 'mapView';
 			$data['map'] = $this->googlemaps->create_map();
 
 			$this->load->helper('url');
 
-			if ($this->session->userdata('is_logged_in')){
-				
+			if ($this->session->userdata('is_logged_in')){	
 				$data['name'] = $this->session->userdata('name');
 			};			
 				
 
 			$this->load->view('templates/template',$data);
 		}	
+		
+		/*this function doesn't do anything yet*/
 		function searchView(){
 			
 			$this->load->helper('url');
@@ -68,24 +75,42 @@
 			$this->load->model('mapModel');
 			$query = $this->mapModel->search();
 			
-			if($query){
-				echo "Search Results: (", $query->num_rows(),')';
-				echo "<br><hr>";
-				
-				foreach ($query->result() as $row){	
-				    echo "Name: ",$row->name;
-				    echo '<br>';
-				    echo "ID: ",$row->id;
-				    echo '<hr>';
+			$marker = array();
 
-				};
+						
+			if($query){
+							    
+			   $this->load->library('googlemaps');
+
+				$config['center'] = '28.594461, -81.304002';
+				$config['zoom'] = '18';
+				$this->googlemaps->initialize($config);
+				
+				
+				foreach ($query->result() as $coordinate) {
+				 	$marker = array();
+				 	$marker['position'] = $coordinate->latitude.','.$coordinate->longitude;
+				 	$this->googlemaps->add_marker($marker);
+				 }
+					
+				$data = array();
+				$data['content'] = 'mapView';
+				$data['map'] = $this->googlemaps->create_map();
+	
+				$this->load->helper('url');
+	
+				if ($this->session->userdata('is_logged_in')){	
+					$data['name'] = $this->session->userdata('name');
+				};			
+					
+	
+				$this->load->view('templates/template',$data);			 			   
+		
 			}else{
 				
 				echo "No Results";
 			}
-			
-			
-			
+					
 		}
 		function POI(){
 			/*
