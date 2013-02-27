@@ -7,7 +7,6 @@ class mapModel extends CI_Model{
     }
 	
 	function suggestaspot(){
-
 	
 		$this->db->where('name', $this->input->post('spot-name'));
 		$query = $this->db->get('SuggestASpot');
@@ -48,7 +47,10 @@ class mapModel extends CI_Model{
 			
 			$SuggestASpot_data = array(
 				'name' => $this->input->post('spot-name'),
-				'tally' => $startTally
+				'tally' => $startTally,
+				'longitude' => $this->input->post('sasLng'),
+				'latitude' => $this->input->post('sasLat')
+
 				);
 				 /*,
 				'building_id' => $this->input->post('building_id'),			

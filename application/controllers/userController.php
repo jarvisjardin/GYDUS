@@ -86,7 +86,9 @@ class userController extends CI_Controller
 	
 		$this->load->helper('url');
 
-		$data['name'] = $this->session->userdata('name');
+		if ($this->session->userdata('is_logged_in')){	
+			$data['userData'] = $this->session->all_userdata();
+		};	
 		$data['content'] = 'accountSettingsView';
 		$this->load->view('templates/template', $data);		
 
@@ -97,8 +99,11 @@ class userController extends CI_Controller
 	
 		$this->load->helper('url');
 
-		$data['name'] = $this->session->userdata('name');
+		if ($this->session->userdata('is_logged_in')){	
+			$data['userData'] = $this->session->all_userdata();
+		};	
 		$data['content'] = 'editAccountSettingsView';
+	
 		$this->load->view('templates/template', $data);		
 
 	
@@ -138,7 +143,9 @@ class userController extends CI_Controller
 	
 		$this->load->helper('url');
 
-		$data['name'] = $this->session->userdata('name');
+		if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+		};	
 		$data['content'] = 'contactUsView';
 		$this->load->view('templates/template', $data);		
 
@@ -163,7 +170,7 @@ class userController extends CI_Controller
 				<br><hr><br>
 				Name: $nameField <br>
 				Email: $emailField <br>
-";
+			";
 
 			$headers = "From: $emailField\r\n"; // This takes the email and displays it as who this email is from.
 			$headers.= "Content-type: text/html\r\n"; // This tells the server to turn the coding into the text.

@@ -15,6 +15,7 @@
 
 			$config['center'] = '28.594461, -81.304002';
 			$config['zoom'] = '18';
+			$config['minifyJS'] = TRUE;
 			$this->googlemaps->initialize($config);
 			
 		
@@ -84,6 +85,8 @@
 
 				$config['center'] = '28.594461, -81.304002';
 				$config['zoom'] = '18';
+				$config['minifyJS'] = TRUE;
+
 				$this->googlemaps->initialize($config);
 				
 				
@@ -100,7 +103,7 @@
 				$this->load->helper('url');
 	
 				if ($this->session->userdata('is_logged_in')){	
-					$data['name'] = $this->session->userdata('name');
+					$data['userData'] = $this->session->all_userdata();
 				};			
 					
 	
@@ -120,15 +123,41 @@
 		}
 		
 		function suggestaspotView(){
-		
-			$data['content'] = 'sasView';
+			
+			$sasPos;
+			
+			$this->load->library('googlemaps');
+
+			$config['center'] = '28.594461, -81.304002';
+			$config['zoom'] = '18';
+			$config['minifyJS'] = TRUE;
+			$this->googlemaps->initialize($config);
+			
+			$marker = array();
+			$marker['position'] = '28.594461, -81.304002';
+			$marker['draggable'] = true;
+			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());$("#sasLat").val(event.latLng.lat());$("#sasPrompt").text("Perfect! Make sure thats where you want it.");';
+			$marker['animation'] = 'DROP';
+			$this->googlemaps->add_marker($marker);
+			
 			$this->load->helper('url');
 
-			if ($this->session->userdata('is_logged_in')){
+			if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+			};			
 				
-				$data['name'] = $this->session->userdata('name');
-			};		
-			$this->load->view('templates/template', $data);			
+			$data = array();
+			$data['map'] = $this->googlemaps->create_map();
+			$data['content'] = 'sasView';
+			
+			$this->load->helper('url');
+			
+			if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+			};	
+						
+			$this->load->view('templates/template', $data);	
+					
 		
 		}
 		function suggestaspot(){
