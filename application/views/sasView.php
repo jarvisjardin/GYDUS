@@ -29,12 +29,24 @@
 
  				</section>
 
+
+<form action="<?php echo base_url();?>index.php/mapController/suggestaspot"  method="post"class="form-horizontal gydus-form-horizontal ">
+            <section class="control-group">
+              <section class="controls">
+                <input type="text" class="gydus-login-email-input" name="spot-name" id="spot-name" placeholder="name">
+              </section>
+            </section>
+            
+             <section class="control-group">
+              <section class="controls">
+	              <textarea rows="3" placeholder="Description of Spot"></textarea>             
+	               </section>
+            </section>
             <section>
             	  <input type="text" name="sasLat" id="sasLat"><br>
      	          <input type="text" name="sasLng" id="sasLng"><br>
 
-            </section>     
-             
+
               <section class="control-group">
               	<section class="viewLocationbtn controls">
                 
