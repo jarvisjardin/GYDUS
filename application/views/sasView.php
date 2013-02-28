@@ -21,8 +21,7 @@
  </section><!-- end of searchkeyword-->
 
 
-<<<<<<< HEAD
-=======
+
 <form action="<?php echo base_url();?>index.php/mapController/suggestaspot"  method="post"class="form-horizontal gydus-form-horizontal ">
             <section class="control-group">
               <section class="controls">
@@ -38,7 +37,7 @@
             <section>
             	  <input type="text" name="sasLat" id="sasLat"><br>
      	          <input type="text" name="sasLng" id="sasLng"><br>
->>>>>>> trying to fix suggest a spot
+
 
               <section class="control-group">
               	<section class="viewLocationbtn controls">
