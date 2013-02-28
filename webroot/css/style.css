@@ -77,10 +77,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 
 
 a.signin.nav-signin{
-	margin-right: 2em;
+	margin-right: 1em;
 	margin-top:0.625em;
 	font-family: "Helvetica";
-	font-size: 1.875em;
+	font-size: 1.5em;
 	color:black;
 	text-shadow: none;
 }

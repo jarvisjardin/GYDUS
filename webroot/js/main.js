@@ -147,6 +147,17 @@ $('#clickableGPS').click(function (e) { //enables the use of GPS and moved the u
     });
 
 	
+	
+	
+	$("#sasBtnsubmit").on('click', function(){
+		
+		$("#sasSuccess").removeClass("hide");
+	
+	});
+
+
+	
+	
         
         
 

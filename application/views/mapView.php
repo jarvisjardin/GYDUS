@@ -99,23 +99,13 @@
 		
 		
 		
-				
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
 
 	</section>
+	
+
 	
 	<section id="mapSpot" class="map-spot">
 		    <section id="map_canvas" class="mapCanvas pull-left" style="width:100%; height:100%">
