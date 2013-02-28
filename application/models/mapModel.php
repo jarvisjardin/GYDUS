@@ -87,6 +87,9 @@ class mapModel extends CI_Model{
 		
 		
 	}	
+	function get_Directions(){
+		
+	}
 			
 		
 } 
