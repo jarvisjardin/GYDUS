@@ -24,27 +24,10 @@
 				
  </section><!-- end of searchkeyword-->
  				<section>
- 					<input type="text" name="sasLat" id="sasLat"><br>
- 					<input type="text" name="sasLng" id="sasLng"><br>
+ 					<input type="hidden" name="sasLat" id="sasLat"><br>
+ 					<input type="hidden" name="sasLng" id="sasLng"><br>
 
  				</section>
-
-
-<form action="<?php echo base_url();?>index.php/mapController/suggestaspot"  method="post"class="form-horizontal gydus-form-horizontal ">
-            <section class="control-group">
-              <section class="controls">
-                <input type="text" class="gydus-login-email-input" name="spot-name" id="spot-name" placeholder="name">
-              </section>
-            </section>
-            
-             <section class="control-group">
-              <section class="controls">
-	              <textarea rows="3" placeholder="Description of Spot"></textarea>             
-	               </section>
-            </section>
-            <section>
-            	  <input type="text" name="sasLat" id="sasLat"><br>
-     	          <input type="text" name="sasLng" id="sasLng"><br>
 
 
               <section class="control-group">
@@ -72,3 +55,5 @@
 			    
 
 	</section>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
