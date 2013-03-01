@@ -35,13 +35,11 @@
             
             
             
-            <section class="control-group">
-              <section class="controls">
+          
                 
-                <button class="btn btn-success" type="submit" class="btn">Update Information</button>
-                <button class="btn btn-danger" type="button" class="btn" onClick="location='<?php echo base_url();?>index.php/mapController/'">Cancel</button>
+                <button class="btn btn-block btn-large btn-success" type="submit" class="btn">Update Information</button>
+                <button class="btn btn-block btn-large btn-danger" type="button" class="btn" onClick="location='<?php echo base_url();?>index.php/mapController/'">Cancel</button>
 
-              </section>
-            </section>
+             
           </form>
           </section><!-- end of Gydus Login-->
