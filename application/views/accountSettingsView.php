@@ -7,31 +7,33 @@
 
 
 <form class="form-horizontal gydus-form-horizontal ">
-            <section class="control-group">
-              <section class="gydus-controls controls">
-                            <label class="control-label" for="inputEmail">Username</label>
 
-              <input class="gydus-login-email-input input-xlarge" id="disabledInput" type="text" placeholder="" disabled value="<?php echo $this->session->userdata('name');?>">
-<!--                 <input type="text" class="gydus-login-email-input" name="spot-name" id="spot-name" placeholder="name"> -->
-              </section>
-            </section>
-            
-             <section class="control-group">
-              <section class="controls">
-                                          <label class="control-label" for="inputEmail">Email</label>
 
-              <input class="gydus-login-email-input input-xlarge" id="disabledInput" type="text" placeholder="" disabled value="<?php echo $this->session->userdata('email');?>">
-	               </section>
-            </section>
-              
+<section class="gydus-kw-append input-append">
+					<input type="text" class="gydus-kw-search-name" id="disabledInput" type="text" placeholder="" disabled value="<?php echo $this->session->userdata('name');?>">
+					
+					</section><!-- end of input-append-->
+					
+					
+					<section class="gydus-kw-append-desc control-group">
+					<section class="controls">
+						<input type="text" class="gydus-kw-search-email" id="disabledInput" type="text" placeholder="" disabled value="<?php echo $this->session->userdata('email');?>">
+        
+	                </section>
+	            </section>
+					</section><!-- end of input-append-->
+
+				
+
+                         
               <section class="control-group">
-              <section class="controls">
+              <section class="eAS-controls controls">
                 
-                <button  class="btn btn-primary" type="button" onClick="location='<?php echo base_url();?>index.php/userController/edit_account_settings'">Edit Account</button>
+                <button  class="btn btn-large btn-block btn-primary" type="button" onClick="location='<?php echo base_url();?>index.php/userController/edit_account_settings'">Edit Account</button>
 
              
                 <section class="acct-cancel">
-                <button  class="btn btn-danger" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
+                <button  class="btn btn-large  btn-block btn-danger" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
                 </section><!--end of acct-cancel-->
               </section>
             </section>
