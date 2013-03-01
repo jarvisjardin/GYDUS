@@ -14,13 +14,24 @@
 			
 			$this->load->library('googlemaps');
 
-			$config['center'] = $this->center;
+			$config['center'] =  $this->center;//'auto';
 			$config['zoom'] = '18';
 			//$config['minifyJS'] = TRUE;
 			$config['$sensor'] = TRUE;
 			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
 			$config['$disableStreetViewControl'] = TRUE;
+			/*$config['onboundschanged'] = 'if (!centreGot) {
+											var mapCentre = map.getCenter();
+												marker_0.setOptions({
+													position: new google.maps.LatLng(mapCentre.lat(),mapCentre.lng()) 
+												});
+											}
+											centreGot = true;';*/
+			
 			$this->googlemaps->initialize($config);
+			
+			$marker = array();
+			$this->googlemaps->add_marker($marker);
 			
 		
 			/*$FS3C = array();
