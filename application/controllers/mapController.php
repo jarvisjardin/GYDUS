@@ -17,6 +17,7 @@
 			$config['zoom'] = '18';
 			$config['minifyJS'] = TRUE;
 			$config['$jsfile'] = '../GYDUS/webroot/js/main.js';
+			$config['$disableStreetViewControl'] = TRUE;
 			$this->googlemaps->initialize($config);
 			
 		
@@ -162,14 +163,18 @@
 		
 		}
 		function suggestaspot(){
+			
 			$this->load->model('mapModel');
 			$query = $this->mapModel->suggestaspot();
 			
-			
-			
-			
-			redirect('index.php/mapController');
+			if($query){
+				
+				redirect('index.php/mapController');
 
+			}else{
+			
+				redirect('index.php/mapController/suggestaspotView');
+			}
 			
 		}
 		

@@ -18,8 +18,7 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>/webroot/css/bootstrap.css" type="text/css" media="screen" />
 
 		<!-- end CSS-->
-    <?php echo $map[ 'js']; ?>
-
+    
 </head>
 <body class="landing">
 
