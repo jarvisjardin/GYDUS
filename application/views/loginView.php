@@ -1,5 +1,9 @@
 
 
+		
+<button class=" notmemyetsec btn-block btn-large alert alert-info " type="button"  onClick="location='<?php echo base_url();?>'">	<h6 class="nomemyettitle">NOT A MEMBER YET?</h6>
+			<h4 class="h3-notmemyet">Create An Account</h5></button>
+
 <section class="gydus-login">
  <h1 class="gydus-login-headertxt">Sign Into GYDUS</h1>
 
@@ -23,9 +27,10 @@
                  
                 <button  class="btn btn-block btn-large btn-success" type="submit" class="btn">Sign in Now</button>
               </section>
+              <button  class="fb-btn btn btn-block btn-large btn-info" type="submit" class="btn">Sign in with Facebook</button>
             </section>
           </form>
-<button class="btn btn-block btn-warning " type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
+<button class="btn btn-link btn-danger " type="button"  onClick="location='<?php echo base_url();?>'">Cancel</button>
 
           </section><!-- end of Gydus Login --> 
 
