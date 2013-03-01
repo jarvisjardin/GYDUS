@@ -15,7 +15,7 @@
 
 		<!-- EMAIL-->
 
-            <section class="control-group">
+            <section class="gregE-control-group control-group">
               <label class="control-label" for="inputEmail">Email</label>
               <section class="controls">
                 <input type="text" class="gydus-reg-email-input" name="user_email" id="reg-inputEmail" placeholder="Email">
@@ -36,12 +36,10 @@
             
             
             
-            <section class="control-group">
-              <section class="controls">
+            
                 
-                <button class="btn btn-success" type="submit" class="btn">SIGN UP</button>
-              </section>
-            </section>
+                <button class=" btn btn-block btn-large btn-success" type="submit" class="btn">SIGN UP</button>
+             
           </form>
 <button class="btn btn-block btn-warning" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
 
