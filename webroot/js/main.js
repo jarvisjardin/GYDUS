@@ -139,9 +139,10 @@ $(document).ready(function() {
 
 /*---------- GPS Position -----------------*/
 
-$('#clickableGPS').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
-	alert("hello");
-		//map.setCenter(FullSail);
+$('#gpsBtn').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
+		
+		//console.log("hello");
+		map.setCenter(28.594461, -81.304002);
 
         return false;
     });

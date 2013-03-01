@@ -16,6 +16,7 @@
 			$config['center'] = '28.594461, -81.304002';
 			$config['zoom'] = '18';
 			$config['minifyJS'] = TRUE;
+			$config['$jsfile'] = '../GYDUS/webroot/js/main.js';
 			$this->googlemaps->initialize($config);
 			
 		
