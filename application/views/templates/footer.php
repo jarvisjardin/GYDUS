@@ -5,7 +5,7 @@
 
 <section id="footer" class="row">
 	 <button class="foot-nav" type="button"onClick="location='<?php echo base_url();?>index.php/mapController/navigate'"></button>
-	 <button class="foot-GPS" id='gpsBtn' type="button"></button>
+	 <button class="foot-GPS" id='gpsBtn' type="button" ></button>
 	 <button class="foot-sas" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/suggestaspotView'"></button>
 
 
@@ -22,7 +22,7 @@
 		
 	<!-- main -->
 	
-	<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>
 
 

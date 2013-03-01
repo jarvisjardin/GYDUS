@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-<?php echo $map[ 'js']; ?>
+	<?php echo $map[ 'js']; ?>
+
 </head>
 
 

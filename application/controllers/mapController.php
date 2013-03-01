@@ -3,6 +3,7 @@
 	class mapController extends CI_Controller{
 	    
 	    public $mapData;
+	    public $center = '28.594461, -81.304002';		
 	    
 		function __construct()
 	    {
@@ -13,10 +14,11 @@
 			
 			$this->load->library('googlemaps');
 
-			$config['center'] = '28.594461, -81.304002';
+			$config['center'] = $this->center;
 			$config['zoom'] = '18';
-			$config['minifyJS'] = TRUE;
-			$config['$jsfile'] = '../GYDUS/webroot/js/main.js';
+			//$config['minifyJS'] = TRUE;
+			$config['$sensor'] = TRUE;
+			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
 			$config['$disableStreetViewControl'] = TRUE;
 			$this->googlemaps->initialize($config);
 			
@@ -33,8 +35,7 @@
 			$FS3B['positionNE'] = '28.595417, -81.303560';
 			$this->googlemaps->add_ground_overlay($FS3B);
 			*/
-			
-		
+	
 		
 			$data = array();
 			$data['content'] = 'mapView';
@@ -49,6 +50,11 @@
 
 			$this->load->view('templates/template',$data);
 		}	
+		
+		function centerMap(){
+			redirect('index/mapController');
+			
+		}
 		
 		/*this function doesn't do anything yet*/
 		function searchView(){
