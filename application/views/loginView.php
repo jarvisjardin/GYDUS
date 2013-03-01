@@ -18,10 +18,10 @@
                 <input type="password" id="login-inputPassword" name="user_pass" placeholder="Password">
               </section>
             </section>
-            <section class="control-group">
-              <section class="controls">
+            <section class="gydus-loginbtns">
+              <section class="gydus-loginbtncontrols">
                  
-                <button  class="btn btn-success" type="submit" class="btn">Sign in Now</button>
+                <button  class="btn btn-block btn-large btn-success" type="submit" class="btn">Sign in Now</button>
               </section>
             </section>
           </form>
