@@ -1,6 +1,3 @@
-<head>
-	<?php echo $map['js']; ?>
-</head>
 
 <section class="sasView">
  <h1 class="gydus-login-headertxt">Suggest A Spot</h1>

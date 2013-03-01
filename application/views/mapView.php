@@ -1,25 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-	<?php echo $map['js']; ?>
-
-</head>
-
-<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Vx13Q8MwO4Dsi14Mp__6N1mOmVsbT30&sensor=true">
-    </script>
 
 <body>
 	<section>
 		<br><br><br><br>
 		
-		
-		
-		
-
-
 		
 		<section class="searchView hide" id="searchViewdisplay">
 			<section class="findLocation alert alert-info">
