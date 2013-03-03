@@ -16,6 +16,7 @@
 
 	<link rel="stylesheet" href="<?php echo base_url();?>/webroot/css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php echo base_url();?>/webroot/css/bootstrap.css" type="text/css" media="screen" />
+<!-- 	<link href="/webroot/css/bootstrap-responsive.css" rel="stylesheet"> -->
 
 		<!-- end CSS-->
     

@@ -3,29 +3,24 @@
 	<section class="CTA pull-left">
 					
 					<section class="cta-text">
-						<p class="">Find your classroom,<br>
-						 quickly with GYDUS.<br> Its <strong>fun</strong>, <strong>fast</strong>, and <strong>friendly</strong>.<br>
+						<p class="cta-findcr-txt">Find your classroom,
+						 quickly with GYDUS. Its <strong>fun</strong>, <strong>fast</strong>, and <strong>friendly</strong>.
 						 <strong>Search now</strong> 
 						</p>
 					</section><!-- end of cta-text-->
 
 					<section class="cta-searchbar">
-						<form action="<?php echo base_url();?>index.php/mapController/search"  method="post">
-						<section class="input-append gydus-searchbox pull-left">
-						  <input class="span2 searchBar " id="searchBar" type="text" name='searchLocation' placeholder="Search Keyword or Classroom">
-						  <section class="gotomap-section-btn pull-right">
-
-						  <button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="submit">Search</button>
-						  </section>
+						<form class="cta-searchform clearfix pull-left" action="<?php echo base_url();?>index.php/mapController/search"  method="post">
+							<section class="input-append gydus-searchbox pull-left">
+								<input class="span2 searchBar " id="searchBar" type="text" name='searchLocation' placeholder="Search BUILDINGS">
+									<section class="gotomap-section-btn pull-right">
+								</section>
 						
 						</section><!-- end of input-append aqilex-searchbar-->
 						</form>
 					</section><!-- end of cta-searchbar-->
 	</section><!--end of CTA -->
 
-<section class="gotomap-section-btn pull-right">
-					<button class="btn btn-large btn-block gydus-btn-large btn btn-success" type="button"  onClick="location='<?php echo base_url();?>index.php/mapController/'">Go To map</button>
-					</section><!-- end of signup-section-btn-->
 				<section class="signup-section pull-left">
 					<section class="signup-section-text">
 						<p>Try it for <strong>FREE</strong> and start using GYDUS <strong>in under 60 seconds</strong>!</p>
@@ -64,7 +59,7 @@
 
 				<section class="gydus-bottom pull-left clearfix">
 					<section class="video-section pull-left clearfix">
-						<h1 class="vidTitle">INTRO TO GYDUS</h1>
+						<h2 class="vidTitle">INTRO TO GYDUS</h2>
 						<section class="video-video">
 							<video class="gydus-video" controls>
 							<source src="webroot/superman.mp4" type="video/mp4">
@@ -75,13 +70,13 @@
 	
 					<section class="keyfeatures-section pull-right clearfix">
 						<section class="keyfeatures-section-title pull-right">
-							<h1 class="kfsT">GYDUS UPDATES</h1>
-								<a class="updateLink" href="#">VERSION 1.0 (Released on January 4, 2013)</a>
+							<h2 class="kfsT">GYDUS UPDATES</h2>
+								<a class="updateLink" href="#">VERSION 1.0 (Released 01/04/13)</a>
 								
-								<h4 class="whatsnew">Whats new in this version?</h4>
+								<h5 class="whatsnew">Whats new in this version?</h5>
 								<ul class="newitems">
-									<li>- Enhanced UI elements</li>
-									<li>- Users allowed to log in and register </li>
+									<li>Enhanced UI elements</li>
+									<li>Users allowed to log in and register </li>
 
 								</ul>
 						</section><!-- end of keyfeatures-section-title-->

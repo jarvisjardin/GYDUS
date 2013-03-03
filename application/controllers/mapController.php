@@ -128,7 +128,7 @@
 		
 			}else{
 				
-				echo "No Results";
+				redirect('index.php/mapController');
 			}
 					
 		}
