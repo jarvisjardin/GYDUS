@@ -27,6 +27,19 @@
 												});
 											}
 											centreGot = true;';*/
+											
+											
+			// styling the color of the map								
+			$config['styles'] = array(
+						array("name"=>"GydusColor", "definition"=>array(
+						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-30"))),
+						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-20"), array("hue"=>"#00ffe6")))
+						)),
+						
+			);
+			
+			$config['stylesAsMapTypes'] = false;
+			$config['stylesAsMapTypesDefault'] = "GydusColor";
 			
 			$this->googlemaps->initialize($config);
 			

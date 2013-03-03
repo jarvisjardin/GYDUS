@@ -1121,7 +1121,8 @@ filter: dropshadow(color=#454545, offx=4, offy=4);
 }
 
 .gydus-video{
-	margin-left:-17em;
+	margin-left:-20em;
+	width:auto;
 }
 
 .keyfeatures-section{
