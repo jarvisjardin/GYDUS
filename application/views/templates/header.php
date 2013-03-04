@@ -19,17 +19,66 @@
 <!-- 	<link href="/webroot/css/bootstrap-responsive.css" rel="stylesheet"> -->
 
 		<!-- end CSS-->
-    
+		
+	<script type="text/javascript" src="https://raw.github.com/snaptortoise/konami-js/master/konami.js"></script>
+<!--	<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/harlemshake.js"></script> -->
+
+
 </head>
 <body class="landing">
 
+
+
+
 	<!-- Parent container for the page, load your core templates into this div -->
-	
-<!-- NAVIGATION -->
+	<?php $this->load->helper('url');
+			
+			if ($this->session->userdata('is_logged_in')) { ?>
+					
+				<!-- NAVIGATION -->
 	        <section class="navbar  navbar-fixed-top ">
 	        	<section class="navbar-inner dark-header">
 
 <!-- GYDUS LOGO -->
+				<section class="logo" id="logo">
+		        		<a class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
+		        		<ul class="gydusSetDrop dropdown-menu">
+		        			<li class="gydusContactHead"><a href="<?php echo base_url();?>index.php/userController/contact_us"><h3>Contact Us</h3></a></li>
+		        			<li class="gydusDevCornerHead"><a href="#"><h3>Developers Corner</h3></a></li>
+		        			<li class="gydusTermsHead"><a href="#"><h3>Terms and Conditions</h3></a></li>
+		        		
+		        		</ul><!-- end of dropdown-menu-->
+		        		
+					</section><!-- end of logo -->					
+					
+<!--  SIGN IN LINK -->					
+					<section class="gydus-signin-nav pull-right">
+					
+						<a class="brand signin nav-signin" data-toggle="dropdown" href="#"><?php echo $userData['name'];?></a>
+						
+						<ul class="gydusUserDrop dropdown-menu">
+							<li class="accountSettingsHead "><a href="<?php echo base_url();?>index.php/userController/account_setting"><h3>Account Settings</h3></a></li>
+							<li class="logOutaccountSettingsHead btn-danger"><a href="<?php echo base_url();?>index.php/userController/logout"><h3>Sign Out</h3></a></li>
+							
+							
+							
+							
+							
+						</ul><!-- end of dropdown-menu-->
+					</section><!-- end of gydus signin nav-->
+	        	</section> <!-- close navbar-inner dark-header -->
+	        </section><!-- end of navbar navbar-fixed-top -->
+	        
+	        
+				
+				<? }else{ ?> 
+				
+				<!-- NAVIGATION -->
+	        <section class="navbar  navbar-fixed-top ">
+	        	<section class="navbar-inner dark-header">
+
+<!-- GYDUS LOGO -->
+			
 					<section class="logo" id="logo">
 		        		<a class="brand gydus-logo" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
 					</section><!-- end of logo -->
@@ -40,7 +89,14 @@
 					
 						<a class="brand signin nav-signin" href="<?php echo base_url();?>index.php/userController/login">Sign In</a>
 					</section><!-- end of gydus signin nav-->
-	        	</section> <!-- close navbar-inner dark-header -->
+	        	</section> <!-- close navbar-inner dark-header
+				
+				<? } ?>
+			
+
+	
+	
+ -->
 	        </section><!-- end of navbar navbar-fixed-top -->
         
 <!--  end of header -->

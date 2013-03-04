@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>/webroot/css/bootstrap.css" type="text/css" media="screen" />
 
 		<!-- end CSS-->
+	<script type="text/javascript" src="https://raw.github.com/snaptortoise/konami-js/master/konami.js"></script>
 
 </head>
 <body class="landing">

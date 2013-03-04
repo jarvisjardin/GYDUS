@@ -3,14 +3,18 @@
 
 	if ($this->session->userdata('is_logged_in'))
 	{
-		$this->load->view('templates/member_header', $userData);
+		$this->load->view('templates/header', $userData);
 		
 
 	}else{ 
 	
 	$this->load->view('templates/header');
 	
-	}?>
+	}
+
+?>
+
+
 
 <?php 
 	
