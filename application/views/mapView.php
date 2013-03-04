@@ -45,31 +45,24 @@
 				<h4 class="poiHeader ">Select Points of Interest</h4>
 			</section>
 			
-			<section class="poiSelection">
-				<label class="checkbox inline btn">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Patio
-				</label>
-				<label class="checkbox inline btn">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Food/beverage
-				</label>
-				<label class="checkbox inline btn">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Library
-				</label>
-			</section><!--end of poiselection -->
-		
-			<section class="poiSelectionTwo">
-				<label class="checkbox inline btn">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> BookStore
-				</label>
-			
-				<label class="checkbox inline btn">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Restroom
-				</label>
-				<label class="checkbox inline btn">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Receptionist
-				</label>
-			</section><!-- end o poi selection-->
-		
+			<section class="pointsofinterest">
+				<section class="pointsofinterest1">
+				<section class="poiSelection btn-group" data-toggle="buttons-checkbox">
+						<button type="button" class="btn btn-default">Patio</button>
+						<button type="button" class="btn btn-default">Food/Beverage</button>
+						<button type="button" class="btn btn-default">Library</button>
+				</section>
+				
+				</section><!-- end of points of interst 1-->
+				<section class="poinstofinterest2">
+						<section class="poiSelectionDos btn-group" data-toggle="buttons-checkbox">
+								<button type="button" class="btn btn-default">Book Store</button>
+								<button type="button" class="btn btn-default">Restroom</button>
+								<button type="button" class="btn btn-default">Receptionist</button>
+						</section>
+				</section><!-- end of points of interst 2-->
+			</section><!-- end of points of interest-->
+
 		<section class="findlocationBtns">
 			<section class="suggestSpotbtn">
 				<?php 
@@ -95,7 +88,7 @@
 <section class="findlocationButtonTop">
 		<h4 class="map-view-fL btn btn-large btn-block" id="map-viewFLbtn">Find Location</h4>
 		<section class="findLocation-Drop">
-					<h3 class="gydus-findL-btn-drop pull-right clearfix" id="findLbtnX" type="button" >V</h3>
+					<h3 id="fldropcarret" class="gydus-findL-btn-drop pull-right clearfix" id="findLbtnX" type="button" >V</h3>
 
 				</section><!-- end of findLocation Close-->
 

@@ -201,8 +201,9 @@ $('#sasSpotname').keydown(function(event){
          $('#map-viewFLbtn').on('click', function(){   
            $('#map-viewFLbtn').fadeOut(1500, function(){
 					$('#map-viewFLbtn').addClass('hide');
+					$('#fldropcarret').addClass('hide');
 					$('#mapSpot').addClass('hide');	
-
+					$('#footer').addClass('hide');
 				});	
 			
 			$("#searchViewdisplay").slideDown(1500,function(){
@@ -223,7 +224,9 @@ $('#sasSpotname').keydown(function(event){
 	     		$("#searchViewdisplay").slideUp(1500);
 				$('#map-viewFLbtn').fadeIn(1000, function(){
 					$('#map-viewFLbtn').removeClass('hide');
-				});					$('#mapSpot').removeClass('hide');	
+					$('#fldropcarret').removeClass('hide');
+
+				});					$('#mapSpot').removeClass('hide');	$('#footer').removeClass('hide');	
 
 		     	
 	     	})// END of Closing the Finding Location
