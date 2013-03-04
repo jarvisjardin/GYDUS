@@ -169,8 +169,12 @@
 			$marker = array();
 			$marker['position'] = '28.594461, -81.304002';
 			$marker['draggable'] = true;
-			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());$("#sasLat").val(event.latLng.lat());$("#sasPrompt").text("Perfect! Make sure thats where you want it.");';
+			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());$("#sasLat").val(event.latLng.lat());$("#sasPrompt").text("Double Click pin to give information. Or drag pin to desired location .");';
 			$marker['animation'] = 'DROP';
+			$marker['ondblclick']= "$('.sasView').slideDown(1500,function(){
+			
+			$('#sasPrompt').addClass('hide');
+			});";
 			$this->googlemaps->add_marker($marker);
 			
 			$this->load->helper('url');

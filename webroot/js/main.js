@@ -316,10 +316,7 @@ $('#gpsBtn').click(function (e) { //enables the use of GPS and moved the user's 
 	
 	});
 
-
-	
-	
-        
+	        
         
 
                          

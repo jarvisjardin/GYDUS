@@ -2,7 +2,7 @@
 <?php echo $map[ 'js']; ?>
 </head>
 
-<section class="sasView">
+<section class="sasView hide">
  <h1 class="gydus-login-headertxt">Suggest A Spot</h1>
  <section class="alert alert-block hide" id="sasSuccess">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -45,10 +45,14 @@
           </form>
           
 
-          <h2 id='sasPrompt'>Position the Marker where you want it!</h2>
           </section><!-- end of Gydus Login --> 
 
+<section id="sasPrompt" class="alert alert-block">
+  Click to drag pin<br>or<br>Double click pin to give information
+  
+   
 
+</section>
 
 <section id="mapSpot" class="map-spot">
 		    <section id="map_canvas" class="mapCanvas pull-left" style="width:100%; height:100%">
