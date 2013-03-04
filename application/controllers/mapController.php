@@ -32,8 +32,11 @@
 			// styling the color of the map								
 			$config['styles'] = array(
 						array("name"=>"GydusColor", "definition"=>array(
-						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-30"))),
-						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-20"), array("hue"=>"#00ffe6")))
+						
+						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-20"), array("hue"=>"#00ffe6"))),
+						array("featureType"=>"landscape.man_made","stylers"=>array(array("saturation"=>"50"), array("hue"=>"#60ba46"))),
+						array("featureType"=>"landscape.natural","stylers"=>array(array("saturation"=>"90"), array("hue"=>"#b77e46")))
+
 						)),
 						
 			);

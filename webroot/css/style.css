@@ -100,7 +100,7 @@ background: -o-linear-gradient(top,  #f2f2f2 0%,#edeced 9%,#e0dedf 47%,#dedcdd 4
 background: -ms-linear-gradient(top,  #f2f2f2 0%,#edeced 9%,#e0dedf 47%,#dedcdd 47%,#dcdada 57%,#d9d7d8 59%,#d7d6d7 67%,#d2d0d1 76%,#cbc9c9 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #f2f2f2 0%,#edeced 9%,#e0dedf 47%,#dedcdd 47%,#dcdada 57%,#d9d7d8 59%,#d7d6d7 67%,#d2d0d1 76%,#cbc9c9 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#cbc9c9',GradientType=0 ); /* IE6-9 */
-
+height:90px;
 }
 
 .navbar.gydus-nav{
@@ -123,13 +123,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 	font-size: 0;
 }
 .logo{
-	margin-left:2em;
+	margin-left:1em;
+	margin-top:1em;
 }
 
 
 
 a.signin.nav-signin{
-	margin-right: 1em;
+	margin-right: -2em;
 	margin-top:1em;
 	font-family: "Helvetica";
 	font-size: 1.1em;
@@ -755,6 +756,14 @@ margin-left:5em;
 .checkbox.inline{
 	margin-left:2em;
 }
+
+.gydus-findL-btn-drop.pull-right.clearfix{
+margin-top:-3em;
+margin-right:10%;
+font-size: 1em;
+color:#305528;
+border:none;
+}
 /*-------------------------------
 
 		sasView
@@ -805,17 +814,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .mapCanvas{
 /* 		margin-left:2em; */
 		background-color:purple;
+			margin-top:-.5em;
+
 
 }
-
+.map-view-fL.btn.btn-large.btn-block{
+	background: #d6f9ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #d6f9ff 0%, #9ee8fa 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6f9ff), color-stop(100%,#9ee8fa)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d6f9ff 0%,#9ee8fa 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 ); /* IE6-9 */
+	color:#1d77a3;
+margin-top:-.4em;
+}
 .map-view-fL a:hover{
 list-style-type: none;
 text-decoration: none;
 }
 .map-view-fL a{
 	display:inline-block;
-
-	color:white;
 	width: 100%;
 	font-style: "Helvetica";
 }
@@ -1032,6 +1052,7 @@ position: absolute;
 
 -------------------------------*/
 
+/*
 .footer.row{
 	margin-top:-5em;
 margin-left:20em;
@@ -1042,28 +1063,29 @@ border:none;
 .footer.row button{
 	border:none;
 }
+*/
 
 .foot-nav{
-	height:35px;
-	width:113px;
-	background: url("../img/navbtn.png")no-repeat;
+	height:75px;
+	width:246px;
+	background: url("../img/navbtnfooter-01.png")no-repeat;
 		border:none;
 
 }
 
 
 .foot-GPS{
-	height:122px;
-	width:142px;
-	background: url("../img/gpsbtn.png")no-repeat;
+	height:107px;
+	width:159px;
+	background: url("../img/gpsbtnfooter-01.png")no-repeat;
 	border:none;
 }
 
 
 .foot-sas{
-	height:35px;
-	width:113px;
-	background: url("../img/sasbtn.png")no-repeat;
+	height:75px;
+	width:246px;
+	background: url("../img/sasbtnfooter-01.png")no-repeat;
 		border:none;
 
 }
@@ -1282,6 +1304,40 @@ filter: dropshadow(color=#454545, offx=4, offy=4);
 	
 .whatsnew{
 	margin-top:1em;
+}
+
+
+/*-------- MOBILE GYDUS FOOTER -----------*/
+
+
+#footer{
+	float:left;
+	clear:right;
+	margin-top:-31px;
+}
+.foot-nav{
+	height:48px;
+	width:156px;
+	background: url("../img/navigationbtn-01.png")no-repeat;
+		border:none;
+
+}
+
+
+.foot-GPS{
+	height:68px;
+	width:102px;
+	background: url("../img/GPSbttn-01.png")no-repeat;
+	border:none;
+}
+
+
+.foot-sas{
+	height:48px;
+	width:158px;
+	background: url("../img/suggestASbtn-01.png")no-repeat;
+		border:none;
+
 }
 
 		

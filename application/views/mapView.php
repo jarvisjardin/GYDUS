@@ -92,12 +92,16 @@
 		
 		
 
+<section class="findlocationButtonTop">
+		<h4 class="map-view-fL btn btn-large btn-block" id="map-viewFLbtn">Find Location</h4>
+		<section class="findLocation-Drop">
+					<h3 class="gydus-findL-btn-drop pull-right clearfix" id="findLbtnX" type="button" >V</h3>
 
-		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
+				</section><!-- end of findLocation Close-->
 
+</section><!-- end of findlocatoinButtonTop-->
 	</section>
 	
-
 	
 	<section id="mapSpot" class="map-spot">
 		    <section id="map_canvas" class="mapCanvas pull-left" style="width:100%; height:100%">
