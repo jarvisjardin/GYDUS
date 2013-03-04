@@ -138,6 +138,44 @@ $('.gydus-reg-name-input').keydown(function(event){
  
  
  
+ /*------SUGGEST A SPOT FRONT SIDE VALIDATION---------*/
+
+
+
+
+  /*--       SAS NAME VALIDATION      --*/
+
+$('#sasSpotname').keydown(function(event){
+	 if($('#sasSpotname').val().length < 2){
+		 $('#sasSpotname').css("border", "1px solid red");
+		 		 		 $('.wrongsasSpotname').removeClass('hide');
+
+	 }else{
+		 		 $('#sasSpotname').css("border", "2px solid green");
+		 		 $('.checksasSpotname').removeClass('hide');
+		 		 $('.wrongsasSpotname').addClass('hide');
+
+	 }
+ })
+ 
+ 
+  /*--       SAS DESC VALIDATION      --*/
+
+ $('.gydus-kw-search-spotDesc').keydown(function(event){
+	 if($('.gydus-kw-search-spotDesc').val().length < 2){
+		 $('.gydus-kw-search-spotDesc').css("border", "1px solid red");
+		 $('.wrongsasdesc').removeClass('hide');
+
+	 }else{
+		 		 $('.gydus-kw-search-spotDesc').css("border", "2px solid green");
+		 		 $('.checksasdesc').removeClass('hide');
+		 		 $('.wrongsasdesc').addClass('hide');
+	 }
+ })
+ 
+
+ 
+ 
  
  
  

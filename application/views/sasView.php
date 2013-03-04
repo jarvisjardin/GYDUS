@@ -12,13 +12,15 @@
  <section class="searchkeyword">
 			<form action="<?php echo base_url();?>index.php/mapController/suggestaspot" method='post' class="form-search">
 				<section class="gydus-kw-append input-append">
-					<input type="text" class="gydus-kw-search" name='spot-name' placeholder="Name of Spot">
+					<input type="text" class="gydus-kw-search" id="sasSpotname" name='spot-name' placeholder="Name of Spot"><span class="checksasSpotname">√</span><span class="wrongsasSpotname hide">Please enter a Spot Name</span>
+
 				</section><!-- end of input-append-->
 				
 				
 				<section class="gydus-kw-append-desc control-group">
 					<section class="controls">
-						<textarea rows="3" class="gydus-kw-search-spotDesc" placeholder="Description of Spot"></textarea>             
+						<textarea rows="3" class="gydus-kw-search-spotDesc" placeholder="Description of Spot"></textarea><span class="checksasdesc hide">√</span><span class="wrongdesc hide">Please give the spot a description</span>
+           
 	                </section>
 	            </section>
 				
@@ -57,3 +59,8 @@
 	</section>
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		
+	<!-- main -->
+	
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>

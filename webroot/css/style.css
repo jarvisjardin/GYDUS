@@ -64,6 +64,30 @@ img{
 	font-size: 1.3em;
 }
 
+.checksasSpotname{
+	color:#0da111;
+/* 	margin-left:1em; */
+	font-size: 1.3em;
+}
+
+.wrongsasSpotname{
+	color:red;
+/* 	margin-left:1em; */
+	font-size: 1.3em;
+}
+
+.checksasdesc{
+	color:#0da111;
+/* 	margin-left:1em; */
+	font-size: 1.3em;
+}
+
+.wrongsasdesc{
+	color:red;
+/* 	margin-left:1em; */
+	font-size: 1.3em;
+}
+
 
 /*------------------------- nav bar ---------------------------*/
 .navbar-inner.dark-header{
