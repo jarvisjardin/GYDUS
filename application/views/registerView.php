@@ -1,14 +1,14 @@
 <section class="gydus-register">
-<h1 class="gydus-register-headertxt">Register Now</h1>
+<h1 class="gydus-register-headertxt" >Register Now</h1>
 
 <form action="<?php echo base_url();?>index.php/userController/create_member"  method="post" class="form-horizontal gydus-form-horizontal ">
 		<h1 class="gydus-accinfo-headertxt">ACCOUNT INFORMATION</h1>
 
 		<!-- NAME-->
 		<section class="control-group">
-              <label class="control-label" for="inputName">Name</label>
+              <label class="control-label" id="testme" for="inputName">Username</label>
               <section class="controls">
-                <input type="text" class="gydus-reg-name-input" name="name"  id="reg-inputName" placeholder="Name">
+                <input type="text" class="gydus-reg-name-input" name="name"  id="reg-inputName" placeholder="Username">
               </section>
 
 
@@ -44,3 +44,11 @@
 <button class="btn btn-block btn-warning" type="button"  onClick="location='<?php echo base_url();?>'">Go back Home</button>
 
           </section><!-- end of Gydus Login-->
+          
+          
+          	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		
+	<!-- main -->
+	
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>

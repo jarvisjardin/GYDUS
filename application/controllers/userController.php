@@ -34,7 +34,6 @@ class userController extends CI_Controller
 						
 		
 		}else{ // incorrect username or password
-		
 			redirect('index.php/marketingController/index');
 
 		}

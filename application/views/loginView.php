@@ -25,7 +25,7 @@
             <section class="gydus-loginbtns">
               <section class="gydus-loginbtncontrols">
                  
-                <button  class="btn btn-block btn-large btn-success" type="submit" class="btn">Sign in Now</button>
+                <button id="gydus-login-submt" class="btn btn-block btn-large btn-success" type="submit" class="btn">Sign in Now</button>
               </section>
               <button  class="fb-btn btn btn-block btn-large btn-info" type="submit" class="btn">Sign in with Facebook</button>
             </section>

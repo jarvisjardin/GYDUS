@@ -16,6 +16,29 @@
 $(document).ready(function() {
 
 
+$('.gydus-reg-name-input').keydown(function(event){
+	 if($('.gydus-reg-name-input').val().length < 4){
+		 $('.gydus-reg-name-input').css("border", "1px solid red");
+	 }else{
+		 		 $('.gydus-reg-name-input').css("border", "2px solid green");
+
+	 }
+ })
+ 
+ $('#reg-inputPassword').keydown(function(event){
+	 if($('#reg-inputPassword').val().length < 5){
+		 $('#reg-inputPassword').css("border", "1px solid red");
+	 }else{
+		 		 $('#reg-inputPassword').css("border", "2px solid green");
+
+	 }
+ })
+
+
+
+
+
+
 
    // variable to get fullsails latitude and long
         var FullSail = new google.maps.LatLng(28.594461, -81.304002);
