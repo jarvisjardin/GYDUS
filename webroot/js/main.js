@@ -15,7 +15,22 @@
 */
 $(document).ready(function() {
 
+	
+	var success = function() {
+			console.log('Konami Success');			
+			
+			$.getScript("../../webroot/js/harlemshake.js", function(){
 
+				console.log('got the JS');
+			   alert("DO THE HARLEMSHAKE!");
+			   // here you can use anything you defined in the loaded script
+			
+			});
+	
+	}
+	
+		
+	var konami = new Konami(success);
 
 /*------REGISTER FRONT SIDE VALIDATION---------*/
 
