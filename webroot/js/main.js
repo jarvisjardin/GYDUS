@@ -80,6 +80,62 @@ $('.gydus-reg-name-input').keydown(function(event){
 
 
 
+/*------LOGIN FRONT SIDE VALIDATION---------*/
+
+ /*--       LOGIN EMAIL VALIDATION      --*/
+  $('.gydus-login-email-input').keydown(function(event){
+  
+  	var regEmailInput = $('.gydus-login-email-input').val()
+  	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+	 if(regEmailInput==''){
+		 $('.gydus-login-email-input').css("border", "1px solid red");
+		 		 $('.wrongemail').removeClass('hide');
+
+
+	 }else if(!emailReg.test(regEmailInput)){
+		 $('.gydus-login-email-input').css("border", "1px solid red");
+		 $('.wrongemail').removeClass('hide');
+
+	 }else{
+		 $('.gydus-login-email-input').css("border", "2px solid green");
+		 $('.checkemail').removeClass('hide');
+		 $('.wrongemail').addClass('hide');
+
+
+	 }
+ })
+ 
+ 
+   /*--       LOGIN PASSWORD VALIDATION      --*/
+
+ $('#login-inputPassword').keydown(function(event){
+	 if($('#login-inputPassword').val().length < 5){
+		 $('#reg-inputPassword').css("border", "1px solid red");
+		 $('.wrongpass').removeClass('hide');
+
+	 }else{
+		 		 $('#login-inputPassword').css("border", "2px solid green");
+		 		 $('.checkpass').removeClass('hide');
+		 		 $('.wrongpass').addClass('hide');
+	 }
+ })
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
