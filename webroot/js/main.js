@@ -16,23 +16,68 @@
 $(document).ready(function() {
 
 
+
+/*------REGISTER FRONT SIDE VALIDATION---------*/
+
+
+
+
+  /*--       REGISTER USERNAME VALIDATION      --*/
+
 $('.gydus-reg-name-input').keydown(function(event){
 	 if($('.gydus-reg-name-input').val().length < 4){
 		 $('.gydus-reg-name-input').css("border", "1px solid red");
+		 		 		 $('.wronguser').removeClass('hide');
+
 	 }else{
 		 		 $('.gydus-reg-name-input').css("border", "2px solid green");
+		 		 $('.checkuser').removeClass('hide');
+		 		 $('.wronguser').addClass('hide');
 
 	 }
  })
  
+ 
+  /*--       REGISTER PASSWORD VALIDATION      --*/
+
  $('#reg-inputPassword').keydown(function(event){
 	 if($('#reg-inputPassword').val().length < 5){
 		 $('#reg-inputPassword').css("border", "1px solid red");
+		 $('.wrongpass').removeClass('hide');
+
 	 }else{
 		 		 $('#reg-inputPassword').css("border", "2px solid green");
+		 		 $('.checkpass').removeClass('hide');
+		 		 $('.wrongpass').addClass('hide');
+	 }
+ })
+ 
+ 
+ 
+ /*--       REGISTER EMAIL VALIDATION      --*/
+  $('.gydus-reg-email-input').keydown(function(event){
+  
+  	var regEmailInput = $('.gydus-reg-email-input').val()
+  	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+	 if(regEmailInput==''){
+		 $('.gydus-reg-email-input').css("border", "1px solid red");
+		 		 $('.wrongemail').removeClass('hide');
+
+
+	 }else if(!emailReg.test(regEmailInput)){
+		 $('.gydus-reg-email-input').css("border", "1px solid red");
+		 $('.wrongemail').removeClass('hide');
+
+	 }else{
+		 $('.gydus-reg-email-input').css("border", "2px solid green");
+		 $('.checkemail').removeClass('hide');
+		 $('.wrongemail').addClass('hide');
+
 
 	 }
  })
+
 
 
 

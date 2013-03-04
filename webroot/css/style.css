@@ -30,6 +30,39 @@ img{
 /* 	margin:0 auto; */
 }
 
+.checkuser{
+	color:#0da111;
+	margin-left:1em;
+	font-size: 1.3em;
+}
+.wronguser{
+	color:red;
+	margin-left:1em;
+	font-size: 1.3em;
+}
+.checkpass{
+	color:#0da111;
+	margin-left:1em;
+	font-size: 1.3em;
+}
+
+.wrongpass{
+	color:red;
+	margin-left:1em;
+	font-size: 1.3em;
+}
+
+.checkemail{
+	color:#0da111;
+	margin-left:1em;
+	font-size: 1.3em;
+}
+
+.wrongemail{
+	color:red;
+	margin-left:1em;
+	font-size: 1.3em;
+}
 
 
 /*------------------------- nav bar ---------------------------*/
