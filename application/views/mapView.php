@@ -96,7 +96,7 @@
 		<h4 class="map-view-fL btn btn-large btn-block btn-info" id="map-viewFLbtn">Find Location</h4>
 
 	</section>
-	<p id="test">HI EVERYOE</p>
+	
 
 	
 	<section id="mapSpot" class="map-spot">
