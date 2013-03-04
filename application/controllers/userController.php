@@ -190,6 +190,19 @@ class userController extends CI_Controller
 			}
 		
 	}
+	
+	function dev_corner(){
+
+		$this->load->helper('url');
+	
+		if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+		};	
+		$data['content'] = 'developersCorner';
+		$this->load->view('templates/template', $data);		
+
+
+	}//end of dev_corner
 
 	
 	

@@ -1012,7 +1012,90 @@ border:none;
 
 }
 
-/*------------------------- RESPONSIVE MARKETPAGE ---------------------------*/
+
+/*-- developers corner --*/
+
+.gydus-dev-Corner-titlebtn{
+	margin-top:10em;
+}
+.gydus-dev-Corner-titlebtn h3 a:hover{
+text-decoration: none;
+}
+.gydus-dev-Corner-titlebtn h3 a{
+	color:white;
+}
+
+.gydus-decorner-btn.btn.btn-link:hover{
+	text-decoration: none;
+}
+
+.gydus-decorner-btn.btn.btn-link{
+margin-top:-1.45em;
+margin-right:10%;
+color:white;
+font-size: 2em;
+padding:.3em;
+
+}
+.meetDCtitle{
+	margin-left: 3em;
+}
+
+.DCbios.row-fluid{
+	height:443px;
+	
+	width:100%;
+}
+.person1.span4{
+	height:100%;
+	margin-left:3%;
+
+	
+}
+
+.row-fluid .person1.offset2:first-child {
+margin-left: 3%;
+}
+.person1pic{
+	background: url("../img/jarvis.png")no-repeat;
+	height:202px;
+	width: 201px;
+	
+}
+
+.person1bio{
+	height:100%;
+	min-width: 201px;
+	margin-top:1em;
+}
+
+.person2.span4{
+	height:100%;
+	
+}
+
+.person2pic{
+	background: url("../img/geoff.png")no-repeat;
+	height:202px;
+	width:201px;
+	
+}
+
+.person2bio{
+	height:100%;
+	margin-top:1em;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+
+																RESPONSIVE MARKETPAGE
+																
+																
+------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------*/
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 480px) {
