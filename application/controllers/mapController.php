@@ -34,8 +34,8 @@
 						array("name"=>"GydusColor", "definition"=>array(
 						
 						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-20"), array("hue"=>"#00ffe6"))),
-						array("featureType"=>"landscape.man_made","stylers"=>array(array("saturation"=>"50"), array("hue"=>"#60ba46"))),
-						array("featureType"=>"landscape.natural","stylers"=>array(array("saturation"=>"90"), array("hue"=>"#b77e46")))
+						array("featureType"=>"landscape.man_made","stylers"=>array(array("saturation"=>"100"), array("hue"=>"#131ba5"))),
+						array("featureType"=>"landscape.natural","stylers"=>array(array("saturation"=>"90"), array("hue"=>"#60ba46")))
 
 						)),
 						
