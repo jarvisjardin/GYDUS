@@ -130,7 +130,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 
 a.signin.nav-signin{
 	margin-right: 1em;
-	margin-top:0.625em;
+	margin-top:1em;
 	font-family: "Helvetica";
 	font-size: 1.1em;
 	color:black;
@@ -148,14 +148,14 @@ a.signin.nav-signin{
 
 /*--------------------icons ---------------------------*/
 
-.cog-icon, .star-icon{
-	display: inline-block;
-	margin-top: 1px;
-	line-height: 30px;
-	vertical-align: text-top;
-	background-repeat: no-repeat;
-
-
+.dbName{
+	margin-left:-6em;
+	margin-top:2em;	
+}
+.brand.signin.nav-signin{
+	background:url("../img/cog_icon-01.png")no-repeat;
+	width:48px;
+	height:50px;
 }
 
 
