@@ -269,7 +269,10 @@ $('#sasSpotname').keydown(function(event){
 	
 	
 	
-	
+	$("#updateInfobtn").on('click', function(){
+		$('#accountsuccess').removeClass('hide');
+		
+	})
 	
 	
 	/*-----------View Gydus Menu---------------*/

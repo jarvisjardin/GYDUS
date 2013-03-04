@@ -3,6 +3,7 @@
 
 <form action="<?php echo base_url();?>index.php/userController/update_member" method="post" class="form-horizontal gydus-form-horizontal ">
 
+
 		<!-- NAME-->
 		<section class="control-group">
               <label class="control-label" for="inputName">Edit UserName</label>
@@ -40,7 +41,7 @@
             
           
                 
-                <button class="btn btn-block btn-large btn-success" type="submit" class="btn">Update Information</button>
+                <button class="btn btn-block btn-large btn-success" id="updateInfobtn" type="submit" class="btn">Update Information</button>
                 <button class="btn btn-block btn-large btn-danger" type="button" class="btn" onClick="location='<?php echo base_url();?>index.php/mapController/'">Cancel</button>
 
              

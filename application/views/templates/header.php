@@ -50,7 +50,7 @@
 
 		        		<ul class="gydusSetDrop dropdown-menu">
 		        			<li class="gydusContactHead"><a href="<?php echo base_url();?>index.php/userController/contact_us"><h3>Contact Us</h3></a></li>
-		        			<li class="gydusDevCornerHead"><a href="#"><h3>Developers Corner</h3></a></li>
+		        			<li class="gydusDevCornerHead"><a href="<?php echo base_url();?>index.php/userController/dev_corner"><h3>Developers Corner</h3></a></li>
 		        			<li class="gydusTermsHead"><a href="#"><h3>Terms and Conditions</h3></a></li>
 		        		
 		        		</ul><!-- end of dropdown-menu-->
