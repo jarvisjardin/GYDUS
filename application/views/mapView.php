@@ -69,14 +69,14 @@
 					$this->load->helper('url');
 
 					if ($this->session->userdata('is_logged_in')){ ?>
-					<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-block">Suggest a Spot</a>		
+					<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-success btn-block">Suggest a Spot</a>		
 				<?php }else{ ?>	
-					<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-block disabled">Suggest a Spot</a>
+					<a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-success btn-block disabled">Suggest a Spot</a>
 				<?php }; ?>	
 			</section><!-- end of suggest spot btn-->
 			<br>
 			<section class="viewLocationbtn">
-				<button class="btn btn-large btn-block btn-success" type="submit">View Location</button>
+				<button class="btn btn-large btn-block btn-primary" type="submit">View Location</button>
 			</section><!-- end of view location btn-->
 		</section><!-- end of find location btns-->
 		</form>

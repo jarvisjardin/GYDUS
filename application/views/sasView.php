@@ -35,11 +35,11 @@
               <section class="control-group">
               	<section class="viewLocationbtn controls">
                 
-               	 <button  class="btn btn-large btn-block btn-primary" id="sasBtnsubmit" type="buton" class="btn" onClick="location='<?php echo base_url();?>index.php/mapController/'">Suggest Location</button>
+               	 <button  class="btn btn-large btn-block btn-success" id="sasBtnsubmit" type="buton" class="btn" onClick="location='<?php echo base_url();?>index.php/mapController/'">Suggest Location</button>
                 </section><!-- end of viewlocaionbtn-->
                 
                 <section class="sasCancel">
-                              <button  class="btn btn-large btn-block btn-danger" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
+                              <button  class="btn btn-large btn-block btn-warning" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">CANCEL</button>
                 </section><!-- end of sas cancel-->
             </section>
           </form>
