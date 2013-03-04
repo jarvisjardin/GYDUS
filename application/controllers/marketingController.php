@@ -3,12 +3,19 @@
 	class marketingController extends CI_Controller{
 
 		function index(){
-		
-			$data = array();
+			$this->load->helper('url');
+
+			if ($this->session->userdata('is_logged_in')){
 				
-			$data['content'] = 'marketingView';
-			$this->load->view('templates/template', $data);
+				redirect("index.php/mapController");
+							
+			}else{
 		
+				$data = array();
+					
+				$data['content'] = 'marketingView';
+				$this->load->view('templates/template', $data);
+			}
 		
 		}
 	}
