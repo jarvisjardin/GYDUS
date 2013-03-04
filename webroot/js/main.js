@@ -14,32 +14,40 @@
 
 */
 $(document).ready(function() {
+	var snd = document.createElement('audio'),
+			    src = document.createElement('source'); 
+			    
+			    src.src = "http://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3"; 
+			    src.type = "audio/mp3"; 
+			    src.loop = 'true';
+			    snd.appendChild(src); 
+			    snd.preload = 'null'; 
 
-	
+			  			   
+		
 	var success = function() {
 			console.log('Konami Success');			
-		
-			  // alert("DO THE HARLEMSHAKE!");
-			   $('#hs').html(
-			   				'<audio controls="controls" autoplay="TRUE" loop="FALSE">'+
-			   				'<source src="http://files.time2hack.com/time2hack.harlem.shake.ogg" type="audio/ogg" />'+
-			   				'</audio>'
-			   				);
-			   setInterval(function(){
-				   
-				   
-				   
-			   },3000);
+			alert("DO THE HARLEMSHAKE");
+			
+			
 			   
-			   //$('#HeaderLogo').animate({margin-right: 1em});
-				
-			   harlemShake();
+			   //$('#gydusHeader').animate({margin-right: 1em});
+			
+			
+			 harlemShake()
+			 setTimeout(function(){snd.play()},900);
 
+			 setTimeout(function(){history.go(0)},32000)							  
+	
+			  
 			   // here you can use anything you defined in the loaded script
 			   
 
 	}
 	
+	function stoper()	{
+			clearTimeout(timer);
+	}
 		
 	var konami = new Konami(success);
 

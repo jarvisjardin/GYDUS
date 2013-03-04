@@ -25,7 +25,6 @@
 	<script src="http://files.time2hack.com/time2hack.harlem.shake.min.js" type="text/javascript"></script>
 	
 
-
 </head>
 <body class="landing">
 
@@ -45,7 +44,7 @@
 <!-- GYDUS LOGO -->
 				<section class="logo" id="logo">
 
-		        		<a class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo_smaller-01.png" alt="Gydus" /></a>
+		        		<a id='gydusHeader' class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo_smaller-01.png" alt="Gydus" /></a>
 
 
 		        		<ul class="gydusSetDrop dropdown-menu">
