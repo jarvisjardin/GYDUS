@@ -22,12 +22,15 @@
 		
 	<script type="text/javascript" src="https://raw.github.com/snaptortoise/konami-js/master/konami.js"></script>
 <!--	<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/harlemshake.js"></script> -->
+	<script src="http://files.time2hack.com/time2hack.harlem.shake.min.js" type="text/javascript"></script>
+	
 
 
 </head>
 <body class="landing">
 
-
+	<section id='hs' class='hide'></section>
+	
 
 
 	<!-- Parent container for the page, load your core templates into this div -->
@@ -41,7 +44,11 @@
 
 <!-- GYDUS LOGO -->
 				<section class="logo" id="logo">
+<<<<<<< HEAD
 		        		<a class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo_smaller-01.png" alt="Gydus" /></a>
+=======
+		        		<a id="HeaderLogo"class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo.png" alt="Gydus" /></a>
+>>>>>>> messing with easter egg
 		        		<ul class="gydusSetDrop dropdown-menu">
 		        			<li class="gydusContactHead"><a href="<?php echo base_url();?>index.php/userController/contact_us"><h3>Contact Us</h3></a></li>
 		        			<li class="gydusDevCornerHead"><a href="#"><h3>Developers Corner</h3></a></li>

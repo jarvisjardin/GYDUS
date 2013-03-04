@@ -18,15 +18,26 @@ $(document).ready(function() {
 	
 	var success = function() {
 			console.log('Konami Success');			
-			
-			$.getScript("../../webroot/js/harlemshake.js", function(){
+		
+			  // alert("DO THE HARLEMSHAKE!");
+			   $('#hs').html(
+			   				'<audio controls="controls" autoplay="TRUE" loop="FALSE">'+
+			   				'<source src="http://files.time2hack.com/time2hack.harlem.shake.ogg" type="audio/ogg" />'+
+			   				'</audio>'
+			   				);
+			   setInterval(function(){
+				   
+				   
+				   
+			   },3000);
+			   
+			   //$('#HeaderLogo').animate({margin-right: 1em});
+				
+			   harlemShake();
 
-				console.log('got the JS');
-			   alert("DO THE HARLEMSHAKE!");
 			   // here you can use anything you defined in the loaded script
-			
-			});
-	
+			   
+
 	}
 	
 		
