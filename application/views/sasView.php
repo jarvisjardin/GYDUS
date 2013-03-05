@@ -26,8 +26,8 @@
 				
  </section><!-- end of searchkeyword-->
  				<section>
- 					<input type="text" name="sasLat" id="sasLat"><br>
- 					<input type="text" name="sasLng" id="sasLng"><br>
+ 					<input type="hidden" name="sasLat" id="sasLat"><br>
+ 					<input type="hidden" name="sasLng" id="sasLng"><br>
 
  				</section>
 
@@ -48,7 +48,8 @@
           </section><!-- end of Gydus Login --> 
 
 <section id="sasPrompt" class="alert alert-block">
-  Click to drag pin<br>or<br>Double click pin to give information
+  <p>1.Tap and hold to drag pin</p><br>
+  <p>2.Double Tap pin to give information</p>
   
    
 

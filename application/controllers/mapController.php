@@ -167,7 +167,7 @@
 			$marker = array();
 			$marker['position'] = '28.594461, -81.304002';
 			$marker['draggable'] = true;
-			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());$("#sasLat").val(event.latLng.lat());$("#sasPrompt").text("Double Click pin to give information. Or drag pin to desired location .");';
+			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());$("#sasLat").val(event.latLng.lat());$("#sasPrompt").text("Double Tap pin to give information. Or Tap and hold pin to desired location .");';
 			$marker['animation'] = 'DROP';
 			$marker['ondblclick']= "$('.sasView').slideDown(1500,function(){
 			
