@@ -7,9 +7,17 @@
 	</script>
 	<?php echo $map[ 'js']; ?>
 	<section>
+			<?php 
+			$this->load->helper('url');
 		
-			<br><br><br><br><br>
-		
+			if ($this->session->userdata('is_logged_in'))
+			{ ?>
+				<br><br><br><br>
+			<? }else{ ?>
+				<br><br><br><br><br>
+			<?  }; ?>
+			
+			
 				<section class="searchView hide" id="searchViewdisplay">
 			<section class="findLocation alert alert-info">
 				<h3 class="h3-findlocationtitle">Find Location</h3>
