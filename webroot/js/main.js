@@ -325,7 +325,9 @@ $('#gpsBtn').click(function (e) { //enables the use of GPS and moved the user's 
 	});
 
 	        
-        
-
+        /*---------- flashdata time out -----------------*/
+$('#sasPromptsuccess').fadeOut(3000, function(){
+	$('#sasPromptsuccess').addClass('hide');
+});
                          
 });

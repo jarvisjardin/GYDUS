@@ -26,8 +26,8 @@
 				
  </section><!-- end of searchkeyword-->
  				<section>
- 					<input type="hidden" name="sasLat" id="sasLat"><br>
- 					<input type="hidden" name="sasLng" id="sasLng"><br>
+ 					<input type="text" name="sasLat" id="sasLat"><br>
+ 					<input type="text" name="sasLng" id="sasLng"><br>
 
  				</section>
 

@@ -203,8 +203,12 @@
 			$query = $this->mapModel->suggestaspot();
 			
 			if($query){
+				$blah = $this->session->set_flashdata('message', 'Thank you! Your Message Posted Successfully');
 				
+
 				redirect('index.php/mapController');
+				
+
 
 			}else{
 			
