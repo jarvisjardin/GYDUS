@@ -38,9 +38,4 @@
 
           </section><!-- end of Gydus Login --> 
 
- 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-		
-	<!-- main -->
-	
-		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>
+ 	

@@ -100,7 +100,7 @@ background: -o-linear-gradient(top,  #f2f2f2 0%,#edeced 9%,#e0dedf 47%,#dedcdd 4
 background: -ms-linear-gradient(top,  #f2f2f2 0%,#edeced 9%,#e0dedf 47%,#dedcdd 47%,#dcdada 57%,#d9d7d8 59%,#d7d6d7 67%,#d2d0d1 76%,#cbc9c9 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #f2f2f2 0%,#edeced 9%,#e0dedf 47%,#dedcdd 47%,#dcdada 57%,#d9d7d8 59%,#d7d6d7 67%,#d2d0d1 76%,#cbc9c9 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#cbc9c9',GradientType=0 ); /* IE6-9 */
-height:90px;
+height:80px;
 }
 
 .navbar.gydus-nav{
@@ -141,6 +141,9 @@ a.signin.nav-signin{
 .landing{
 	background-color:#B3D7F2;
 	 }
+
+
+
 
 
 /*--------------------end of logo ---------------------------*/
@@ -1185,7 +1188,38 @@ margin-left: 3%;
 	margin-top:1em;
 }
 
+/*---- terms and conditons --*/
+.termsView{
+	margin-top:10em;
+}
 
+.gydus-terms-titlebtn{
+	margin-top:7em;
+}
+
+.gydus-terms-titlebtn a{
+	color:white;
+}
+.accordion-heading{
+background-color:#1e78a5;
+}
+
+.accordion-heading:hover{
+background-color:#37a6d1;
+}
+.accordion-toggle:hover{
+list-style-type: none;
+text-decoration: none;
+color:white;
+
+}
+.accordion-toggle{
+color:white;
+}
+
+.accordion-inner{
+	background-color:white;
+}
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -1360,6 +1394,8 @@ filter: dropshadow(color=#454545, offx=4, offy=4);
 		border:none;
 
 }
+
+
 
 		
 }/*-- end of media query--*/

@@ -202,6 +202,19 @@ class userController extends CI_Controller
 
 
 	}//end of dev_corner
+	
+		function terms(){
+
+		$this->load->helper('url');
+	
+		if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+		};	
+		$data['content'] = 'termsCondView';
+		$this->load->view('templates/template', $data);		
+
+
+	}//end of terms
 
 	
 	

@@ -50,7 +50,7 @@
 		        		<ul class="gydusSetDrop dropdown-menu">
 		        			<li class="gydusContactHead"><a href="<?php echo base_url();?>index.php/userController/contact_us"><h3>Contact Us</h3></a></li>
 		        			<li class="gydusDevCornerHead"><a href="<?php echo base_url();?>index.php/userController/dev_corner"><h3>Developers Corner</h3></a></li>
-		        			<li class="gydusTermsHead"><a href="#"><h3>Terms and Conditions</h3></a></li>
+		        			<li class="gydusTermsHead"><a href="<?php echo base_url();?>index.php/userController/terms"><h3>Terms and Conditions</h3></a></li>
 		        		
 		        		</ul><!-- end of dropdown-menu-->
 		        		
@@ -103,6 +103,16 @@
 	
  -->
 	        </section><!-- end of navbar navbar-fixed-top -->
+	        
+	        </section><!-- end of terms view-->
+              
+              <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		
+	<!-- main -->
+	
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>
+
         
 <!--  end of header -->
 
