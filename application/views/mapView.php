@@ -7,11 +7,6 @@
 	</script>
 	<?php echo $map[ 'js']; ?>
 	<section>
-<<<<<<< HEAD
-=======
-		<br><br><br><br><br>
->>>>>>> trying to fix safari
-		
 		
 			<br><br><br><br><br>
 		
