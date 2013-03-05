@@ -1,8 +1,10 @@
 
 
 		
-<button class=" notmemyetsec btn-block btn-large alert alert-info " type="button"  onClick="location='<?php echo base_url();?>index.php/userController/register'">	<h6 class="nomemyettitle">NOT A MEMBER YET?</h6>
-			<h4 class="h3-notmemyet">Create An Account</h5></button>
+<button class=" notmemyetsec btn-block btn-large alert alert-info " type="button"  onClick="location='<?php echo base_url();?>index.php/userController/register'">
+	<h6 class="nomemyettitle pull-left">NOT A MEMBER YET?</h6>
+	<h4 class="h4notmemyet pull-left clearfix">Create An Account</h4>
+</button>
 
 <section class="gydus-login">
  <h1 class="gydus-login-headertxt">Sign Into GYDUS</h1>
