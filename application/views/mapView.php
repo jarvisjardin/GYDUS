@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<head>
+
+
+
+
 	<script type="text/javascript">
 		var centreGot = false;
 	</script>
 	<?php echo $map[ 'js']; ?>
-
-</head>
-
-
-<body>
 	<section>
-		<br><br><br><br>
 		
 		
-		<section class="searchView hide" id="searchViewdisplay">
+			<br><br><br><br><br>
+		
+				<section class="searchView hide" id="searchViewdisplay">
 			<section class="findLocation alert alert-info">
 				<h3 class="h3-findlocationtitle">Find Location</h3>
 		
@@ -114,5 +112,3 @@
 	
 	<?php $this->load->view('templates/footer'); ?>
 
-</body>
-</html>	
