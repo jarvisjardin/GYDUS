@@ -102,11 +102,7 @@
 
 						echo'</section>';
 						}?></span>
-	<!--
-<section id="sasPromptsuccess" class="alert alert-block alert-success hide">
-		Thanks for suggest a spot, we’ll take it into consideration.
-	</section>
--->
+
 	
 	<section id="mapSpot" class="map-spot">
 		    <section id="map_canvas" class="mapCanvas pull-left" style="width:100%; height:100%">

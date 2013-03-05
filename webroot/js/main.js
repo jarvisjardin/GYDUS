@@ -214,7 +214,6 @@ $('#sasSpotname').keydown(function(event){
 
 
    // variable to get fullsails latitude and long
-        var FullSail = new google.maps.LatLng(28.594461, -81.304002);
 
         /*-----------Find location click effects---------------*/
          $('#map-viewFLbtn').on('click', function(){   
@@ -325,9 +324,22 @@ $('#gpsBtn').click(function (e) { //enables the use of GPS and moved the user's 
 	});
 
 	        
-        /*---------- flashdata time out -----------------*/
+	        
+	        
+/*---------- flashdata time out -----------------*/
 $('#sasPromptsuccess').fadeOut(3000, function(){
 	$('#sasPromptsuccess').addClass('hide');
 });
+    
+/*---------- flashdata time out -----------------*/
+$('#editAccPromptsuccess').fadeOut(3000, function(){
+	$('#editAccPromptsuccess').addClass('hide');
+});
+    
+    
+    
+    
+    
+    
                          
 });

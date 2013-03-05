@@ -128,7 +128,7 @@ class userController extends CI_Controller
 				'is_logged_in' => TRUE
 			);
 			
-
+			$editaccsucc = $this->session->set_flashdata('word', 'Your account has been successfully updated');
 			$this->session->set_userdata($userData);
 			
 			redirect('index.php/userController/account_setting');
