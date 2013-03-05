@@ -33,8 +33,8 @@
 						array("name"=>"GydusColor", "definition"=>array(
 						
 						array("featureType"=>"all", "stylers"=>array(array("saturation"=>"-20"), array("hue"=>"#00ffe6"))),
-						array("featureType"=>"landscape.man_made","stylers"=>array(array("saturation"=>"100"), array("hue"=>"#0b084c"))),
-						array("featureType"=>"landscape.natural","stylers"=>array(array("saturation"=>"20"), array("hue"=>"#120b9b")))
+						array("featureType"=>"landscape.man_made","stylers"=>array(array("saturation"=>"100"), array("hue"=>"#131ba5"))),
+						array("featureType"=>"landscape.natural","stylers"=>array(array("saturation"=>"90"), array("hue"=>"#60ba46")))
 
 						)),
 						
@@ -202,12 +202,8 @@
 			$query = $this->mapModel->suggestaspot();
 			
 			if($query){
-				$blah = $this->session->set_flashdata('message', 'Thanks for suggest a spot, we’ll take it into consideration.');
-				
-
+				$blah = $this->session->set_flashdata('message', 'Thanks for suggest a spot, we?ll take it into consideration.');
 				redirect('index.php/mapController');
-				
-
 
 			}else{
 			
@@ -232,7 +228,6 @@
 				$this->googlemaps->initialize($config);
 				
 				$row = $query->row();
-				$dir = $row->directions;
 			
 //				$pieces = explode("','", $dir);
 
