@@ -1,8 +1,7 @@
 <?
 class mapModel extends CI_Model{
 		
-	function __construct()
-    {
+	function __construct(){
         parent::__construct();
     }
 	
@@ -94,7 +93,42 @@ class mapModel extends CI_Model{
 		
 		
 	}	
+	
 	function get_Directions(){
+		
+		$formA_Building = 'FS3B';
+		$formA_Room = '136';
+		$formB_Building = 'FS3C';
+		$formB_Room = '110';
+		
+		$this->db->where('buildingA',$formA_Building);
+		$this->db->where('buildingB',$formB_Building);
+		$this->db->where('pointA',$formA_Room);
+		$this->db->where('pointB',$formB_Room);
+		
+		$query = $this->db->get('Navigation'); 
+		
+		if($query){
+			
+			return $query;
+		}else{
+			$this->db->where('buildingB',$formA_Building);
+			$this->db->where('buildingA',$formB_Building);
+			$this->db->where('pointB',$formA_Room);
+			$this->db->where('pointA',$formB_Room);
+			
+			$query = $this->db->get('Navigation'); 
+			
+			if($query){
+				
+				return $query;
+			}else{
+				
+				return FALSE;
+			}	
+		}
+		
+
 		
 	}
 			
