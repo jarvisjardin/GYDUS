@@ -314,4 +314,55 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- Navigation -----------------*/	        
+	        $('#foot-nav').click(function () {
+	        	$('.navigationforms').removeClass('hide');
+	        });
+	        $('#closenav').click(function () {
+	        	$('.navigationforms').addClass('hide');
+	        });
+
+	        
+	        
+/*---------- flashdata time out -----------------*/
+$('#sasPromptsuccess').fadeOut(3000, function(){
+	$('#sasPromptsuccess').addClass('hide');
+});
+    
+/*---------- flashdata time out -----------------*/
+$('#editAccPromptsuccess').fadeOut(3000, function(){
+	$('#editAccPromptsuccess').addClass('hide');
+});
+    
+    
+    
+    
+    
+    
+                         
+
 });

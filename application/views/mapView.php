@@ -18,6 +18,7 @@
 				<br><br><br><br><br>
 			<?  }; ?>
 			
+				
 			
 				<section class="searchView hide" id="searchViewdisplay">
 			<section class="findLocation alert alert-info">
@@ -99,6 +100,13 @@
 				</section><!-- end of findLocation Close-->
 
 </section><!-- end of findlocatoinButtonTop-->
+<section class="navigationforms alert alert-info hide">
+	 <button type="button" id="closenav" class="close">&times;</button>
+					<h3 class="navTitle">Get Directions</h3>
+ 					<label>From Point A<input type="text" name="pointa" placeholder="Point A" id="pointa"><br> 
+ 					<label>To Point B<input type="text" name="pointb" placeholder="Point B" id="pointb"><br>
+ 					<button class="getdirections btn btn-large btn-block">Get Directions</button>
+ 				</section>
 	</section>
 				<span><?php if($this->session->flashdata('message')) {
 						echo '<section id="sasPromptsuccess" class=" message alert alert-block alert-success">

@@ -1101,7 +1101,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 }
 
 
-
+/*---- NAVIGATION -----*/
+.navigationforms.alert.alert-info{
+	margin-left:-1em;
+	width:90%;
+}
+.getdirections.btn.btn-large.btn-block{
+	margin-left:-1em;
+	width:100%;
+}
 
 /*-------------------------------
 
