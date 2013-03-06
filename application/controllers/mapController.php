@@ -18,16 +18,14 @@
 			//$config['minifyJS'] = TRUE;
 			$config['$sensor'] = TRUE;
 			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
-			$config['$disableStreetViewControl'] = TRUE;
-			/*$config['onboundschanged'] = 'if (!centreGot) {
-											var mapCentre = map.getCenter();
-												marker_0.setOptions({
-													position: new google.maps.LatLng(mapCentre.lat(),mapCentre.lng()) 
-												});
-											}
-											centreGot = true;';*/
-											
-											
+			$config['onzoomchanged'] = 'if(map.getZoom() == 19) {
+							            	overlays().addClass("hide");	
+							            }else if(map.getZoom() == 18){ 
+							                 overlays().removeClass("hide");
+							        
+							            }';
+			
+																	
 			// styling the color of the map								
 			$config['styles'] = array(
 						array("name"=>"GydusColor", "definition"=>array(
@@ -167,12 +165,16 @@
 			$marker = array();
 			$marker['position'] = '28.594461, -81.304002';
 			$marker['draggable'] = true;
-			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());$("#sasLat").val(event.latLng.lat());$("#sasPrompt").text("Double Tap pin to give information. Or Tap and hold pin to desired location .");';
+			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());
+									$("#sasLat").val(event.latLng.lat());
+									$("#sasPrompt").text("Double Tap pin to give information. Or Tap and hold pin to desired location .");';
 			$marker['animation'] = 'DROP';
 			$marker['ondblclick']= "$('.sasView').slideDown(1500,function(){
+										$('#sasPrompt').addClass('hide');
+									});";
+			$marker['title'] = 'Drag Me';
+
 			
-			$('#sasPrompt').addClass('hide');
-			});";
 			$this->googlemaps->add_marker($marker);
 			
 			$this->load->helper('url');
@@ -227,13 +229,15 @@
 	
 				$this->googlemaps->initialize($config);
 				
-				$row = $query->row();
-			
-//				$pieces = explode("','", $dir);
+				$q = $query->row();
+				$d = $q->directions;
+				
+				$directions = explode(";", $d);
 
-				 //echo $row->directions;
 				$polyline = array();
-				$polyline['points'] = array('28.594416, -81.303782', '28.594413, -81.304147', '28.594475, -81.304270', '28.595078, -81.304286', '28.595023, -81.304056', '28.594983, -81.304056');
+				$polyline['points'] = $directions; 
+				$polyline['$zIndex'] = 10;
+				
 				$this->googlemaps->add_polyline($polyline); 
 				
 					
@@ -257,15 +261,15 @@
 	
 				if ($this->session->userdata('is_logged_in')){	
 					$data['userData'] = $this->session->all_userdata();
-				};			
+				};
 					
-	
 				$this->load->view('templates/template',$data);			
+
 			}else{
 				
 				redirect('index.php/mapController');
+
 			}
-			
 			
 		}
 		

@@ -95,9 +95,24 @@ class mapModel extends CI_Model{
 	}	
 	
 	function get_Directions(){
+	
+		/*
+if($formA_Building == $formB_Building){
+			
+			// directtions from room to room in same building
+			
+			
+		}else{
+			
+			//directions from room to building exit,"walk from building A to BuildingB, exit to room 
+		 
+			
+		}
+*/
+	
 		
 		$formA_Building = 'FS3B';
-		$formA_Room = '136';
+		$formA_Room = '131';
 		$formB_Building = 'FS3C';
 		$formB_Room = '110';
 		
