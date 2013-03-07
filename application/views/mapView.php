@@ -62,7 +62,7 @@
 				
 				</section><!-- end of points of interst 1-->
 				<section class="poinstofinterest2">
-						<section class="poiSelectionDos btn-group" data-toggle="buttons-checkbox">
+						<section class="poiSelection btn-group" data-toggle="buttons-checkbox">
 								<button type="button" class="btn btn-default">Book Store</button>
 								<button type="button" class="btn btn-default">Restroom</button>
 								<button type="button" class="btn btn-default">Receptionist</button>

@@ -381,7 +381,12 @@ $('#editAccPromptsuccess').fadeOut(3000, function(){
     
     
     
+/*
+$('.poiSelection').click(function(){
+	alert($('.poiSelection[btn]:checkbox:checked').get(this));
+})    
     
+*/
     
                          
 
