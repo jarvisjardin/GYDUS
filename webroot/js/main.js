@@ -310,6 +310,26 @@ $(document).ready(function () {
 
 
 
+/*-------------- AJAX TO LOAD OVERLAYS------------------------*/
+
+
+
+      $.ajax({
+       	    type: 'GET',
+            url: '',
+            dataType: 'json',
+            success: function (response) {
+            
+                for (var i = 0; i < response.result.length; i++) {
+                   
+                }
+            },
+            error: function (error) {
+	            console.log("YOU MESSED UP!");
+            }
+        });
+
+
 
 
 
