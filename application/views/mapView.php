@@ -93,11 +93,8 @@
 		
 
 <section class="findlocationButtonTop">
-		<h4 class="map-view-fL btn btn-large btn-block" id="map-viewFLbtn">Find Location</h4>
-		<section class="findLocation-Drop">
-					<h3 id="fldropcarret" class="gydus-findL-btn-drop pull-right clearfix" id="findLbtnX" type="button" >V</h3>
-
-				</section><!-- end of findLocation Close-->
+		<h4 class="map-view-fL btn btn-large btn-block" id="map-viewFLbtn">Find Location  <i class="icon-chevron-down"></i></h4>
+		
 
 </section><!-- end of findlocatoinButtonTop-->
 <section class="navigationforms alert alert-info hide">
