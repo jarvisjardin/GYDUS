@@ -19,12 +19,13 @@
 			$config['$sensor'] = TRUE;
 			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
 			$config['onzoomchanged'] = 'if(map.getZoom() == 19) {
-							            	overlays().addClass("hide");	
+											console.log("show overlays");
 							            }else if(map.getZoom() == 18){ 
-							                 overlays().removeClass("hide");
+							                console.log("hide overlays");
 							        
 							            }';
-			
+			$config['onclick'] = 'alert(\'You just clicked at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
+
 																	
 			// styling the color of the map								
 			$config['styles'] = array(
