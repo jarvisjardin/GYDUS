@@ -1,9 +1,7 @@
 <section class="gydus-terms-titlebtn">
-				<h3 class="btn btn-large btn-block btn-info"><a href="<?php echo base_url();?>index.php/mapController/">Contact Us</a></h3>
-				<section class="terms-back">
-					<button class="gydus-decorner-btn btn  btn-link pull-right clearfix" id="findLbtnX" type="button" ><</button>
-
-				</section><!-- end of findLocation Close-->
+				<button class="contactusbutton btn btn-large btn-block btn-info" type="button" onClick="location='<?php echo base_url();?>index.php/mapController/'">Back to Map</button>
+				
+</section>
 <section class="gydus-contactus">
 <h1 class="gydus-register-headertxt">Contact Us</h1>
 
@@ -20,7 +18,7 @@
              <!-- EMAIL-->
 
             <section class="gyduscontact control-group">
-              <label class="control-label" for="inputEmail">How do we reach you?</label>
+              <label class="control-label" for="inputEmail">Your Email</label>
               <section class="controls">
                 <input type="text" class="gydus-reg-email-input" name="reginputEmail" id="reg-inputEmail reginputEmail" placeholder="Email you can be reached at">
               </section>

@@ -1,11 +1,7 @@
 <section class="gydus-dev-Corner">
 	<section class="gydus-dev-Corner-titlebtn">
-				<h3 class="btn btn-large btn-block btn-info"><a href="<?php echo base_url();?>index.php/mapController/">Developers Corner</a></h3>
-				<section class="devcorner-back">
-					<button class="gydus-decorner-btn btn  btn-link pull-right clearfix" id="findLbtnX" type="button" ><</button>
-
-				</section><!-- end of findLocation Close-->
-	</section><!-- end of dev corder title-->
+				<h3 class="btn btn-large btn-block btn-info" onClick="location='<?php echo base_url();?>index.php/mapController/'">Back to Map</h3>
+					</section><!-- end of dev corder title-->
 
 
 	<section class="whoarewe">

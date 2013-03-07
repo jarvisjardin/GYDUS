@@ -1,9 +1,6 @@
 <section class="gydus-terms-titlebtn">
-				<h3 class="btn btn-large btn-block btn-info"><a href="<?php echo base_url();?>index.php/mapController/">Terms and Conditions</a></h3>
-				<section class="terms-back">
-					<button class="gydus-decorner-btn btn  btn-link pull-right clearfix" id="findLbtnX" type="button" ><</button>
-
-				</section><!-- end of findLocation Close-->
+				<h3 class="btn btn-large btn-block btn-info"onClick="location='<?php echo base_url();?>index.php/mapController/'">Back to Map</h3>
+				
 <section class="termsView">
 
 
@@ -141,13 +138,13 @@
 	                  </section>
 	                </section>
 	                <section class="accordion-group">
-	                  <section class="accordion-heading">
-	                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-	                      BIOSTALL - TERMS AND CONDITIONS
-	                    </a>
-	                  </section>
-	                  <section id="collapseTwo" class="accordion-body collapse">
-	                    <section class="accordion-inner">
+		                  <section class="accordion-heading">
+		                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+		                      BIOSTALL - TERMS AND CONDITIONS
+		                    </a>
+		                  </section><!-- end of accourdion-heading-->
+		                  <section id="collapseTwo" class="accordion-body collapse">
+			                  <section class="accordion-inner">
 	                     <p>The library enables you to create a map and overlay multiple markers, polylines, polygons, rectangles, ground overlays and/or circles, all of which are fully customizable. The library also supports showing directions between two points, including the ability to show the textual directions alongside the map too, and marker clustering. The first stages of integration with the Google Places API are available for use too.</p>
 
 	    <p>

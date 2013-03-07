@@ -1073,7 +1073,7 @@ position: absolute;
 /*----- CONTACT US ----*/
 
 .gydus-contactus{
-	margin-top:1em;
+/* 	margin-top:4em; */
 	background: rgb(240,249,255); /* Old browsers */
 background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(203,235,255,1) 47%, rgba(161,219,255,1) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,249,255,1)), color-stop(47%,rgba(203,235,255,1)), color-stop(100%,rgba(161,219,255,1))); /* Chrome,Safari4+ */
@@ -1099,16 +1099,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .gyduscontact.control-group{
 	margin-top:3em;
 }
-
+.contactusbutton.btn.btn-large.btn-block.btn-info{
+	margin-top:-1.9em;
+}
 
 /*---- NAVIGATION -----*/
 .navigationforms.alert.alert-info{
-	margin-left:-1em;
+/* 	margin-left:-1em; */
 	width:90%;
 }
 .getdirections.btn.btn-large.btn-block{
-	margin-left:-1em;
+/* 	margin-left:-1em; */
 	width:100%;
+}
+button.gydussetbacktomap.btn.btn-mini.btn-info{
+	margin-left:-6em;
+}
+.cuback{
+	margin-left:5em;
+}
+
+.contactus-back{
+	margin-top:-2.9em;
+	margin-left:1em;
 }
 
 /*-------------------------------
@@ -1160,7 +1173,7 @@ border:none;
 /*-- developers corner --*/
 
 .gydus-dev-Corner-titlebtn{
-	margin-top:10em;
+	margin-top:4.8em;
 }
 .gydus-dev-Corner-titlebtn h3 a:hover{
 text-decoration: none;
@@ -1236,7 +1249,7 @@ margin-left: 3%;
 }
 
 .gydus-terms-titlebtn{
-	margin-top:7em;
+	margin-top:5em;
 }
 
 .gydus-terms-titlebtn a{
