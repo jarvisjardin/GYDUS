@@ -75,24 +75,48 @@ class mapModel extends CI_Model{
 	
 	function search(){
 
-		
-		$this->db->where('name',$this->input->post('searchLocation'));
-		$query = $this->db->get('Buildings'); //Change this to rooms later
-		
-		if($query->num_rows() > 0)
-		{
-		
-			return $query;
-		}else
-		{
+		if($this->input->get('searchLocation')!=''){
+		 
+			$this->db->where('name',$this->input->get('searchLocation'));
+			$query = $this->db->get('Buildings'); //Change this to rooms later
 			
-			return false;
+			if($query->num_rows() > 0)
+			{
 			
+				return $query;
+			}else
+			{
+				
+				return false;
+				
+			}
+			
+		}else{
+		
+			if(isset($_GET['points'])) {
+				
+				echo 'theres a check';
+			}
+
+
 		}
-			
-		
 		
 	}	
+	
+	function IsChecked($chkname,$value)
+    {
+        if(!empty($_GET[$chkname]))
+        {
+            foreach($_GET[$chkname] as $chkval)
+            {
+                if($chkval == $value)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 	
 	function get_Directions(){
 	

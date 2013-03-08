@@ -139,7 +139,7 @@
 				$this->load->view('templates/template',$data);			 			   
 		
 			}else{
-				
+				$blah = $this->session->set_flashdata('message', 'Search Results Not Found.');
 				redirect('index.php/mapController');
 			}
 					
