@@ -17,7 +17,7 @@
 				
 				<section class="person1bio">
 					<h4>Jarivs Jardin</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p>Hey Everyone! I'm Jarvis Jardin, Web Developer and Designer. I'm 21 years old and I attend Full Sail University to complete a bachelors degree in Web Design and Development. During high school I did some freelance web design work and graduated completing 1000 hours of website development. After high school, I wanted to continue my path and decided that Full Sail was the correct choice.</p>
 				</section><!--end of person1bio-->
 			
 			</section><!-- end of person1-->
@@ -30,7 +30,9 @@
 					
 					<section class="person2bio">
 					<h4>Geoffrey Ganga</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					
+		
+					<p>My name is Geoffrey Ganga. I was born in Connecticut, raised in Alpharetta, Georgia. I currently live in Winter Park Florida and attend Full Sail University. I will be graduating March 2013 with a bachelors degree in Computer Science. My major is Web Development. I love everything about the web. From the design to whats going on behind the scenes that make your design functional. Majority of the population including me spends most of their time on the internet. So why not study the web and how it works.Outside of developing websites I also enjoy, skateboarding, working out, playing video games, sleeping, and watching movies. My favorite tv shows are "How I met your mother", "White Collar", "Dexter", and "Greek".</p>
 
 					</section><!--end of person1bio-->
 			
