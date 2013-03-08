@@ -120,7 +120,7 @@
         <label>To Point B</label>
         <input type="text" name="pointb" placeholder="Point B" id="pointb">
         <br>
-        <button class="getdirections btn btn-success btn-large btn-block">Get Directions</button>
+        <button class="getdirections btn btn-success btn-large btn-block" onClick="location='<?php echo base_url();?>index.php/mapController/navigate'">Get Directions</button>
     </section>
 </section>	<span><?php if($this->session->flashdata('message')) {
 						echo '<section id="sasPromptsuccess" class=" message alert alert-block alert-success">
