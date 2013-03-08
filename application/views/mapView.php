@@ -80,56 +80,11 @@
     <section class="findlocationButtonTop">
         	<h4 class="map-view-fL btn btn-large btn-block" id="map-viewFLbtn">Find Location  <i class="icon-chevron-down"></i></h4>
 
-<<<<<<< HEAD
-				</section><!-- end of findLocation Close-->
-			</section><!-- end of findlocation-->
-			
-			<section class="searchkeyword">
-				<form action="<?php echo base_url();?>index.php/mapController/search" method='post' class="form-search">
-					<section class="gydus-kw-append input-append">
-						<input type="text" class="gydus-kw-search" name='searchLocation' placeholder="Search keyword or room">
-					</section><!-- end of input-append-->
-						<h3 class="searchOR">or</h3>
-					</section><!-- end of searchkeyword-->
-		
-			<section class="dropdownBuildings">
-				<select class="buildingSelect">
-					<option>SELECT BUILDING</option>
-					<option>FS1</option>
-					<option>FS2</option>
-					<option>FS3</option>
-					<option>FS4</option>
-				</select>
-			</section><!-- end fo dropdownBuildings-->
-		
-			<section class="poiTitleSection alert alert-info">
-				<h4 class="poiHeader ">Select Points of Interest</h4>
-			</section>
-			
-			<section class="pointsofinterest">
-				<section class="pointsofinterest1">
-				<section class="poiSelection btn-group" data-toggle="buttons-checkbox">
-						<button type="button" class="btn btn-default">Patio</button>
-						<button type="button" class="btn btn-default">Food/Beverage</button>
-						<button type="button" class="btn btn-default">Library</button>
-				</section>
-				
-				</section><!-- end of points of interst 1-->
-				<section class="poinstofinterest2">
-						<section class="poiSelection btn-group" data-toggle="buttons-checkbox">
-								<button type="button" class="btn btn-default">Book Store</button>
-								<button type="button" class="btn btn-default">Restroom</button>
-								<button type="button" class="btn btn-default">Receptionist</button>
-						</section>
-				</section><!-- end of points of interst 2-->
-			</section><!-- end of points of interest-->
-=======
     </section>
     <!-- end of findlocatoinButtonTop-->
     <section class="navigationforms alert alert-info hide">
         <button type="button" id="closenav" class="close">&times;</button>
         	<h3 class="navTitle">Get Directions</h3>
->>>>>>> points of interest functionality
 
         <label>From Point A</label>
         <input type="text" name="pointa" placeholder="Point A" id="pointa">
