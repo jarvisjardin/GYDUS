@@ -16,6 +16,7 @@
 
 	<link rel="stylesheet" href="<?php echo base_url();?>/webroot/css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php echo base_url();?>/webroot/css/bootstrap.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
 <!-- 	<link href="/webroot/css/bootstrap-responsive.css" rel="stylesheet"> -->
 
 		<!-- end CSS-->
@@ -107,6 +108,7 @@
 	        </section><!-- end of terms view-->
               
               <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
 		
 	<!-- main -->
 	

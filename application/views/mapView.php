@@ -44,14 +44,42 @@
         </section>
         <section class="pointsofinterest">
             <section class="pointsofinterest1">
-                <section name="poiSelection1" class="poiSelection btn-group" data-toggle="buttons-checkbox">
-                   <input  name="points[]" value="Patio" type="checkbox" class="btn btn-default"/>
-                   <input name="points[]" value="Food/Beverage" type="checkbox" class="btn btn-default"/>
-                    <input  name="points[]" value="Restroom" type="checkbox" class="btn btn-default"/><br>
-                     <input  name="points[]" value="Book Store" type="checkbox" class="btn btn-default"/>
-                    <input name="points[]" value="Library" type="checkbox" class="btn btn-default"/>
-                    <input  name="points[]" value="Receptionist" type="checkbox" class="btn btn-default"/>
-
+                <section name="poiSelection1" class="poiSelection btn-group">
+                	<section class="patioPoisection pull-left">
+                		<label class="pull-left">
+	                		<input name="points[]" value="Patio" type="checkbox"/><span>Patio</span>
+                		</label>
+                	</section><!-- end of patio poi section-->
+                	
+                	<section class="foodPoisection pull-left">
+                		<label class="pull-left">
+	                		<input name="points[]" value="Food/Beverage" type="checkbox"/><span>Food/Beverage</span>
+                		</label>
+                	</section><!-- end of food poi section-->
+                	
+                	<section class="restroomPoisection pull-left">
+                		<label class="pull-left">
+	                		<input name="points[]" value="Food/Beverage" type="checkbox"/><span>Food/Beverage</span>
+                		</label>
+                	</section><!-- end of food poi section-->
+                	
+                	<section class="bookstorePoisection pull-left">
+                		<label class="pull-left">
+                    	 	<input  name="points[]" value="Book Store" type="checkbox" /><span>Distribution Center</span>
+                    	</label>
+                	</section><!-- end of bookstore poi section-->
+                	
+                	<section class="libraryPoisection pull-left">
+                		<label class="pull-left">
+                  		  <input name="points[]" value="Library" type="checkbox" /><span>Library</span>
+                		</label>
+                	</section><!-- end of library poi section-->
+                	
+                	<section class="receptionistPoisection pull-left">
+                		<label class="pull-left">
+                    	  <input  name="points[]" value="Receptionist" type="checkbox"/><span>Receptionist</span>
+                		</label>
+                	</section><!-- end of receptionisht poi section-->
                 </section>
             </section>
             <!-- end of points of interst 1-->
