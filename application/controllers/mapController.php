@@ -120,10 +120,25 @@
 			
 				
 				foreach($query as $q) {
-				
-					foreach($q->result() as $p){
 					 
-					 	$marker = array();
+					foreach($q->result() as $p){
+						echo '<br';
+						echo '<br';
+						echo '<br';
+						echo '<br';
+						echo $p->categorey;
+						$marker = array();
+
+						
+					 	if($p->categorey == 'Restroom'){
+						 	
+						 	$marker['icon'] = 'http://mapicons.nicolasmollet.com/wp-content/uploads/mapicons/shape-default/color-3875d7/shapecolor-color/shadow-1/border-dark/symbolstyle-white/symbolshadowstyle-dark/gradient-no/toilets.png';
+					 	}else if($p->categorey == 'Food/Beverage'){
+						 	
+						 	$marker['icon'] = 'http://mapicons.nicolasmollet.com/wp-content/uploads/mapicons/shape-default/color-4670f0/shapecolor-color/shadow-1/border-dark/symbolstyle-white/symbolshadowstyle-dark/gradient-no/sandwich-2.png';
+					 	}
+					
+					 	$marker['title']=$p->name;
 					 	$marker['position'] = $p->latitude.','.$p->longitude;
 					 	$this->googlemaps->add_marker($marker);
 				 	}

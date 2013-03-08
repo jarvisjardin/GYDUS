@@ -93,7 +93,11 @@ class mapModel extends CI_Model{
 			
 		}else{
 			$qArray = array();
-			$points = $_GET['points'];
+			
+			if(isset($_GET['points'])){
+				$points = $_GET['points'];
+
+			}
 			
 			  if(empty($points))   {
 				return false;			    
@@ -124,21 +128,21 @@ class mapModel extends CI_Model{
 		
 	}	
 	
-	function IsChecked($chkname,$value)
-    {
-        if(!empty($_GET[$chkname]))
-        {
-            foreach($_GET[$chkname] as $chkval)
-            {
-                if($chkval == $value)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-	
+	public function getOverlays(){
+			
+			$db = new \PDO("mysql:hostname=127.0.0.1;port=8889;dbname=Gydus", "root", "root");
+			$sqlst = "Select * from Overlays";
+			$st = $db->prepare($sqlst);
+			$results = $st->execute();
+			$resultData = $st->fetchAll(); //get all responses
+			if($st->rowCount() > 0){ //if the record exists than 
+				//there is a record
+				return $resultData;
+			}else{
+				return 'no record';
+			}
+		}//close get campuses	
+		
 	function get_Directions(){
 	
 		/*

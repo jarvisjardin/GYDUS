@@ -59,7 +59,7 @@
                 	
                 	<section class="restroomPoisection pull-left">
                 		<label class="pull-left">
-	                		<input name="points[]" value="Food/Beverage" type="checkbox"/><span>Food/Beverage</span>
+	                		<input name="points[]" value="Restroom" type="checkbox"/><span>Restroom</span>
                 		</label>
                 	</section><!-- end of food poi section-->
                 	

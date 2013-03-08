@@ -312,41 +312,18 @@ $(document).ready(function () {
 
 /*-------------- AJAX TO LOAD OVERLAYS------------------------*/
 
-
-
-      $.ajax({
-       	    type: 'GET',
-            url: '',
-            dataType: 'json',
-            success: function (response) {
-            
-                for (var i = 0; i < response.result.length; i++) {
-                   
-                }
-            },
-            error: function (error) {
-	            console.log("YOU MESSED UP!");
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	$.ajax({                                      
+	      url: '../../webroot/js/xhr/getOverlays.php',       //the script to call to get data          
+	      dataType: 'json',                //data format      
+	      success: function(data)          //on recieve of reply
+	      {
+			console.log(data);	      		
+	      },
+	      error:function(){
+		      console.log('error');
+		      
+	      } 
+    });
 
 
 
