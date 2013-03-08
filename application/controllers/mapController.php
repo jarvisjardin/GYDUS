@@ -132,10 +132,10 @@
 						
 					 	if($p->categorey == 'Restroom'){
 						 	
-						 	$marker['icon'] = 'http://mapicons.nicolasmollet.com/wp-content/uploads/mapicons/shape-default/color-3875d7/shapecolor-color/shadow-1/border-dark/symbolstyle-white/symbolshadowstyle-dark/gradient-no/toilets.png';
+						 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/Restroom_zpsa251fe0e.png';
 					 	}else if($p->categorey == 'Food/Beverage'){
 						 	
-						 	$marker['icon'] = 'http://mapicons.nicolasmollet.com/wp-content/uploads/mapicons/shape-default/color-4670f0/shapecolor-color/shadow-1/border-dark/symbolstyle-white/symbolshadowstyle-dark/gradient-no/sandwich-2.png';
+						 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FoodBeverage_zps777eb768.png';
 					 	}
 					
 					 	$marker['title']=$p->name;
