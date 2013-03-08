@@ -92,12 +92,33 @@ class mapModel extends CI_Model{
 			}
 			
 		}else{
-		
-			if(isset($_GET['points'])) {
-				
-				echo 'theres a check';
-			}
-
+			$qArray = array();
+			$points = $_GET['points'];
+			
+			  if(empty($points))   {
+				return false;			    
+			  
+			  }else{
+			  
+			  	foreach($points as $p){
+			  	
+				  	$this->db->where('categorey',$p);
+			        $query = $this->db->get('PointsOfInterest'); //Change this to rooms later
+			        
+			        
+			        if($query->num_rows() > 0){
+			       
+						array_push($qArray, $query);						     
+						
+			        }else{
+				        
+				        return false;
+			        };
+			        
+				 }
+				 
+				 return $qArray;
+			  }
 
 		}
 		

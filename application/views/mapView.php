@@ -45,12 +45,12 @@
         <section class="pointsofinterest">
             <section class="pointsofinterest1">
                 <section name="poiSelection1" class="poiSelection btn-group" data-toggle="buttons-checkbox">
-                   <input name="points[]" value="Patio" type="button checkbox" class="btn btn-default"/>
-                   <input name="points[]" value="Food/Beverage" type="button checkbox" class="btn btn-default"/>
-                    <input name="points[]" value="Restroom" type="button checkbox" class="btn btn-default"/><br>
-                     <input name="points[]" value="Book Store" type="button checkbox" class="btn btn-default"/>
-                    <input name="points[]" value="Library" type="button checkbox" class="btn btn-default"/>
-                    <input name="points[]" value="Receptionist" type="button checkbox" class="btn btn-default"/>
+                   <input  name="points[]" value="Patio" type="checkbox" class="btn btn-default"/>
+                   <input name="points[]" value="Food/Beverage" type="checkbox" class="btn btn-default"/>
+                    <input  name="points[]" value="Restroom" type="checkbox" class="btn btn-default"/><br>
+                     <input  name="points[]" value="Book Store" type="checkbox" class="btn btn-default"/>
+                    <input name="points[]" value="Library" type="checkbox" class="btn btn-default"/>
+                    <input  name="points[]" value="Receptionist" type="checkbox" class="btn btn-default"/>
 
                 </section>
             </section>
@@ -63,7 +63,7 @@
                 <?php $this->load->helper('url'); if ($this->session->userdata('is_logged_in')){ ?>
                 <a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-success btn-block">Suggest a Spot</a>
                 <?php }else{ ?>
-                <a href="<?php echo base_url();?>index.php/mapController/suggestaspotView" class="btn btn-large btn-success btn-block disabled">Suggest a Spot</a>
+                <a class="btn btn-large btn-success btn-block disabled">Suggest a Spot</a>
                 <?php }; ?>
             </section>
             <!-- end of suggest spot btn-->

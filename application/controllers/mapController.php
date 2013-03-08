@@ -117,12 +117,18 @@
 				$config['minifyJS'] = TRUE;
 
 				$this->googlemaps->initialize($config);
+			
 				
+				foreach($query as $q) {
 				
-				foreach ($query->result() as $coordinate) {
-				 	$marker = array();
-				 	$marker['position'] = $coordinate->latitude.','.$coordinate->longitude;
-				 	$this->googlemaps->add_marker($marker);
+					foreach($q->result() as $p){
+					 
+					 	$marker = array();
+					 	$marker['position'] = $p->latitude.','.$p->longitude;
+					 	$this->googlemaps->add_marker($marker);
+				 	}
+			
+			
 				 }
 					
 				$data = array();
