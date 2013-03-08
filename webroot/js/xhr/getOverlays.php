@@ -10,11 +10,14 @@
 	$sql = "SELECT * FROM Overlay";
 	$q	 = $conn->query($sql) or die("failed!");
 	
+	$qArray = array()
 	
 	while($r = $q->fetch(PDO::FETCH_ASSOC)){
-	  echo $r['title'];
+	 
+	  array_push($qArray, $r);
 	}
 
+	echo json_encode(array('message'=>'overlays', 'result'=> $qArray);
 
 
 
