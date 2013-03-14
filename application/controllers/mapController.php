@@ -193,6 +193,7 @@
 			$marker['animation'] = 'DROP';
 			$marker['ondblclick']= "$('.sasView').slideDown(1500,function(){
 										$('#sasPrompt').addClass('hide');
+										$('.gydus-sas-back').addClass('hide');
 									});";
 			$marker['title'] = 'Drag Me';
 

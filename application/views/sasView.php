@@ -48,12 +48,16 @@
           </section><!-- end of Gydus Login --> 
 
 <section id="sasPrompt" class="alert alert-block">
+<h3>Suggest a Spot</h3>
   <p>1.Tap and hold to drag pin</p><br>
   <p>2.Double Tap pin to give information</p>
-  
-   
-
 </section>
+
+<section class="gydus-sas-back">
+	<section class="gydus-sas-backbtn">
+		<h3 class="btn btn-block btn-warning" onClick="location='<?php echo base_url();?>index.php/mapController/'">Cancel</h3>
+	</section>
+</section><!-- end of dev corder title-->
 
 <section id="mapSpot" class="map-spot">
 		    <section id="map_canvas" class="mapCanvas pull-left" style="width:100%; height:100%">

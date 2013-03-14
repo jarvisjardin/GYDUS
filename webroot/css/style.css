@@ -1044,6 +1044,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	margin-top:1em;
 }
 
+.gydus-sas-back{
+	margin-top:-1em;
+	padding-bottom: 1em;
+}
+
 /*-------------------------------
 
 		MAP VIEW
@@ -1525,7 +1530,7 @@ and (max-width : 480px) {
 	font-family: "Helvetica";
 	font-size:1.8em;    /*48 px*/
 	color: #ffffff;
-	margin-left:.5em;
+	margin-left:.2em;
 	width: 100%;
 	font-weight: lighter;
 	text-shadow: 4px 4px 5px #454545;
