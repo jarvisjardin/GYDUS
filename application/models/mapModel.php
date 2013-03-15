@@ -84,6 +84,7 @@ class mapModel extends CI_Model{
 			{
 			
 				return $query;
+				//echo gettype($query);
 			}else
 			{
 				
@@ -120,7 +121,8 @@ class mapModel extends CI_Model{
 			        };
 			        
 				 }
-				 
+				//echo gettype($qu);
+
 				 return $qArray;
 			  }
 

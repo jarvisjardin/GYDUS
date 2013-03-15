@@ -111,21 +111,14 @@
 				$config['minifyJS'] = TRUE;
 
 				$this->googlemaps->initialize($config);
-			
+
 				
-				if(count($query) > 1){
+				if(gettype($query) == 'array'){
 				
 					foreach($query as $q) {
 										 
-						foreach($q->result_array() as $p){
-							echo '<br';
-							echo '<br';
-							echo '<br';
-							echo '<br';
-							echo $p->categorey;
-							$marker = array();
-	
-							
+						foreach($q->result() as $p){
+												
 						 	if($p->categorey == 'Restroom'){
 							 	
 							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/Restroom_zpsa251fe0e.png';
@@ -137,6 +130,8 @@
 						 	$marker['title']=$p->name;
 						 	$marker['position'] = $p->latitude.','.$p->longitude;
 						 	$this->googlemaps->add_marker($marker);
+						 	
+
 					 	}
 					 	
 					 }
@@ -146,9 +141,15 @@
 				 	foreach($query->result() as $q) {
 					 	$marker['title']=$q->name;
 					 	$marker['position'] = $q->latitude.','.$q->longitude;
+					 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/bulding_zpscbd143c7.png';
 					 	$this->googlemaps->add_marker($marker);
+					 	
+
+					 	
 					} 
 				 }
+				
+
 					
 				$data = array();
 				$data['content'] = 'mapView';
