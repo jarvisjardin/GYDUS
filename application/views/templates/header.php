@@ -86,7 +86,18 @@
 <!-- GYDUS LOGO -->
 			
 					<section class="logo" id="logo">
-		        		<a class="brand gydus-logo" href="#"><img src="<?php echo base_url();?>/webroot/img/logo_smaller-01.png" alt="Gydus" /></a>
+		        		
+		        		<a id='gydusHeader' class="brand gydus-logo" data-toggle="dropdown" href="#"><img src="<?php echo base_url();?>/webroot/img/logo_smaller-01.png" alt="Gydus" /></a>
+
+
+		        		<ul class="gydusSetDrop dropdown-menu">
+		        			<li class="gydusContactHead"><a href="<?php echo base_url();?>index.php/userController/contact_us"><h3>Contact Us</h3></a></li>
+		        			<li class="gydusDevCornerHead"><a href="<?php echo base_url();?>index.php/userController/dev_corner"><h3>Developers Corner</h3></a></li>
+		        			<li class="gydusTermsHead"><a href="<?php echo base_url();?>index.php/userController/terms"><h3>Terms and Conditions</h3></a></li>
+		        		
+		        		</ul><!-- end of dropdown-menu-->
+		        		
+
 					</section><!-- end of logo -->
 					
 					
