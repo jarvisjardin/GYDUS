@@ -14,10 +14,15 @@
 */
 $(document).ready(function () {
     
-    var snd = document.createElement('audio'),
+  
+  var snd = document.createElement('audio'),
         src = document.createElement('source');
    
     var FullSail = new google.maps.LatLng(28.594461, -81.304002);
+    
+    var GMAP,
+    	overlayArray = [];
+    
 
 
     src.src = "http://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
@@ -285,6 +290,12 @@ $(document).ready(function () {
 
         //console.log("hello");
         map.panTo(FullSail);
+        
+ 
+      
+        GMAP = map;
+        
+        
 
         return false;
     });
@@ -312,29 +323,47 @@ $(document).ready(function () {
 
 /*-------------- AJAX TO LOAD OVERLAYS------------------------*/
 
-	$.ajax({                                      
-	      url: '../../webroot/js/xhr/getOverlays.php',       //the script to call to get data          
-	      dataType: 'json',                //data format      
-	      success: function(data)          //on recieve of reply
-	      {
-			console.log(data);	      		
-	      },
-	      error:function(){
-		      console.log('error');
-		      
-	      } 
-    });
+    
+	
+   
+   
+    function getOverlays(){
+			
+			$.ajax({
+				url: '../webroot/js/xhr/getOverlays.php',
+				type: 'get',
+				dataType: 'json',
+				success: function(response){
+					for(i=0,j=response.length; i<j; i++){
+						var overlay = response[i];
+						createOverlay(overlay.SWlat,overlay.SWlng,overlay.NElat,overlay.NElng,overlay.url,overlay.name);
+					}
+											
+				},error: function(e){
+					
+					console.log("Error",e);
+				}
+				
+			});
+			
+	};
+		
+	
+	function createOverlay(SWlat,SWlng,NElat,NElng,url,name){
 
+		var imageBounds = new google.maps.LatLngBounds(
+			new google.maps.LatLng(SWlat,SWlng),
+			new google.maps.LatLng(NElat,NElng));
+						
+		var Overlay = new google.maps.GroundOverlay(url, imageBounds);
+		    
+		Overlay.setMap(GMAP);
+		
+		overlayArray.push(Overlay);
 
-
-
-
-
-
-
-
-
-
+	}	
+	
+	
 /*---------- Navigation -----------------*/	        
 	        $('#foot-nav').click(function () {
 	        	$('.navigationforms').removeClass('hide');
@@ -364,7 +393,43 @@ $('.poiSelection').click(function(){
 })    
     
 */
-    
-                         
+
+/*=============================================================================*/
+/*================================  INIT ======================================*/
+/*=============================================================================*/
+
+	var init = function(){
+			
+			
+			setTimeout(function () {
+          	  
+          	  $('#gpsBtn').trigger("click");
+          	  
+          	  google.maps.event.addListener(GMAP, 'zoom_changed', function () {
+            if (map.getZoom() == 20) {
+            	
+            	getOverlays();
+            }else if(map.getZoom() == 19){
+            
+            	for (i in overlayArray) {            
+                     overlayArray[i].setMap(null);
+                };
+
+
+	            
+            }
+        });
+
+          	            	
+            }, 900);
+           	
+	};
+		
+	init();
+	    
+    function consolesomething(text){
+	    
+	    console.log(text)
+    }                     
 
 });

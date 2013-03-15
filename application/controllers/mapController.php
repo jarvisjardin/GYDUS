@@ -18,12 +18,6 @@
 			//$config['minifyJS'] = TRUE;
 			$config['$sensor'] = TRUE;
 			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
-			$config['onzoomchanged'] = 'if(map.getZoom() == 19) {
-											console.log("show overlays");
-							            }else if(map.getZoom() == 18){ 
-							                console.log("hide overlays");
-							        
-							            }';
 			$config['onclick'] = 'alert(\'You just clicked at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
 
 																	
@@ -119,31 +113,41 @@
 				$this->googlemaps->initialize($config);
 			
 				
-				foreach($query as $q) {
-					 
-					foreach($q->result() as $p){
-						echo '<br';
-						echo '<br';
-						echo '<br';
-						echo '<br';
-						echo $p->categorey;
-						$marker = array();
-
+				if(count($query) > 1){
+				
+					foreach($query as $q) {
+										 
+						foreach($q->result_array() as $p){
+							echo '<br';
+							echo '<br';
+							echo '<br';
+							echo '<br';
+							echo $p->categorey;
+							$marker = array();
+	
+							
+						 	if($p->categorey == 'Restroom'){
+							 	
+							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/Restroom_zpsa251fe0e.png';
+						 	}else if($p->categorey == 'Food/Beverage'){
+							 	
+							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FoodBeverage_zps777eb768.png';
+						 	}
 						
-					 	if($p->categorey == 'Restroom'){
-						 	
-						 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/Restroom_zpsa251fe0e.png';
-					 	}else if($p->categorey == 'Food/Beverage'){
-						 	
-						 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FoodBeverage_zps777eb768.png';
+						 	$marker['title']=$p->name;
+						 	$marker['position'] = $p->latitude.','.$p->longitude;
+						 	$this->googlemaps->add_marker($marker);
 					 	}
-					
-					 	$marker['title']=$p->name;
-					 	$marker['position'] = $p->latitude.','.$p->longitude;
+					 	
+					 }
+					 	
+				 }else{
+				 
+				 	foreach($query->result() as $q) {
+					 	$marker['title']=$q->name;
+					 	$marker['position'] = $q->latitude.','.$q->longitude;
 					 	$this->googlemaps->add_marker($marker);
-				 	}
-			
-			
+					} 
 				 }
 					
 				$data = array();

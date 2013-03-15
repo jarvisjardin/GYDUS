@@ -1,35 +1,32 @@
 <?php
-
-	$host 	= "localhost";
-	$db	= "Gydus";
-	$user	= "root";
-	$pass	= "root";
+	// connect to the "tests" database
+	$conn = new mysqli('localhost', 'root', 'root', 'Gydus');
 	
-	$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
-	
-	$sql = "SELECT * FROM Overlay";
-	$q	 = $conn->query($sql) or die("failed!");
-	
-	$qArray = array()
-	
-	while($r = $q->fetch(PDO::FETCH_ASSOC)){
-	 
-	  array_push($qArray, $r);
+	// check connection
+	if (mysqli_connect_errno()) {
+	  exit('Connect failed: '. mysqli_connect_error());
 	}
-
-	echo json_encode(array('message'=>'overlays', 'result'=> $qArray);
-
-
-
- 
-//  $con = mysqli_connect($host,$user,$pass);
-//  $dbs = mysqli_select_db($con, $databaseName);
-
-  //$result = mysqli_query($con, "SELECT * FROM $tableName");          
-  
- // $query = mysqli_fetch_($result);                          
-  
-  //echo json_encode($query);
-  //var_dump($query)
-  
+	
+	// SELECT sql query
+	$sql = "SELECT * FROM `Overlays`"; 
+	
+	// perform the query and store the result
+	$result = $conn->query($sql);
+	
+	// if the $result contains at least one row
+	if ($result->num_rows > 0) {
+	  // output data of each row from $result
+	  $qArray = array();
+	  while($row = $result->fetch_assoc()) {
+	    array_push($qArray, $row);
+	   // echo '<br /> id: '. $row['id']. ' - name: '. $row['name']. ' - pass: '. $row['pass'];
+	  }
+	  
+	  echo json_encode($qArray);
+	}
+	else {
+	  echo 'There`s and error brah';
+	}
+	
+	$conn->close();	  
 ?>
