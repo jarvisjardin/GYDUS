@@ -12,424 +12,411 @@
 
 
 */
-$(document).ready(function () {
-    
-  
-  var snd = document.createElement('audio'),
-        src = document.createElement('source');
-   
+
+// javascript document start
+$(document).ready(function() {
+    //creating a variable for sound and for the source to the song
+    var snd = document.createElement('audio'),
+    // variable for sound
+    src = document.createElement('source');
+    // variable for source
+    // creating variable for Fullsails position
     var FullSail = new google.maps.LatLng(28.594461, -81.304002);
-    
-    var GMAP,
-    	overlayArray = [];
-    
 
-
+    // setting the sound and source variables
     src.src = "http://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    // source location
     src.type = "audio/mp3";
+    // source type
     src.loop = 'true';
+    // make it loop
     snd.appendChild(src);
+    // adding it
     snd.preload = 'null';
+    // do not preload
+
+    /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 
+				HARLEM SHAKE KONAMI CODE
 
-    var success = function () {
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
+
+    var success = function() {
         console.log('Konami Success');
         alert("DO THE HARLEMSHAKE");
 
         harlemShake()
-        setTimeout(function () {
+        // harlem shake function
+        setTimeout(function() {
             snd.play()
-        }, 900);
+            }, 900);
 
-        setTimeout(function () {
+        setTimeout(function() {
             history.go(0)
-        }, 32000)
-    };
-    
+            }, 32000)
+        };
+
     var konami = new Konami(success);
+
+    /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+				CLIENT SIDE VALIDATION
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
 
     /*------REGISTER FRONT SIDE VALIDATION---------*/
 
+    /*--  REGISTER USERNAME VALIDATION      --*/
 
+    // when you start to type in the input feild
+    $('.gydus-reg-name-input').keydown(function(event) {
 
-
-    /*--       REGISTER USERNAME VALIDATION      --*/
-
-    $('.gydus-reg-name-input').keydown(function (event) {
+        // if it is wrong
         if ($('.gydus-reg-name-input').val().length < 4) {
+            // if the value is less than 4 characters
             $('.gydus-reg-name-input').css("border", "1px solid red");
+            // css style the error messages
             $('.wronguser').removeClass('hide');
-
-        } else {
+            // display the error message
+            // if successful input
+            } else {
             $('.gydus-reg-name-input').css("border", "2px solid green");
+            // css style the success messages
             $('.checkuser').removeClass('hide');
+            // display the success message
             $('.wronguser').addClass('hide');
-
-        }
-    })
-
+            // hide the error message
+            }
+        // end of else
+        })
+    //end of name check
 
     /*--       REGISTER PASSWORD VALIDATION      --*/
 
-    $('#reg-inputPassword').keydown(function (event) {
+    // when you start to type in the input feild
+    $('#reg-inputPassword').keydown(function(event) {
+
+        // if it is wrong
         if ($('#reg-inputPassword').val().length < 5) {
+            // if the value is less than 5 characters
             $('#reg-inputPassword').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongpass').removeClass('hide');
-
-        } else {
+            // display the error message
+            } else {
             $('#reg-inputPassword').css("border", "2px solid green");
+            // css style the success messages
             $('.checkpass').removeClass('hide');
+            // display the success message
             $('.wrongpass').addClass('hide');
-        }
-    })
-
-
+            // hide the error message
+            }
+        // end of else
+        })
+    // end of password check
 
     /*--       REGISTER EMAIL VALIDATION      --*/
-    $('.gydus-reg-email-input').keydown(function (event) {
+
+    // when you start to type in the input feild
+    $('.gydus-reg-email-input').keydown(function(event) {
 
         var regEmailInput = $('.gydus-reg-email-input').val()
+        //variable for the value of the email input
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
+        // regex rules for email. must have the "@" followed by "."
+        // if it is wrong
         if (regEmailInput == '') {
+            // if the email input is blank
             $('.gydus-reg-email-input').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongemail').removeClass('hide');
+            // display the error message
 
-
-        } else if (!emailReg.test(regEmailInput)) {
+            } else if (!emailReg.test(regEmailInput)) {
+            // if the email does not match the regex rules
             $('.gydus-reg-email-input').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongemail').removeClass('hide');
-
-        } else {
+            // display the error message
+            } else {
+            // if it does pass the regex rules and it is not blank
             $('.gydus-reg-email-input').css("border", "2px solid green");
+            // css style the success messages
             $('.checkemail').removeClass('hide');
+            // display the success message
             $('.wrongemail').addClass('hide');
-
-
-        }
-    })
-
-
+            // hide the error message
+            }
+        // end of else
+        })
+    // end of email check
 
     /*------LOGIN FRONT SIDE VALIDATION---------*/
 
     /*--       LOGIN EMAIL VALIDATION      --*/
-    $('.gydus-login-email-input').keydown(function (event) {
 
-        var regEmailInput = $('.gydus-login-email-input').val()
+    // when you start to type in the input feild
+    $('.gydus-login-email-input').keydown(function(event) {
+
+        var regEmailInput = $('.gydus-login-email-input').val();
+        //variable for the value of the email input
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
+        //regex rules for email. must have the "@" followed by "."
+        // if it is wrong
         if (regEmailInput == '') {
+            // if the email is blank
             $('.gydus-login-email-input').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongemail').removeClass('hide');
+            // display the error message
 
-
-        } else if (!emailReg.test(regEmailInput)) {
+            } else if (!emailReg.test(regEmailInput)) {
+            // if the email does not match the regex rules
             $('.gydus-login-email-input').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongemail').removeClass('hide');
-
-        } else {
+            // display the error message
+            } else {
+            // if it does pass the regex rules and it is not blank
             $('.gydus-login-email-input').css("border", "2px solid green");
+            // css style the success messages
             $('.checkemail').removeClass('hide');
+            // display the success message
             $('.wrongemail').addClass('hide');
+            // hide the error message
 
-
-        }
-    })
-
+            }
+        //end of else
+        })
+    // end of login email check
 
     /*--       LOGIN PASSWORD VALIDATION      --*/
 
-    $('#login-inputPassword').keydown(function (event) {
+    // when you start to type in the input feild
+    $('#login-inputPassword').keydown(function(event) {
+
+        // if it is wrong
         if ($('#login-inputPassword').val().length < 5) {
+            // if the value is less than 5 characters
             $('#reg-inputPassword').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongpass').removeClass('hide');
-
-        } else {
+            // display the error message
+            } else {
+            // if successful input
             $('#login-inputPassword').css("border", "2px solid green");
+            // css style the success messages
             $('.checkpass').removeClass('hide');
+            // display the success message
             $('.wrongpass').addClass('hide');
-        }
-    })
-
-
+            // hide the error message
+            }
+        // end of else
+        })
+    // end of login password check
 
     /*------SUGGEST A SPOT FRONT SIDE VALIDATION---------*/
 
-
-
-
     /*--       SAS NAME VALIDATION      --*/
 
-    $('#sasSpotname').keydown(function (event) {
+    // when you start to type in the input feild
+    $('#sasSpotname').keydown(function(event) {
+        // if it is wrong
         if ($('#sasSpotname').val().length < 2) {
+            // if the value is less than 2 characters
             $('#sasSpotname').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongsasSpotname').removeClass('hide');
-
-        } else {
+            // display the error message
+            } else {
+            // if successful input
             $('#sasSpotname').css("border", "2px solid green");
+            // css style the success messages
             $('.checksasSpotname').removeClass('hide');
+            // display the success message
             $('.wrongsasSpotname').addClass('hide');
-
-        }
-    })
-
+            // hide the error message
+            }
+        //end of else
+        })
+    // end of sas spot name
 
     /*--       SAS DESC VALIDATION      --*/
 
-    $('.gydus-kw-search-spotDesc').keydown(function (event) {
+    // when you start to type in the input feild
+    $('.gydus-kw-search-spotDesc').keydown(function(event) {
+        // if it is wrong
         if ($('.gydus-kw-search-spotDesc').val().length < 2) {
+            // if the value is less than 2 characters
             $('.gydus-kw-search-spotDesc').css("border", "1px solid red");
+            // css style the error messages
             $('.wrongsasdesc').removeClass('hide');
-
-        } else {
+            // display the error message
+            } else {
+            // if successful input
             $('.gydus-kw-search-spotDesc').css("border", "2px solid green");
+            // css style the success messages
             $('.checksasdesc').removeClass('hide');
+            // display the success message
             $('.wrongsasdesc').addClass('hide');
-        }
-    })
-
-
-    // variable to get fullsails latitude and long
-
-    /*-----------Find location click effects---------------*/
-    $('#map-viewFLbtn').on('click', function () {
-        $('#map-viewFLbtn').fadeOut(1500, function () {
-            $('#map-viewFLbtn').addClass('hide');
-            $('#fldropcarret').addClass('hide');
-            $('#mapSpot').addClass('hide');
-            $('#footer').addClass('hide');
-        });
-
-        $("#searchViewdisplay").slideDown(1500, function () {
-            $("input[type=text]").val('');
-
-
-        });
-
-
-
-        return false;
-
-    }); // END OF displaying find location   
-
-
-
-    $("#findLbtnX").on('click', function () {
-        $("#searchViewdisplay").slideUp(1500);
-        $('#map-viewFLbtn').fadeIn(1000, function () {
-            $('#map-viewFLbtn').removeClass('hide');
-            $('#fldropcarret').removeClass('hide');
-
-        });
-        $('#mapSpot').removeClass('hide');
-        $('#footer').removeClass('hide');
-
-
-    }) // END of Closing the Finding Location
-
-
-    /*-----------View Acct Menu---------------*/
-
-
-    $("#viewAcctMenu").on('click', function () {
-
-        $("#accountMenu").removeClass("hide");
-        $("#viewAcctMenu").addClass("hide");
-    });
-
-    $("#CloseMenu").on('click', function () {
-
-        $("#accountMenu").addClass("hide");
-        $("#viewAcctMenu").removeClass("hide");
-
-
-    });
-
-
-    //user clicks Accounts Settings from the menu
-    $("#AccountSettingsSec").on('click', function () {
-
-
-    });
-
-
-
-    $("#updateInfobtn").on('click', function () {
-        $('#accountsuccess').removeClass('hide');
-
-    })
-
-
-    /*-----------View Gydus Menu---------------*/
-
-
-    /*
-	$("#logo").on('click', function(){
-		
-		$("#gydusMenu").removeClass("hide");
-	});
-	
-	$("#gydusCloseMenu").on('click', function(){
-		
-		$("#gydusMenu").addClass("hide");
-
-		
-	});
-	
-*/
-
-
-
-
-
-    /*---------- GPS Position -----------------*/
-
-    $('#gpsBtn').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
-
-        //console.log("hello");
-        map.panTo(FullSail);
-        
- 
-      
-        GMAP = map;
-        
-        
-
-        return false;
-    });
-
-    $("#sasBtnsubmit").on('click', function () {
-
-        $("#sasSuccess").removeClass("hide");
-
-    });
-
-
-
-
-    /*---------- flashdata time out -----------------*/
-    $('#sasPromptsuccess').fadeOut(3000, function () {
-        $('#sasPromptsuccess').addClass('hide');
-    });
-
-    /*---------- flashdata time out -----------------*/
-    $('#editAccPromptsuccess').fadeOut(3000, function () {
-        $('#editAccPromptsuccess').addClass('hide');
-    });
-
-
-
-/*-------------- AJAX TO LOAD OVERLAYS------------------------*/
-
-    
-	
-   
-   
-    function getOverlays(){
-			
-			$.ajax({
-				url: '../webroot/js/xhr/getOverlays.php',
-				type: 'get',
-				dataType: 'json',
-				success: function(response){
-					for(i=0,j=response.length; i<j; i++){
-						var overlay = response[i];
-						createOverlay(overlay.SWlat,overlay.SWlng,overlay.NElat,overlay.NElng,overlay.url,overlay.name);
-					}
-											
-				},error: function(e){
-					
-					console.log("Error",e);
-				}
-				
-			});
-			
-	};
-		
-	
-	function createOverlay(SWlat,SWlng,NElat,NElng,url,name){
-
-		var imageBounds = new google.maps.LatLngBounds(
-			new google.maps.LatLng(SWlat,SWlng),
-			new google.maps.LatLng(NElat,NElng));
-						
-		var Overlay = new google.maps.GroundOverlay(url, imageBounds);
-		    
-		Overlay.setMap(GMAP);
-		
-		overlayArray.push(Overlay);
-
-	}	
-	
-	
-/*---------- Navigation -----------------*/	        
-	        $('#foot-nav').click(function () {
-	        	$('.navigationforms').removeClass('hide');
-	        });
-	        $('#closenav').click(function () {
-	        	$('.navigationforms').addClass('hide');
-	        });
-
-	        
-	        
-/*---------- flashdata time out -----------------*/
-$('#sasPromptsuccess').fadeOut(3000, function(){
-	$('#sasPromptsuccess').addClass('hide');
-});
-    
-/*---------- flashdata time out -----------------*/
-$('#editAccPromptsuccess').fadeOut(3000, function(){
-	$('#editAccPromptsuccess').addClass('hide');
-});
-    
-    
-    
-    
-/*
-$('.poiSelection').click(function(){
-	alert($('.poiSelection[btn]:checkbox:checked').get(this));
-})    
-    
-*/
-
-/*=============================================================================*/
-/*================================  INIT ======================================*/
-/*=============================================================================*/
-
-	var init = function(){
-			
-			
-			setTimeout(function () {
-          	  
-          	  $('#gpsBtn').trigger("click");
-          	  
-          	  google.maps.event.addListener(GMAP, 'zoom_changed', function () {
-            if (map.getZoom() == 20) {
-            	
-            	getOverlays();
-            }else if(map.getZoom() == 19){
-            
-            	for (i in overlayArray) {            
-                     overlayArray[i].setMap(null);
-                };
-
-
-	            
+            // hide the error message
             }
+        //end of else
+        })
+    // end of spot description
+
+    /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+							CLICK EFFECTS
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
+
+    /*-----------  FIND LOCATION  ---------------*/
+
+    // clicks on the find location button
+    $('#map-viewFLbtn').on('click', function() {
+        $('#map-viewFLbtn').fadeOut(1500, function() {
+            // find location button fades out in 1.5 seconds
+            $('#map-viewFLbtn').addClass('hide');
+            // the find location button hides
+            $('#fldropcarret').addClass('hide');
+            // the carret on the find location button hides
+            $('#mapSpot').addClass('hide');
+            // the map hides
+            $('#footer').addClass('hide');
+            // the footer hides
+            });
+        // end of find location animation click
+        $("#searchViewdisplay").slideDown(1500, function() {
+            // the search view slides down in 1.5 seconds
+            $("input[type=text]").val('');
+            // sets the find location input blank
+            });
+        // end of search view slide down
+        return false;
+
+    });
+    // end of find location click   
+
+    // closing the search view
+    //clicks the close button
+    $("#findLbtnX").on('click', function() {
+        $("#searchViewdisplay").slideUp(1500);
+        // search view slides up in 1.5 seconds
+        $('#map-viewFLbtn').fadeIn(1000, function() {
+            // find location button fades in 1 second
+            $('#map-viewFLbtn').removeClass('hide');
+            // displays the find location button
+            $('#fldropcarret').removeClass('hide');
+            // displays the carret on the find location
+            });
+        // end of findlocation fade in
+
+        $('#mapSpot').removeClass('hide');
+        // displays the map
+        $('#footer').removeClass('hide');
+        // displays the footer
+
+        })
+    // END of Closing the Finding Location
+
+    /*-----------  UPDATING ACCOUNT SETTINGS SUCCESS  ---------------*/
+
+    //clicks update
+    $("#updateInfobtn").on('click', function() {
+        $('#accountsuccess').removeClass('hide');
+        //displays the success message
+        })
+    // end of update info click
+
+    /*-----------  GYDUS POSITION  ---------------*/
+
+    $('#gpsBtn').click(function(e) {
+        //enables the use of GPS and moved the user's marker to there location 
+        map.panTo(FullSail);
+        //centers the map the Fullsail
+        return false;
+    });
+    // end of gps position
+
+    /*-----------  SUGGEST A SPOT SUCCESS ---------------*/
+    // clicks submit on suggest a spot
+    $("#sasBtnsubmit").on('click', function() {
+        $("#sasSuccess").removeClass("hide");
+        // displays the success
+        });
+    // end of sas button submit
+
+    /*-----------  NAVIGATION ---------------*/
+
+    //clicks the navigation button
+    $('#foot-nav').click(function() {
+        $('.navigationforms').removeClass('hide');
+        //displays the navigation form
+        });
+    // end of navigation button click
+    //closing the navigation form
+    $('#closenav').click(function() {
+        $('.navigationforms').addClass('hide');
+        // hides the navigation form
         });
 
-          	            	
-            }, 900);
-           	
-	};
-		
-	init();
-	    
-    function consolesomething(text){
-	    
-	    console.log(text)
-    }                     
+    /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# 
 
-});
+
+				FLASH DATA ANIMATIONS
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
+
+    /*---------- flashdata time out -----------------*/
+    $('#sasPromptsuccess').fadeOut(3000, function() {
+        // success message fades out in 3 seconds
+        $('#sasPromptsuccess').addClass('hide');
+        // hides the success message
+        });
+    // end of sas success 
+
+    /*---------- flashdata time out -----------------*/
+    $('#editAccPromptsuccess').fadeOut(3000, function() {
+        // success message fades out in 3 seconds
+        $('#editAccPromptsuccess').addClass('hide');
+        // hides the success message
+        });
+    // end of edit account success
+
+    /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+							AJAX 
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#*/
+
+    /*-------------- AJAX TO LOAD OVERLAYS------------------------*/
+    // getting the overlays
+    $.ajax({
+        url: '../../webroot/js/xhr/getOverlays.php',
+        //the script to call to get data          
+        dataType: 'json',
+        //data format      
+        success: function(data)
+        //on recieve of reply
+        {
+            console.log(data);
+        },
+        error: function() {
+            console.log('error');
+
+        }
+    });
+    // end of overlays ajax call
+
+    });
+// end of document
