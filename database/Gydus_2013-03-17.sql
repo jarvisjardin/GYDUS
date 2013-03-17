@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.9)
 # Database: Gydus
-# Generation Time: 2013-03-17 07:26:06 +0000
+# Generation Time: 2013-03-17 08:31:59 +0000
 # ************************************************************
 
 
@@ -114,7 +114,8 @@ VALUES
 	(3,'FS3E','28.593777, -81.30455','28.594044,-81.304228','http://i1326.photobucket.com/albums/u657/GydusApp/FS3E-01test_zps2b70a342.png','28.593777',' -81.30455','28.594044','-81.304228'),
 	(4,'FS3D','28.594013,-81.304251','28.594253,-81.304002','http://i1326.photobucket.com/albums/u657/GydusApp/FS3D-01test_zps69747b5c.png','28.594013','-81.304251','28.594253','-81.304002'),
 	(5,'FS3B-game','28.594650,-81.304268','28.594893,-81.303792','http://i1326.photobucket.com/albums/u657/GydusApp/FS3B-GameDesign-01copy_zps19177f44.png','28.594650','-81.304268','28.594893','-81.303792'),
-	(6,'FS3F','28.593301,-81.305426','28.594046,-81.304612','http://i1326.photobucket.com/albums/u657/GydusApp/FS3F_16154try_zpsd43461ba.png','28.593301','-81.305426','28.594046','-81.304612');
+	(6,'FS3F','28.593301,-81.305426','28.594046,-81.304612','http://i1326.photobucket.com/albums/u657/GydusApp/FS3F_16154try_zpsd43461ba.png','28.593301','-81.305426','28.594046','-81.304612'),
+	(7,'FS4A','28.592496,-81.305500','28.592939,-81.304856','http://i1326.photobucket.com/albums/u657/GydusApp/FS4AWeb1FilmWeb2_33218copy_zpsbeb8c15b.png','28.592496','-81.305500','28.592939','-81.304856');
 
 /*!40000 ALTER TABLE `Overlays` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -145,7 +146,16 @@ VALUES
 	(3,'Disel Bean','FS3B',28.5950893324,-81.3038800657,'Food/Beverage'),
 	(4,'Restroom','FS3B',28.5947031045,-81.3038653135,'Restroom'),
 	(5,'Vending Machine','FS3C',28.5945005698,-81.3037714362,'Food/Beverage'),
-	(6,'Restroom','FS3C',28.5942968572,-81.3037768006,'Restroom');
+	(6,'Restroom','FS3C',28.5942968572,-81.3037768006,'Restroom'),
+	(7,'Patio','FS3F',28.5937022024,-81.3054491580,'Patio'),
+	(8,'Library','FS3E',28.5939942313,-81.3043320179,'Library'),
+	(9,'Receptionist','FS3B',28.5950963976,-81.3041442633,'Receptionist'),
+	(10,'Receptionist','FS3F',28.5939801009,-81.3050562143,'Receptionist'),
+	(11,'Restroom','FS3E',28.5938811880,-81.3044634461,'Restroom'),
+	(12,'Restroom','FS3F',28.5939070937,-81.3053163886,'Restroom'),
+	(13,'Vending Machine','FS3E',28.5938717677,-81.3043588400,'Food/Beverage'),
+	(14,'Vending Machine','FS3F',28.5938458619,-81.3053941727,'Food/Beverage'),
+	(15,'Zaxly\'s','FS3F',28.5939353546,-81.3054612279,'Food/Beverage');
 
 /*!40000 ALTER TABLE `PointsOfInterest` ENABLE KEYS */;
 UNLOCK TABLES;
