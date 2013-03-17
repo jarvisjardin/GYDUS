@@ -93,17 +93,17 @@
 			/*
 				search the database for locations
 			*/
-			
+
 			$this->load->library('googlemaps');
-		
+
 			$this->load->model('mapModel');
 			$query = $this->mapModel->search();
-			
+
 			$marker = array();
 
-						
+
 			if($query){
-							    
+
 			   $this->load->library('googlemaps');
 
 				$config['center'] = '28.594461, -81.304002';
@@ -112,65 +112,64 @@
 
 				$this->googlemaps->initialize($config);
 
-				
+
 				if(gettype($query) == 'array'){
-				
+
 					foreach($query as $q) {
-										 
+
 						foreach($q->result() as $p){
-												
+
 						 	if($p->categorey == 'Restroom'){
-							 	
+
 							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/Restroom_zpsa251fe0e.png';
 						 	}else if($p->categorey == 'Food/Beverage'){
-							 	
+
 							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FoodBeverage_zps777eb768.png';
 						 	}
-						
+
 						 	$marker['title']=$p->name;
 						 	$marker['position'] = $p->latitude.','.$p->longitude;
 						 	$this->googlemaps->add_marker($marker);
-						 	
+
 
 					 	}
-					 	
+
 					 }
-					 	
+
 				 }else{
-				 
+
 				 	foreach($query->result() as $q) {
 					 	$marker['title']=$q->name;
 					 	$marker['position'] = $q->latitude.','.$q->longitude;
 					 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/bulding_zpscbd143c7.png';
 					 	$this->googlemaps->add_marker($marker);
-					 	
 
-					 	
+
+
 					} 
 				 }
-				
 
-					
+
+
 				$data = array();
 				$data['content'] = 'mapView';
 				$data['map'] = $this->googlemaps->create_map();
-	
+
 				$this->load->helper('url');
-	
+
 				if ($this->session->userdata('is_logged_in')){	
 					$data['userData'] = $this->session->all_userdata();
 				};			
-					
-	
+
+
 				$this->load->view('templates/template',$data);			 			   
-		
+
 			}else{
 				$blah = $this->session->set_flashdata('message', 'Search Results Not Found.');
 				redirect('index.php/mapController');
 			}
-					
-		}
-		
+
+		}		
 		function POI(){
 			/*
 				show points of interest

@@ -1,13 +1,13 @@
 # ************************************************************
 # Sequel Pro SQL dump
-# Version 3408
+# Version 4004
 #
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
 # Host: 127.0.0.1 (MySQL 5.5.9)
 # Database: Gydus
-# Generation Time: 2013-03-17 05:21:04 +0000
+# Generation Time: 2013-03-17 07:26:06 +0000
 # ************************************************************
 
 
@@ -109,8 +109,12 @@ LOCK TABLES `Overlays` WRITE;
 
 INSERT INTO `Overlays` (`id`, `name`, `SW`, `NE`, `url`, `SWlat`, `SWlng`, `NElat`, `NElng`)
 VALUES
-	(1,'FS3C','28.594256,-81.304249','28.594663,-81.303696','http://i1326.photobucket.com/albums/u657/GydusApp/FS3C_zps01d22c94.png','28.594256','-81.304249','28.594663','-81.303696'),
-	(2,'FS3B','28.594906,-81.304305','28.595417,-81.303560','http://i1326.photobucket.com/albums/u657/GydusApp/FS3B1_zps4ec72590.png','28.594906','-81.304305','28.595417','-81.303560');
+	(1,'FS3C','28.594256,-81.304249','28.594663,-81.303696','http://i1326.photobucket.com/albums/u657/GydusApp/FSB3Ctest_zps85479c14.png','28.594256','-81.304249','28.594663','-81.303696'),
+	(2,'FS3B','28.594906,-81.304305','28.595417,-81.303560','http://i1326.photobucket.com/albums/u657/GydusApp/FS3B-Entertainment-01copy_zpsaffa80e8.png','28.594906','-81.304305','28.595417','-81.303560'),
+	(3,'FS3E','28.593777, -81.30455','28.594044,-81.304228','http://i1326.photobucket.com/albums/u657/GydusApp/FS3E-01test_zps2b70a342.png','28.593777',' -81.30455','28.594044','-81.304228'),
+	(4,'FS3D','28.594013,-81.304251','28.594253,-81.304002','http://i1326.photobucket.com/albums/u657/GydusApp/FS3D-01test_zps69747b5c.png','28.594013','-81.304251','28.594253','-81.304002'),
+	(5,'FS3B-game','28.594650,-81.304268','28.594893,-81.303792','http://i1326.photobucket.com/albums/u657/GydusApp/FS3B-GameDesign-01copy_zps19177f44.png','28.594650','-81.304268','28.594893','-81.303792'),
+	(6,'FS3F','28.593301,-81.305426','28.594046,-81.304612','http://i1326.photobucket.com/albums/u657/GydusApp/FS3F_16154try_zpsd43461ba.png','28.593301','-81.305426','28.594046','-81.304612');
 
 /*!40000 ALTER TABLE `Overlays` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -221,6 +225,34 @@ VALUES
 	(98,21,NULL,NULL,'138',1);
 
 /*!40000 ALTER TABLE `Rooms` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table Rooms_copy
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `Rooms_copy`;
+
+CREATE TABLE `Rooms_copy` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `building` varchar(11) DEFAULT NULL,
+  `latitude` decimal(65,10) DEFAULT NULL,
+  `longitude` decimal(65,10) DEFAULT NULL,
+  `name` varchar(250) DEFAULT NULL,
+  `floor` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `Rooms_copy` WRITE;
+/*!40000 ALTER TABLE `Rooms_copy` DISABLE KEYS */;
+
+INSERT INTO `Rooms_copy` (`id`, `building`, `latitude`, `longitude`, `name`, `floor`)
+VALUES
+	(1,'FS3B',28.5950704921,-81.3042408228,'entrance',1),
+	(2,'FS3B',28.5950257462,-81.3040463626,'137',1),
+	(3,'FS3B',28.5950375214,-81.3040141761,'136',1);
+
+/*!40000 ALTER TABLE `Rooms_copy` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
