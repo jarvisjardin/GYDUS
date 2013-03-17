@@ -331,13 +331,13 @@ $(document).ready(function () {
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
 
-    /*---------- flashdata time out -----------------*/
+    /*---------- Suggest a spot flashdata time out -----------------*/
     $('#sasPromptsuccess').fadeOut(3000, function () { // success message fades out in 3 seconds
         $('#sasPromptsuccess').addClass('hide'); // hides the success message
     });// end of sas success 
     
 
-    /*---------- flashdata time out -----------------*/
+    /*---------- Edit account flashdata time out -----------------*/
     $('#editAccPromptsuccess').fadeOut(3000, function () { // success message fades out in 3 seconds
         $('#editAccPromptsuccess').addClass('hide');// hides the success message
     });// end of edit account success
