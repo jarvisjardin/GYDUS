@@ -3,11 +3,27 @@ class userModel extends CI_Model{
 		
 	function validate()
 	{
-		$this->db->where('email', $this->input->post('user_email'));
-		$this->db->where('password',md5($this->input->post('user_pass')));
+		$this->db->where('email', $this->input->post('user_email'));//check to see if the email the user typed is the same in the database
+		$this->db->where('password',md5($this->input->post('user_pass')));//check to see if the password the user typed is the same in the database
+		
+		// creating a variable called query, and telling the database to get the user
 		$query = $this->db->get('Users');
 		
-		if($query->num_rows == 1)
+		if($query->num_rows == 1)// if the credientals exsist
+		{
+			return $query; //return the data
+		}
+		
+	}
+	
+	
+	function validateRegister()
+	{	
+		$this->db->where('email', $this->input->post('user_email'));//check to see if the email the user typed is the same in the database
+
+		$query = $this->db->get('Users');
+		
+		if($query->num_rows == 1)// if the credientals exsist
 		{
 			return $query;
 		}

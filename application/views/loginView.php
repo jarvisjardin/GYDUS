@@ -8,10 +8,18 @@
 
 <section class="gydus-login">
  <h1 class="gydus-login-headertxt">Sign Into GYDUS</h1>
+<span><?php if($this->session->flashdata('message')) {
+						echo '<section id="loginServVal" class=" message alert alert-block alert-danger">
+';
+						echo ''.$this->session->flashdata('message').'';
 
+
+						echo'</section>';
+						}?></span>
 
 
 <form action="<?php echo base_url();?>index.php/userController/check_member"  method="post"class="form-horizontal gydus-form-horizontal ">
+
             <section class="control-group">
               <label class="control-label" for="inputEmail">Email</label>
               <section class="controls">

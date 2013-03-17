@@ -20,7 +20,7 @@ $(document).ready(function () {
         src = document.createElement('source');// variable for source
         
    // creating variable for Fullsails position
-    var FullSail = new google.maps.LatLng(28.594461, -81.304002);
+   // var FullSail = new google.maps.LatLng(28.594461, -81.304002);
 
     // setting the sound and source variables
     src.src = "http://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3"; // source location
@@ -68,7 +68,6 @@ $(document).ready(function () {
 
 
 
-    /*------REGISTER FRONT SIDE VALIDATION---------*/
 
 
 
@@ -78,7 +77,7 @@ $(document).ready(function () {
 
     // when you start to type in the input feild
     $('.gydus-reg-name-input').keydown(function (event) {
-    
+    console.log($('.gydus-reg-name-input').keydown());
     	// if it is wrong
         if ($('.gydus-reg-name-input').val().length < 4) { // if the value is less than 4 characters
             $('.gydus-reg-name-input').css("border", "1px solid red");// css style the error messages
@@ -342,6 +341,8 @@ $(document).ready(function () {
     $('#editAccPromptsuccess').fadeOut(3000, function () { // success message fades out in 3 seconds
         $('#editAccPromptsuccess').addClass('hide');// hides the success message
     });// end of edit account success
+    
+    
 
 
 /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#

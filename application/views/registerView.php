@@ -3,6 +3,14 @@
 
 <form action="<?php echo base_url();?>index.php/userController/create_member"  method="post" class="form-horizontal gydus-form-horizontal ">
 		<h1 class="gydus-accinfo-headertxt">ACCOUNT INFORMATION</h1>
+<span><?php if($this->session->flashdata('message')) {
+						echo '<section id="regServVal" class=" message alert alert-block alert-danger">
+';
+						echo ''.$this->session->flashdata('message').'';
+
+
+						echo'</section>';
+						}?></span>
 
 		<!-- NAME-->
 		<section class="control-group">
@@ -46,9 +54,4 @@
           </section><!-- end of Gydus Login-->
           
           
-          	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-		
-	<!-- main -->
-	
-		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>
+          	

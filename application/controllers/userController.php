@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 class userController extends CI_Controller
 {
 	
@@ -34,14 +33,18 @@ class userController extends CI_Controller
 						
 		
 		}else{ // incorrect username or password
-			redirect('index.php/marketingController/index');
+						$loginVal = $this->session->set_flashdata('message', 'Email or Password is incorrect');
 
+				redirect('index.php/userController/login');
+
+					
 		}
 	}	
 	
 	function register()
 	{
 		$data['content'] = 'registerView';
+
 		$this->load->view('templates/template', $data);
 	}
 	
@@ -49,27 +52,36 @@ class userController extends CI_Controller
 	{
 				
 			$this->load->model('userModel');
-			$query = $this->userModel->create_member();
+			$query = $this->userModel->validateRegister();
 			
-			$row = $query->row_array();
+			if($query)//if the username alreayd exsists
+			{
+				$egisterVal = $this->session->set_flashdata('message', 'Email already exsists');
+
+				redirect('index.php/userController/register');
+			}else{
+				$query = $this->userModel->create_member();
+			
+				$row = $query->row_array();
 
 			
-			$userData = array(
-				'id' => $row['id'],
-				'name' => $row['name'],
-				'email' => $row['email'],
-				'pass' => $row['password'],
-				'is_logged_in' => TRUE
-			);
+				$userData = array(
+					'id' => $row['id'],
+					'name' => $row['name'],
+					'email' => $row['email'],
+					'pass' => $row['password'],
+					'is_logged_in' => TRUE
+				);
 			
 
 			$this->session->set_userdata($userData);
 			
 			redirect('index.php/mapController/index');
 
-			
-		
-	}
+
+				
+			}// end of else	
+	}// end of create_member
 	
 	function logout()
 	{
