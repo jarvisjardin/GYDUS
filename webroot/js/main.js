@@ -77,11 +77,12 @@ $(document).ready(function () {
 
     // when you start to type in the input feild
     $('.gydus-reg-name-input').keydown(function (event) {
-    console.log($('.gydus-reg-name-input').keydown());
     	// if it is wrong
         if ($('.gydus-reg-name-input').val().length < 4) { // if the value is less than 4 characters
             $('.gydus-reg-name-input').css("border", "1px solid red");// css style the error messages
             $('.wronguser').removeClass('hide'); // display the error message
+            $('.checkuser').addClass('hide');// hide the error message
+
 
         // if successful input
         } else {
