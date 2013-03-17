@@ -16,7 +16,7 @@
 		<section class="control-group">
               <label class="control-label" id="testme" for="inputName">Username</label>
               <section class="controls">
-                <input type="text" class="gydus-reg-name-input" name="name"  id="reg-inputName" placeholder="Username"><span class="checkuser hide">√</span><span class="wronguser hide">Username must be at least 4 letters</span>
+                <input type="text" class="gydus-reg-name-input" name="name"  id="reg-inputName" autocomplete="off" placeholder="Username"><span class="checkuser hide">√</span><span class="wronguser hide">Username must be at least 4 letters</span>
               </section>
 
 
@@ -26,7 +26,7 @@
             <section class="gregE-control-group control-group">
               <label class="control-label" for="inputEmail">Email</label>
               <section class="controls">
-                <input type="text" class="gydus-reg-email-input" name="user_email" id="reg-inputEmail" placeholder="Email"><span class="checkemail hide">√</span><span class="wrongemail hide">Email must follow email@mail.com</span>
+                <input type="text" class="gydus-reg-email-input" name="user_email" id="reg-inputEmail" autocomplete="off" placeholder="Email"><span class="checkemail hide">√</span><span class="wrongemail hide">Email must follow email@mail.com</span>
               </section>
             </section>
             
@@ -37,7 +37,7 @@
             <section class="control-group">
               <label class="control-label" for="inputPassword">Password</label>
               <section class="controls">
-                <input type="password" id="reg-inputPassword" name="user_pass" placeholder="Password"><span class="checkpass hide">√</span><span class="wrongpass hide">Password must be at least 5 characters</span>
+                <input type="password" id="reg-inputPassword" name="user_pass" autocomplete="off" placeholder="Password"><span class="checkpass hide">√</span><span class="wrongpass hide">Password must be at least 5 characters</span>
               </section>
             </section>
      

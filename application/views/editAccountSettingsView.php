@@ -16,7 +16,7 @@
 		<section class="control-group">
               <label class="control-label" for="inputName">Edit UserName</label>
               <section class="controls">
-                <input type="text" class="gydus-reg-name-input" name="user_name"  id="reg-inputName" placeholder="<?php echo $this->session->userdata('name');?>"><span class="checkuser hide">√</span><span class="wronguser hide">Username must be at least 4 letters</span>
+                <input type="text" class="gydus-reg-name-input" name="user_name" autocomplete="off"  id="reg-inputName" placeholder="<?php echo $this->session->userdata('name');?>"><span class="checkuser hide">√</span><span class="wronguser hide">Username must be at least 4 letters</span>
 
               </section>
 
@@ -27,7 +27,7 @@
             <section class="control-group">
               <label class="control-label" for="inputEmail">Edit Email</label>
               <section class="controls">
-                <input type="text" class="gydus-reg-email-input" name="user_email" id="reg-inputEmail" placeholder="<?php echo $this->session->userdata('email');?>"><span class="checkemail hide">√</span><span class="wrongemail hide">Email must follow email@mail.com</span>
+                <input type="text" class="gydus-reg-email-input" name="user_email" autocomplete="off" id="reg-inputEmail" placeholder="<?php echo $this->session->userdata('email');?>"><span class="checkemail hide">√</span><span class="wrongemail hide">Email must follow email@mail.com</span>
 
               </section>
             </section>
@@ -39,7 +39,7 @@
             <section class="control-group">
               <label class="control-label" for="inputPassword">Password</label>
               <section class="controls">
-                <input type="password" id="reg-inputPassword" name="user_pass" placeholder="<?php echo $this->session->userdata('password');?>"><span class="checkpass hide">√</span><span class="wrongpass hide">Password must be at least 5 characters</span>
+                <input type="password" id="reg-inputPassword" name="user_pass" autocomplete="off" placeholder="<?php echo $this->session->userdata('password');?>"><span class="checkpass hide">√</span><span class="wrongpass hide">Password must be at least 5 characters</span>
 
               </section>
             </section>

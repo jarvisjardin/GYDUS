@@ -12,14 +12,14 @@
  <section class="searchkeyword">
 			<form action="<?php echo base_url();?>index.php/mapController/suggestaspot" method='post' class="form-search">
 				<section class="gydus-kw-append input-append">
-					<input type="text" class="gydus-kw-search" id="sasSpotname" name='spot-name' placeholder="Name of Spot"><span class="checksasSpotname hide">√</span><span class="wrongsasSpotname hide">Please enter a Spot Name</span>
+					<input type="text" class="gydus-kw-search" id="sasSpotname" autocomplete="off" name='spot-name' placeholder="Name of Spot"><span class="checksasSpotname hide">√</span><span class="wrongsasSpotname hide">Please enter a Spot Name</span>
 
 				</section><!-- end of input-append-->
 				
 				
 				<section class="gydus-kw-append-desc control-group">
 					<section class="controls">
-						<textarea rows="3" class="gydus-kw-search-spotDesc" placeholder="Description of Spot"></textarea><span class="checksasdesc hide">√</span><span class="wrongdesc hide">Please give the spot a description</span>
+						<textarea rows="3" class="gydus-kw-search-spotDesc"  autocomplete="off" placeholder="Description of Spot"></textarea><span class="checksasdesc hide">√</span><span class="wrongdesc hide">Please give the spot a description</span>
            
 	                </section>
 	            </section>

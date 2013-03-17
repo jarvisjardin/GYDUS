@@ -23,14 +23,14 @@
             <section class="control-group">
               <label class="control-label" for="inputEmail">Email</label>
               <section class="controls">
-                <input type="text" class="gydus-login-email-input" name="user_email" id="login-inputEmail" placeholder="Email"><span class="checkemail hide">√</span><span class="wrongemail hide">Please enter a valid email</span>
+                <input type="text" class="gydus-login-email-input" name="user_email" id="login-inputEmail" autocomplete="off" placeholder="Email"><span class="checkemail hide">√</span><span class="wrongemail hide">Please enter a valid email</span>
 
               </section>
             </section>
             <section class="control-group">
               <label class="control-label" for="inputPassword">Password</label>
               <section class="controls">
-                <input type="password" id="login-inputPassword" name="user_pass" placeholder="Password"><span class="checkpass hide">√</span><span class="wrongpass hide">Password must be at least 5 characters long</span>
+                <input type="password" id="login-inputPassword" name="user_pass" autocomplete="off" placeholder="Password"><span class="checkpass hide">√</span><span class="wrongpass hide">Password must be at least 5 characters long</span>
 
               </section>
             </section>
