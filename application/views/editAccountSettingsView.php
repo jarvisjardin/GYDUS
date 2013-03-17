@@ -3,6 +3,14 @@
 
 <form action="<?php echo base_url();?>index.php/userController/update_member" method="post" class="form-horizontal gydus-form-horizontal ">
 
+<span><?php if($this->session->flashdata('message')) {
+						echo '<section id="eAcctServVal" class=" message alert alert-block alert-danger">
+';
+						echo ''.$this->session->flashdata('message').'';
+
+
+						echo'</section>';
+						}?></span>
 
 		<!-- NAME-->
 		<section class="control-group">

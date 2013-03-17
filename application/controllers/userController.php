@@ -59,7 +59,7 @@ class userController extends CI_Controller
 				$egisterVal = $this->session->set_flashdata('message', 'Email already exsists');
 
 				redirect('index.php/userController/register');
-			}else{
+			}else{// if it doesnt then create the member
 				$query = $this->userModel->create_member();
 			
 				$row = $query->row_array();
@@ -125,10 +125,16 @@ class userController extends CI_Controller
 		$data = $this->session->all_userdata();
 	
 		$this->load->model('userModel');
-		$query = $this->userModel->update_member($data);
+		$query = $this->userModel->validateUpdateMember();
 		
-		if($query){
+		if($query)//if the email and username is the same already
+		{
+			$updateAccVal = $this->session->set_flashdata('message', 'Cant update account to the same information');
+
+				redirect('index.php/userController/edit_account_settings');
 			
+		}else{// update the credientials
+		$query = $this->userModel->update_member($data);
 			$row = $query->row_array();
 
 			
@@ -145,10 +151,8 @@ class userController extends CI_Controller
 			
 			redirect('index.php/userController/account_setting');
 			
-		}
-
-	
-	}
+		}//end of else
+	}// end of update member
 	
 	function contact_us(){
 	

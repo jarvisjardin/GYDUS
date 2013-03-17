@@ -46,6 +46,20 @@ class userModel extends CI_Model{
 		return $query;
 	}
 	
+		function validateUpdateMember()
+	{	
+		$this->db->where('email', $this->input->post('user_email'));//check to see if the email the user typed is the same in the database
+		$this->db->where('name', $this->input->post('user_name'));//check to see if the username the user typed is the same in the database
+
+		$query = $this->db->get('Users');
+		
+		if($query->num_rows == 1)// if the credientals exsist
+		{
+			return $query;
+		}
+		
+	}
+	
 	function update_member($userdata){
 		
 		if($this->input->post('user_name') != ''){$updateName = $this->input->post('user_name');}else{$updateName = $userdata['name'];};	
