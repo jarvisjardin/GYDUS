@@ -306,7 +306,17 @@ $(document).ready(function () {
 
         return false;
     });// end of gps position
-    
+
+
+
+/*--------------- Navigate to -------------------*/
+
+	 $("#navButton").on('click', function () {
+		   event.preventDefault();
+
+		alert('hello click');
+	
+	});
     
 /*-----------  SUGGEST A SPOT SUCCESS ---------------*/
 	// clicks submit on suggest a spot

@@ -127,8 +127,9 @@
 							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FoodBeverage_zps777eb768.png';
 						 	}
 
-						 	$marker['title']=$p->name;
+						 	$marker['title']= $p->name;
 						 	$marker['position'] = $p->latitude.','.$p->longitude;
+
 						 	$this->googlemaps->add_marker($marker);
 
 
@@ -142,6 +143,9 @@
 					 	$marker['title']=$q->name;
 					 	$marker['position'] = $q->latitude.','.$q->longitude;
 					 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/bulding_zpscbd143c7.png';
+					 	$marker['infowindow_content'] = '<form action="../mapController/navigate" method="post"><input id="navLat" type="hidden" value="'.$q->latitude.'"></input><input id="navLng" value="'.$q->longitude.'"type="hidden"></input><button type="submit">GO TO HERE</button></form>';
+					 	//$marker['onclick'] = '$("#navLat").val(event.latLng.lat())$("#navLng").val(event.latLng.lng())';
+
 					 	$this->googlemaps->add_marker($marker);
 
 
@@ -265,20 +269,7 @@
 				$polyline['points'] = $directions; 
 				$polyline['$zIndex'] = 10;
 				
-				$this->googlemaps->add_polyline($polyline); 
-				
-					
-				$FS3C = array();
-				$FS3C['image'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FS3C_zps01d22c94.png';
-				$FS3C['positionSW'] = '28.594256, -81.304249';
-				$FS3C['positionNE'] = '28.594663, -81.303696';
-				$this->googlemaps->add_ground_overlay($FS3C);
-				
-				$FS3B = array();
-				$FS3B['image'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FS3B1_zps4ec72590.png';
-				$FS3B['positionSW'] = '28.594906, -81.304305';
-				$FS3B['positionNE'] = '28.595417, -81.303560';
-				$this->googlemaps->add_ground_overlay($FS3B);
+				$this->googlemaps->add_polyline($polyline);
 				
 				$data = array();
 				$data['content'] = 'mapView';
