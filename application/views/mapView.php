@@ -8,7 +8,7 @@
     <? }else{ ?>
    		 <br><br><br><br><br>
     <? }; ?>
-    
+    <button id='hideoverlay'>hideoverlay</button>
     <section class="searchView hide" id="searchViewdisplay">
         <section class="findLocation alert alert-info">
             	<h3 class="h3-findlocationtitle">Find Location</h3>

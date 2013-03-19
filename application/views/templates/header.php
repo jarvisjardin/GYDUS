@@ -125,6 +125,9 @@
 	
 		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/main.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>/webroot/js/bootstrap.js"></script>
+		  <script type="text/javascript"
+			  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvZaMreoE_xsh9XGwsO_jCzbCGFDzGLVA&sensor=true">
+    </script>
 
         
 <!--  end of header -->

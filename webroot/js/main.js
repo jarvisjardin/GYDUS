@@ -156,16 +156,20 @@ $(document).ready(function () {
         
         // if it is wrong
         if (regEmailInput == '') { // if the email is blank
+        
             $('.gydus-login-email-input').css("border", "1px solid red");// css style the error messages
             $('.wrongemail').removeClass('hide');// display the error message
+            $('.checkemail').addClass('hide'); // display the success message
 
 
         } else if (!emailReg.test(regEmailInput)) { // if the email does not match the regex rules
             $('.gydus-login-email-input').css("border", "1px solid red"); // css style the error messages
             $('.wrongemail').removeClass('hide');// display the error message
+            $('.checkemail').addClass('hide'); // display the success message
 
         } else {  // if it does pass the regex rules and it is not blank
-            $('.gydus-login-email-input').css("border", "2px solid green"); // css style the success messages
+            $('.gydus-login-email-input').css("border", "2px solid #d2fce1"); // css style the success messages
+
             $('.checkemail').removeClass('hide'); // display the success message
             $('.wrongemail').addClass('hide');// hide the error message
 
@@ -365,12 +369,14 @@ $(document).ready(function () {
 /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 
+
 							AJAX 
 
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#*/
 
 
+    
 /*-------------- AJAX TO LOAD OVERLAYS------------------------*/
 	function getOverlays(){
 

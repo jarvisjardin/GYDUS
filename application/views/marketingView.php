@@ -10,7 +10,7 @@
 					</section><!-- end of cta-text-->
 
 					<section class="cta-searchbar">
-						<form class="cta-searchform clearfix pull-left" action="<?php echo base_url();?>index.php/mapController/search"  method="post">
+						<form class="cta-searchform clearfix pull-left" action="<?php echo base_url();?>index.php/mapController/search"  method="get">
 							<section class="input-append gydus-searchbox pull-left">
 								<input class="span2 searchBar " id="searchBar" type="text" name='searchLocation' placeholder="Search BUILDINGS">
 									<section class="gotomap-section-btn pull-right">
