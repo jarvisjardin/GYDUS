@@ -119,44 +119,61 @@
 
     </section>
     <!-- end of findlocatoinButtonTop-->
+    
     <section class="navigationforms alert alert-info hide">
         <button type="button" id="closenav" class="close">&times;</button>
         	<h3 class="navTitle">Get Directions</h3>
-
-        <label>From Point A</label>
-
-        
-         <section class="dropdownBuildingsA">
-            <select name="buildingSelection" class="buildingSelect">
-                <option>SELECT BUILDING</option>
-                <option value="FS3">FS3</option>
-                <option value="FS4">FS4</option>
-            </select>
-        </section>
-        
-        <input type="text" name="pointA" placeholder="Point A" id="pointa">
-
-        <br>
-        
-        <section class="dropdownBuildingsB">
-            <select name="buildingSelection" class="buildingSelect">
-                <option>SELECT BUILDING</option>
-                <option value="FS3B">FS3B</option>
-                <option value="FS3C">FS3C</option>
-                <option value="FS3D">FS3D</option>
-                <option value="FS3E">FS3E</option>
-                <option value="FS3F">FS3F</option>
-                <option value="FS4A">FS4A</option>
-                <option value="FS4A">FS4A</option>
-
-            </select>
-        </section>
-        <label>To Point B</label>
-        <input type="text" name="pointB" placeholder="Point B" id="pointb">
-        <br>
-        <button class="getdirections btn btn-success btn-large btn-block" onClick="location='<?php echo base_url();?>index.php/mapController/navigate'">Get Directions</button>
-    </section>
-</section>	<span><?php if($this->session->flashdata('message')) {
+        <form action="<?php echo base_url();?>index.php/mapController/navigateViaForm" method='get' >	
+	        <label>From Point A</label>
+	
+	        
+	         <section class="dropdownBuildingsA">
+	            <select name="buildingSelectionA" class="buildingSelect">
+	                <option>SELECT BUILDING</option>
+	                <option value="FS3B">FS3B</option>
+	                <option value="FS3C">FS3C</option>
+	                <option value="FS3D">FS3D</option>
+	                <option value="FS3E">FS3E</option>
+	                <option value="FS3F">FS3F</option>
+	                <option value="FS4A">FS4A</option>
+	                <option value="FS4B">FS4B</option>
+	                <option value="FS4C">FS4C</option>
+	                <option value="FS4E">FS4E</option>
+	                <option value="FS4F">FS4F</option>
+	                <option value="FS4G">FS4G</option>
+	
+	            </select>
+	        </section>
+	        
+	        <input type="text" name="pointA" placeholder="Point A" id="pointa">
+	
+	        <br>
+	        
+	         <label>To Point B</label> 
+	         <section class="dropdownBuildingsB">
+	            <select name="buildingSelectionB" class="buildingSelect">
+	                <option>SELECT BUILDING</option>
+	                <option value="FS3B">FS3B</option>
+	                <option value="FS3C">FS3C</option>
+	                <option value="FS3D">FS3D</option>
+	                <option value="FS3E">FS3E</option>
+	                <option value="FS3F">FS3F</option>
+	                <option value="FS4A">FS4A</option>
+	                <option value="FS4B">FS4B</option>
+	                <option value="FS4C">FS4C</option>
+	                <option value="FS4E">FS4E</option>
+	                <option value="FS4F">FS4F</option>
+	                <option value="FS4G">FS4G</option>
+	
+	            </select>
+	        </section>
+	
+	        <input type="text" name="pointB" placeholder="Point B" id="pointb">
+	        <br>
+	        <button class="getdirections btn btn-success btn-large btn-block" type="submit">Get Directions</button>
+	    </section>
+	  </form> <!-- END OF NAV FORM -->
+	  </section>	<span><?php if($this->session->flashdata('message')) {
 						echo '<section id="sasPromptsuccess" class=" message alert alert-block alert-success">
 ';
 						echo ''.$this->session->flashdata('message').'';

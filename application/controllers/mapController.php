@@ -146,7 +146,7 @@
 					 	$marker['title']=$q->name;
 					 	$marker['position'] = $q->latitude.','.$q->longitude;
 					 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/bulding_zpscbd143c7.png';
-					 	$marker['infowindow_content'] = '<form action="../mapController/navigateViaMarker" method="post"><input name="buildingA" type="hidden" value="'.$q->building_name.'"><input name="roomA" type="hidden" value="1"><input name="buildingB" type="hidden" value="'.$q->building_name.'"><input name="roomB" type="hidden" value="'.$q->name.'"><button type="submit">GO TO HERE</button></form>';
+					 	$marker['infowindow_content'] = '<form action="../mapController/navigateViaMarker" method="get"><input name="buildingA" type="hidden" value="'.$q->building_name.'"><input name="roomA" type="hidden" value="1"><input name="buildingB" type="hidden" value="'.$q->building_name.'"><input name="roomB" type="hidden" value="'.$q->name.'"><button type="submit">GO TO HERE</button></form>';
 					 	$this->googlemaps->add_marker($marker);
 
 
@@ -255,7 +255,7 @@
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
 
 
-function addRoomView(){
+		function addRoomView(){
 			
 			$sasPos;
 			
@@ -371,6 +371,83 @@ function addRoomView(){
 				redirect('index.php/mapController');
 
 			}
+			
+		}
+
+		function navigateViaForm(){
+			
+			$this->load->model('mapModel');
+			$query = $this->mapModel->get_DirectionsViaForm();
+			
+			
+			if($query){
+		  
+			    $this->load->library('googlemaps');
+	
+				$config['center'] = '28.594461, -81.304002';
+				$config['zoom'] = '18';
+				$config['minifyJS'] = TRUE;
+	
+				$this->googlemaps->initialize($config);
+				
+				
+				if(gettype($query) != 'array'){						//SAME BUILDING
+					$q = $query->row();
+					$d = $q->directions;
+					
+					$directions = explode(";", $d);
+	
+					$polyline = array();
+					$polyline['points'] = $directions; 
+					$polyline['$zIndex'] = 10;
+					
+					$this->googlemaps->add_polyline($polyline);
+										
+
+				}else{												//DIFF BUILDINGS					
+					
+					foreach($query as $q){
+					
+						foreach($q->result() as $l){
+												
+							
+							$d = $l->directions;
+													
+							$directions = explode(";", $d);
+							$polyline = array();
+							$polyline['points'] = $directions; 
+							$polyline['$zIndex'] = 10;
+							
+							$this->googlemaps->add_polyline($polyline);
+
+
+						}
+						
+
+					}
+					
+
+				}
+				
+				$data = array();
+				$data['content'] = 'mapView';
+				$data['map'] = $this->googlemaps->create_map();
+	
+				$this->load->helper('url');
+	
+				if ($this->session->userdata('is_logged_in')){	
+					$data['userData'] = $this->session->all_userdata();
+				};
+					
+				$this->load->view('templates/template',$data);			
+
+			}else{
+				
+				redirect('index.php/mapController');
+
+			}
+
+
 			
 		}
 		

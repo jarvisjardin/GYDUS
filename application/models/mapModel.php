@@ -212,10 +212,10 @@ function addRoom(){
 		
 	function get_DirectionsViaMarker(){
 			
-		$formA_Building = $this->input->post('buildingA');
-		$formA_Room = $this->input->post('roomA');
-		$formB_Building = $this->input->post('buildingB');
-		$formB_Room = $this->input->post('roomB');
+		$formA_Building = $this->input->get('buildingA');
+		$formA_Room = $this->input->get('roomA');
+		$formB_Building = $this->input->get('buildingB');
+		$formB_Room = $this->input->get('roomB');
 
 		$this->db->where('buildingA',$formA_Building);
 		$this->db->where('buildingB',$formB_Building);
@@ -237,15 +237,19 @@ function addRoom(){
 	}
 	
 	function get_DirectionsViaForm(){
-		
-		$formA_Building = $this->input->post('buildingA');
-		$formA_Room = $this->input->post('roomA');
-		$formB_Building = $this->input->post('buildingB');
-		$formB_Room = $this->input->post('roomB');
+				
+		$formA_Building = $this->input->get('buildingSelectionA');
+		$formA_Room = $this->input->get('pointA');
+		$formB_Building = $this->input->get('buildingSelectionB');
+		$formB_Room = $this->input->get('pointB');
 
 		
-		
-		if($formA_Building == $formB_Building){             //One Line
+		if($formA_Building == 'SELECT BUILDING' || $formB_Building == 'SELECT BUILDING'){
+			
+			return false;
+			
+			
+		}else if($formA_Building == $formB_Building){             //One Line
 			
 			$this->db->where('buildingA',$formA_Building);
 			$this->db->where('buildingB',$formB_Building);
@@ -254,8 +258,11 @@ function addRoom(){
 	
 			$query = $this->db->get('Navigation'); 
 	
-			if($query){
 	
+			
+				
+			if($query->num_rows() > 0){
+			
 				return $query;
 			}else{
 				$this->db->where('buildingA',$formB_Building);
@@ -263,11 +270,11 @@ function addRoom(){
 				$this->db->where('pointA',$formB_Room);
 				$this->db->where('pointB',$formA_Room);
 		
-				$query = $this->db->get('Navigation'); 
+				$query1 = $this->db->get('Navigation'); 
 				
-				if($query){
+				if($query1){
 					
-					return $query;
+					return $query1;
 				}else{
 					return false;
 				}	
@@ -275,52 +282,41 @@ function addRoom(){
 			}
 			
 			
-		}else{												//two lines
-			
-			$qArray = array();
+		}else{	
+		
+			$entrance = '1';
+			$nArray = array();
 			
 			$this->db->where('buildingA',$formA_Building);
 			$this->db->where('buildingB',$formA_Building);
-			$this->db->where('pointA','1');
+			$this->db->where('pointA',$entrance);
 			$this->db->where('pointB',$formA_Room);
-			$queryA = $this->db->get('Navigation'); 
-			
-			if($queryA){
 	
-				array_push($qArray, $queryA);
-			
+			$queryA = $this->db->get('Navigation'); 
+	
+	
+			if($queryA){
+				array_push($nArray, $queryA);
 			}else{
 				return false;
 			}
-
-			
+				
 			$this->db->where('buildingA',$formB_Building);
 			$this->db->where('buildingB',$formB_Building);
-			$this->db->where('pointA','1');
+			$this->db->where('pointA',$entrance);
 			$this->db->where('pointB',$formB_Room);
-			$queryB = $this->db->get('Navigation');
-			
-			if($queryB){
 	
-				array_push($qArray, $queryB);
-			
-			}else{
-				
-				return false;
-			}
-			
-			
-			if(count($qArray)==2){
-				
-				return $qArray;
+			$queryB = $this->db->get('Navigation'); 
+	
+	
+			if($queryB){
+				array_push($nArray, $queryB);
 			}else{
 				return false;
-			}
-			
-		}
-		
-		
-		
+			}			
+										
+			return $nArray;
+		}			
 	}
 	
 	
