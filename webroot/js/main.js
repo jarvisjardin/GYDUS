@@ -23,7 +23,7 @@ $(document).ready(function () {
     var FullSail = new google.maps.LatLng(28.594461, -81.304002);
 
    	var GMAP,
-    	overlayArray = [];
+    overlayArray = [];
     
     // setting the sound and source variables
     src.src = "http://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3"; // source location
@@ -294,11 +294,6 @@ $(document).ready(function () {
     })// end of update info click
 
 
-
-
-
-
-
 /*-----------  GYDUS POSITION  ---------------*/
 
     $('#gpsBtn').click(function (e) { //enables the use of GPS and moved the user's marker to there location 
@@ -417,27 +412,26 @@ $(document).ready(function () {
 	var init = function(){
 
 
-			setTimeout(function () {
+		setTimeout(function () {
           	  
-          	  $('#gpsBtn').trigger("click");
+          	$('#gpsBtn').trigger("click");
+          	
+          	GMAP = map;
           	  
-          	  google.maps.event.addListener(GMAP, 'zoom_changed', function () {
-            if (map.getZoom() == 20) {
-            	
-            	getOverlays();
-            }else if(map.getZoom() == 19){
-            
-            	for (i in overlayArray) {            
-                     overlayArray[i].setMap(null);
+          	google.maps.event.addListener(GMAP, 'zoom_changed', function () {
+		        if (map.getZoom() == 20) {
+		            	
+		            	getOverlays();
+		        }else if(map.getZoom() == 19){
+		            
+	            	for (i in overlayArray) {            
+	                     overlayArray[i].setMap(null);
+	                };
                 };
-
-
-
-            }
-        });
+            });	
 
           	            	
-            }, 900);
+        }, 900);
            	
 	};
 

@@ -75,10 +75,12 @@ class mapModel extends CI_Model{
 	
 	function search(){
 
-		if($this->input->get('searchLocation')!=''){
+
+	/* The User searches for a room directly	 */
+		if($this->input->get('searchLocation')!= ''){
 		 
 			$this->db->where('name',$this->input->get('searchLocation'));
-			$query = $this->db->get('Buildings'); //Change this to rooms later
+			$query = $this->db->get('Rooms'); //Change this to rooms later
 			
 			if($query->num_rows() > 0)
 			{
@@ -93,6 +95,8 @@ class mapModel extends CI_Model{
 			}
 			
 		}else{
+		
+	/* The user searches for POI 	 */
 			$qArray = array();
 			
 			if(isset($_GET['points'])){
@@ -130,73 +134,122 @@ class mapModel extends CI_Model{
 		
 	}	
 	
-	public function getOverlays(){
-			
-			$db = new \PDO("mysql:hostname=127.0.0.1;port=8889;dbname=Gydus", "root", "root");
-			$sqlst = "Select * from Overlays";
-			$st = $db->prepare($sqlst);
-			$results = $st->execute();
-			$resultData = $st->fetchAll(); //get all responses
-			if($st->rowCount() > 0){ //if the record exists than 
-				//there is a record
-				return $resultData;
-			}else{
-				return 'no record';
-			}
-		}//close get campuses	
 		
-	function get_Directions(){
-	
-		/*
-if($formA_Building == $formB_Building){
+	function get_DirectionsViaMarker(){
 			
-			// directtions from room to room in same building
-			
-			
-		}else{
-			
-			//directions from room to building exit,"walk from building A to BuildingB, exit to room 
-		 
-			
-		}
-*/
-	
-		
-		$formA_Building = 'FS3B';
-		$formA_Room = '131';
-		$formB_Building = 'FS3C';
-		$formB_Room = '110';
-		
+		$formA_Building = $this->input->post('buildingA');
+		$formA_Room = $this->input->post('roomA');
+		$formB_Building = $this->input->post('buildingB');
+		$formB_Room = $this->input->post('roomB');
+
 		$this->db->where('buildingA',$formA_Building);
 		$this->db->where('buildingB',$formB_Building);
 		$this->db->where('pointA',$formA_Room);
 		$this->db->where('pointB',$formB_Room);
-		
-		$query = $this->db->get('Navigation'); 
-		
-		if($query){
-			
-			return $query;
-		}else{
-			$this->db->where('buildingB',$formA_Building);
-			$this->db->where('buildingA',$formB_Building);
-			$this->db->where('pointB',$formA_Room);
-			$this->db->where('pointA',$formB_Room);
-			
-			$query = $this->db->get('Navigation'); 
-			
-			if($query){
-				
-				return $query;
-			}else{
-				
-				return FALSE;
-			}	
-		}
-		
 
+		$query = $this->db->get('Navigation'); 
+
+		if($query){
+
+			return $query;
+
+		}else{
+			
+			return false;
+		}
+	
 		
 	}
+	
+	function get_DirectionsViaForm(){
+		
+		$formA_Building = $this->input->post('buildingA');
+		$formA_Room = $this->input->post('roomA');
+		$formB_Building = $this->input->post('buildingB');
+		$formB_Room = $this->input->post('roomB');
+
+		
+		
+		if($formA_Building == $formB_Building){             //One Line
+			
+			$this->db->where('buildingA',$formA_Building);
+			$this->db->where('buildingB',$formB_Building);
+			$this->db->where('pointA',$formA_Room);
+			$this->db->where('pointB',$formB_Room);
+	
+			$query = $this->db->get('Navigation'); 
+	
+			if($query){
+	
+				return $query
+			}else{
+				$this->db->where('buildingA',$formB_Building);
+				$this->db->where('buildingB',$formA_Building);
+				$this->db->where('pointA',$formB_Room);
+				$this->db->where('pointB',$formA_Room);
+		
+				$query = $this->db->get('Navigation'); 
+				
+				if($query){
+					
+					return $
+				}else{
+					return false;
+				}	
+
+			}
+			
+			
+		}else{												//two lines
+			
+			$qArray = array();
+			
+			$this->db->where('buildingA',$formA_Building);
+			$this->db->where('buildingB',$formA_Building);
+			$this->db->where('pointA','1');
+			$this->db->where('pointB',$formA_Room);
+			$queryA = $this->db->get('Navigation'); 
+			
+			if($queryA){
+	
+				array_push($qArray, $queryA);
+			
+			}else{
+				return false;
+			}
+
+			
+			$this->db->where('buildingA',$formB_Building);
+			$this->db->where('buildingB',$formB_Building);
+			$this->db->where('pointA','1');
+			$this->db->where('pointB',$formB_Room);
+			$queryB = $this->db->get('Navigation');
+			
+			if($queryB){
+	
+				array_push($qArray, $queryB);
+			
+			}else{
+				
+				return false;
+			}
+			
+			
+			if(count($qArray)==2){
+				
+				return $qArray;
+			}else{
+				return false;
+			}
+			
+		}
+		
+		
+		
+	}
+	
+	
+
 			
 		
 } 
