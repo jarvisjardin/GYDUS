@@ -133,7 +133,7 @@ function addRoom(){
 		if($this->input->get('searchLocation')!= ''){
 		 
 			$this->db->where('name',$this->input->get('searchLocation'));
-			$query = $this->db->get('search'); //Change this to rooms later
+			$query = $this->db->get('Rooms'); //Change this to rooms later
 
 			
 			if($query->num_rows() > 0)
@@ -235,7 +235,7 @@ function addRoom(){
 	
 			if($query){
 	
-				return $query
+				return $query;
 			}else{
 				$this->db->where('buildingA',$formB_Building);
 				$this->db->where('buildingB',$formA_Building);
@@ -246,7 +246,7 @@ function addRoom(){
 				
 				if($query){
 					
-					return $
+					return $query;
 				}else{
 					return false;
 				}	

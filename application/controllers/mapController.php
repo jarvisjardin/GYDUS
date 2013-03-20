@@ -246,7 +246,6 @@
 			
 		}
 		
-<<<<<<< HEAD
 /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 
@@ -328,10 +327,8 @@ function addRoomView(){
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
 		
-		function navigate(){
-=======
+
 		function navigateViaMarker(){
->>>>>>> cbd9189191f28649e4940a9ad6de51ddf0131a92
 			
 			$this->load->model('mapModel');
 			$query = $this->mapModel->get_DirectionsViaMarker();
