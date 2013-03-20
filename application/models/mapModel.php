@@ -73,12 +73,65 @@ class mapModel extends CI_Model{
 		}
 	}//ends of suggest a spot function
 	
+	/* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+						ADDING DB CLASSROOM SPOTS
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
+
+function addRoom(){
+		if($this->input->post('sasLat') == '' || $this->input->post('spot-name') == ''  ){
+			
+			return false;
+		}else{
+	
+		
+			$this->db->where('name', $this->input->post('spot-name'));
+			$query = $this->db->get('Rooms');
+			
+
+			
+							
+				
+				$addRoom_data = array(
+					'name' => $this->input->post('spot-name'),
+					'building_id' => $this->input->post('spot-Building'),
+					'longitude' => $this->input->post('sasLng'),
+					'latitude' => $this->input->post('sasLat')
+	
+					);
+								
+				
+			
+				$insert = $this->db->insert('Rooms', $addRoom_data);
+				
+				return true;
+				
+			}
+		
+	}//ends of suggest a spot function
+
+
+
+
+
+
+/* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+						ADDING DB CLASSROOM SPOTS
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
+	
 	function search(){
 
 		if($this->input->get('searchLocation')!=''){
 		 
 			$this->db->where('name',$this->input->get('searchLocation'));
-			$query = $this->db->get('Buildings'); //Change this to rooms later
+			$query = $this->db->get('search'); //Change this to rooms later
 			
 			if($query->num_rows() > 0)
 			{

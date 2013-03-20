@@ -8,7 +8,7 @@
     <? }else{ ?>
    		 <br><br><br><br><br>
     <? }; ?>
-    <button id='hideoverlay'>hideoverlay</button>
+<!--     <button id='hideoverlay'>hideoverlay</button> -->
     <section class="searchView hide" id="searchViewdisplay">
         <section class="findLocation alert alert-info">
             	<h3 class="h3-findlocationtitle">Find Location</h3>
@@ -115,8 +115,24 @@
         	<h3 class="navTitle">Get Directions</h3>
 
         <label>From Point A</label>
+        
+         <section class="dropdownBuildingsA">
+            <select name="buildingSelection" class="buildingSelect">
+                <option>SELECT BUILDING</option>
+                <option value="FS3">FS3</option>
+                <option value="FS4">FS4</option>
+            </select>
+        </section>
         <input type="text" name="pointa" placeholder="Point A" id="pointa">
         <br>
+        
+        <section class="dropdownBuildingsB">
+            <select name="buildingSelection" class="buildingSelect">
+                <option>SELECT BUILDING</option>
+                <option value="FS3">FS3</option>
+                <option value="FS4">FS4</option>
+            </select>
+        </section>
         <label>To Point B</label>
         <input type="text" name="pointb" placeholder="Point B" id="pointb">
         <br>

@@ -18,7 +18,7 @@
 			//$config['minifyJS'] = TRUE;
 			$config['$sensor'] = TRUE;
 			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
-			$config['onclick'] = 'alert(\'You just clicked at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
+			$config['onclick'] = 'alert(\'You just clicked at: \' + event.latLng.lat() + \', \' + event.latLng.lng()); ';
 
 																	
 			// styling the color of the map								
@@ -244,6 +244,87 @@
 			}
 			
 		}
+		
+/* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+						ADDING DB CLASSROOM SPOTS
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
+
+
+function addRoomView(){
+			
+			$sasPos;
+			
+			$this->load->library('googlemaps');
+
+			$config['center'] = '28.59033910157528, -81.30546391010284';
+			$config['zoom'] = '18';
+			$config['minifyJS'] = TRUE;
+			$this->googlemaps->initialize($config);
+			
+			$marker = array();
+			$marker['position'] = ' 28.59033910157528, -81.30546391010284';
+			$marker['draggable'] = true;
+			$marker['ondragend'] = '$("#sasLng").val(event.latLng.lng());
+									$("#sasLat").val(event.latLng.lat());
+									$("#sasPrompt").text("Double Tap pin to give information. Or Tap and hold pin to desired location .");';
+			$marker['animation'] = 'DROP';
+			$marker['ondblclick']= "$('.sasView').slideDown(1500,function(){
+										$('#sasPrompt').addClass('hide');
+										$('.gydus-sas-back').addClass('hide');
+									});";
+			$marker['title'] = 'Drag Me';
+
+			
+			$this->googlemaps->add_marker($marker);
+			
+			$this->load->helper('url');
+
+			if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+			};			
+				
+			$data = array();
+			$data['map'] = $this->googlemaps->create_map();
+			$data['content'] = 'addRoom';
+			
+			$this->load->helper('url');
+			
+			if ($this->session->userdata('is_logged_in')){	
+				$data['userData'] = $this->session->all_userdata();
+			};	
+						
+			$this->load->view('templates/template', $data);	
+					
+		
+		}
+
+		function addRoom(){
+			
+			$this->load->model('mapModel');
+			$query = $this->mapModel->addRoom();
+			
+			if($query){
+				$blah = $this->session->set_flashdata('message', 'Thanks for suggest a spot, we?ll take it into consideration.');
+				redirect('index.php/mapController/addRoomView');
+
+			}else{
+			
+				redirect('index.php/mapController/mapController');
+			}
+			
+		}
+		
+/* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+						ADDING DB CLASSROOM SPOTS
+
+
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
 		
 		function navigate(){
 			

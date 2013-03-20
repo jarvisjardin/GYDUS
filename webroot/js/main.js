@@ -310,17 +310,7 @@ $(document).ready(function () {
 
         return false;
     });// end of gps position
-
-
-
-/*--------------- Navigate to -------------------*/
-
-	 $("#navButton").on('click', function () {
-		   event.preventDefault();
-
-		alert('hello click');
-	
-	});
+    
     
 /*-----------  SUGGEST A SPOT SUCCESS ---------------*/
 	// clicks submit on suggest a spot
@@ -375,7 +365,28 @@ $(document).ready(function () {
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#*/
 
+var isOverlay = false;
 
+
+
+$(this).keydown(function(event) {
+  if (event.which == 13) {
+	if(!isOverlay){
+	    	getOverlays();
+	    	isOverlay = true;
+	    	
+    	}else{
+    	for (i in overlayArray) {            
+                     overlayArray[i].setMap(null);
+                };
+
+    		isOverlay = false;
+    		
+	    	
+    	}
+  	
+ }
+})
     
 /*-------------- AJAX TO LOAD OVERLAYS------------------------*/
 	function getOverlays(){
@@ -420,7 +431,7 @@ $(document).ready(function () {
 			setTimeout(function () {
           	  
           	  $('#gpsBtn').trigger("click");
-          	  
+          	  GMAP=map;
           	  google.maps.event.addListener(GMAP, 'zoom_changed', function () {
             if (map.getZoom() == 20) {
             	
