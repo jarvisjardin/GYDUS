@@ -33,8 +33,17 @@
         <section class="dropdownBuildings">
             <select name="buildingSelection" class="buildingSelect">
                 <option>SELECT BUILDING</option>
-                <option value="FS3">FS3</option>
-                <option value="FS4">FS4</option>
+                <option value="FS3B">FS3B</option>
+				<option value="FS3C">FS3C</option>
+				<option value="FS3D">FS3D</option>
+				<option value="FS3E">FS3E</option>
+				<option value="FS3F">FS3F</option>
+				<option value="FS4A">FS4A</option>
+				<option value="FS4B">FS4B</option>
+				<option value="FS4C">FS4C</option>
+				<option value="FS4E">FS4E</option>
+				<option value="FS4F">FS4F</option>
+				<option value="FS4G">FS4G</option>
             </select>
         </section>
         <!-- end fo dropdownBuildings-->
