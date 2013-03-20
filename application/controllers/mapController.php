@@ -17,6 +17,7 @@
 			$config['zoom'] = '18';
 			//$config['minifyJS'] = TRUE;
 			$config['$sensor'] = TRUE;
+
 			$config['$jsfile'] = '<? echo base_url() ?>."webroot/js/main.js"';
 			$config['onclick'] = 'alert(\'You just clicked at: \' + event.latLng.lat() + \', \' + event.latLng.lng()); ';
 
@@ -108,11 +109,13 @@
 
 				$config['center'] = '28.594461, -81.304002';
 				$config['zoom'] = '18';
-				$config['minifyJS'] = TRUE;
-
+			//	$config['minifyJS'] = TRUE;
+				
 				$this->googlemaps->initialize($config);
-
-
+				
+				
+		/* 	Points of interest query return */
+				
 				if(gettype($query) == 'array'){
 
 					foreach($query as $q) {
@@ -136,16 +139,14 @@
 					 	}
 
 					 }
-
+			/* Single room search query */
 				 }else{
 
 				 	foreach($query->result() as $q) {
 					 	$marker['title']=$q->name;
 					 	$marker['position'] = $q->latitude.','.$q->longitude;
 					 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/bulding_zpscbd143c7.png';
-					 	$marker['infowindow_content'] = '<form action="../mapController/navigate" method="post"><input id="navLat" type="hidden" value="'.$q->latitude.'"></input><input id="navLng" value="'.$q->longitude.'"type="hidden"></input><button type="submit">GO TO HERE</button></form>';
-					 	//$marker['onclick'] = '$("#navLat").val(event.latLng.lat())$("#navLng").val(event.latLng.lng())';
-
+					 	$marker['infowindow_content'] = '<form action="../mapController/navigateViaMarker" method="post"><input name="buildingA" type="hidden" value="'.$q->building_name.'"><input name="roomA" type="hidden" value="1"><input name="buildingB" type="hidden" value="'.$q->building_name.'"><input name="roomB" type="hidden" value="'.$q->name.'"><button type="submit">GO TO HERE</button></form>';
 					 	$this->googlemaps->add_marker($marker);
 
 
@@ -245,6 +246,7 @@
 			
 		}
 		
+<<<<<<< HEAD
 /* #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 
@@ -327,10 +329,13 @@ function addRoomView(){
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# */
 		
 		function navigate(){
+=======
+		function navigateViaMarker(){
+>>>>>>> cbd9189191f28649e4940a9ad6de51ddf0131a92
 			
 			$this->load->model('mapModel');
-			$query = $this->mapModel->get_Directions();
-								    
+			$query = $this->mapModel->get_DirectionsViaMarker();
+			   
 			if($query){
 		  
 			    $this->load->library('googlemaps');
@@ -371,7 +376,6 @@ function addRoomView(){
 			}
 			
 		}
-		
 		
 
 	}

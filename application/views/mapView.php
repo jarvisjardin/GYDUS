@@ -115,6 +115,7 @@
         	<h3 class="navTitle">Get Directions</h3>
 
         <label>From Point A</label>
+
         
          <section class="dropdownBuildingsA">
             <select name="buildingSelection" class="buildingSelect">
@@ -123,7 +124,9 @@
                 <option value="FS4">FS4</option>
             </select>
         </section>
-        <input type="text" name="pointa" placeholder="Point A" id="pointa">
+        
+        <input type="text" name="pointA" placeholder="Point A" id="pointa">
+
         <br>
         
         <section class="dropdownBuildingsB">
@@ -134,7 +137,7 @@
             </select>
         </section>
         <label>To Point B</label>
-        <input type="text" name="pointb" placeholder="Point B" id="pointb">
+        <input type="text" name="pointB" placeholder="Point B" id="pointb">
         <br>
         <button class="getdirections btn btn-success btn-large btn-block" onClick="location='<?php echo base_url();?>index.php/mapController/navigate'">Get Directions</button>
     </section>
