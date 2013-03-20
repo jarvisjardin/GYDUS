@@ -131,73 +131,53 @@ function addRoom(){
 
 	/* The User searches for a room directly	 */
 		if($this->input->get('searchLocation')!= ''){
-		 
+
 			$this->db->where('name',$this->input->get('searchLocation'));
-			$query = $this->db->get('Search'); //Change this to rooms later
+			$query = $this->db->get('Rooms'); //Change this to rooms later
 
-			
+
 			if($query->num_rows() > 0)
 			{
-			
+
 				return $query;
 				//echo gettype($query);
 			}else
 			{
-				
-				return false;
-				
-			}
-			
-		}else{
-		
-		if($this->input->get('buildingSelection')!= ''){
-		 
-			$this->db->where('name',$this->input->get('buildingSelection'));
-			$query = $this->db->get('Buildings'); //Change this to rooms later
 
-			
-			if($query->num_rows() > 0)
-			{
-			
-				return $query;
-				//echo gettype($query);
-			}else
-			{
-				
 				return false;
-				
+
 			}
-			
+
 		}else{
-		
+
 	/* The user searches for POI 	 */
 			$qArray = array();
-			
+
 			if(isset($_GET['points'])){
 				$points = $_GET['points'];
 
 			}
-			
+
 			  if(empty($points))   {
 				return false;			    
-			  
+
 			  }else{
-			  
+
 			  	foreach($points as $p){
-			  	
+
 				  	$this->db->where('categorey',$p);
 			        $query = $this->db->get('PointsOfInterest'); //Change this to rooms later
-			        
-			        
+
+
 			        if($query->num_rows() > 0){
-			       
+
 						array_push($qArray, $query);						     
-						
+
 			        }else{
-				        
+
 				        return false;
 			        };
-			        
+
 				 }
 				//echo gettype($qu);
 
@@ -205,10 +185,9 @@ function addRoom(){
 			  }
 
 		}
-		
-	}
+
 	}	
-	
+
 		
 	function get_DirectionsViaMarker(){
 			

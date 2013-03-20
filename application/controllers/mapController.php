@@ -128,7 +128,24 @@
 						 	}else if($p->categorey == 'Food/Beverage'){
 
 							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/FoodBeverage_zps777eb768.png';
+						 	}else if($p->categorey == 'Patio'){
+							 	
+							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/terrace_zpsf0a01f1f.png';
+
+						 	}else if($p->categorey == 'Library'){
+							 	
+							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/book_zpsf5d19204.png';
+
+						 	}else if($p->categorey == 'Book Store'){
+							 	
+							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/computers_zpsecd31c7d.png';
+
+						 	}else if($p->categorey == 'Receptionist'){
+							 	
+							 	$marker['icon'] = 'http://i1326.photobucket.com/albums/u657/GydusApp/library_zps67451e13.png';
+
 						 	}
+
 
 						 	$marker['title']= $p->name;
 						 	$marker['position'] = $p->latitude.','.$p->longitude;
